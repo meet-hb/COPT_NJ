@@ -23,10 +23,10 @@
             <div class="breadcrumb-content">
                 <h2 style="color: #fff;">Terms & Conditions</h2>
                 <ul class="breadcrumb-menu list-style">
-                    <li style="color: #fff;"><a href="{{route('front.index')}}">Home</a></li>
+                    <li style="color: #fff;"><a href="{{ route('front.index') }}">Home</a></li>
                     <li style="color: #fff;">Terms & Conditions</li>
                 </ul>
-                
+
             </div>
         </div>
     </div>
@@ -42,26 +42,20 @@
                 </div>
             </div>
             <div class="row gx-5 align-items-center">
-                
+
                 <div class="project-desc">
                     {!! $termsAndConditions !!}
                 </div>
-
             </div>
-
-
         </div>
     </div>
-
     <!-- Footer Section Start -->
     @include('front.footer')
     <!-- Footer Section End -->
-
     <!-- Back to Top -->
     <button type="button" id="backtotop" class="position-fixed text-center border-0 p-0">
         <i class="ri-arrow-up-line"></i>
     </button>
-
     <!-- Modal HTML -->
     <!-- <div class="modal fade" id="quickview-modal" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="quickview-modal" aria-hidden="true">
