@@ -14,7 +14,6 @@
 
     @include('front.layout')
     <!-- End Navbar Area -->
-
     <!-- Hero Section Start -->
     <div class="hero-wrap hero-one">
         <img src="{{ url('/') }}/assets/front/img/hero/hero-shape-1.webp" alt="Image"
@@ -34,7 +33,6 @@
                             </div> -->
                             <div class="hero-content"
                                 style="background-color: rgba(255, 255, 255, .85); border-radius: .63rem; justify-content: center; padding: 2rem;">
-
                                 <!-- <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Physical Therapy
                                     Somerset, NJ - Comprehensive Orthopedic PT</span> -->
                                 <h2>Individualized Hands-On

@@ -8427,3 +8427,10 @@ p:last-child {
   opacity: 0;
   transition: var(--transition);
 }
+.condition-section .condition-listing .condition-icon svg:hover{
+  fill: #fff !important;
+}
+.condition-section .condition-listing .condition-icon:hover{
+ background-color: #00BFB3;
+
+}
