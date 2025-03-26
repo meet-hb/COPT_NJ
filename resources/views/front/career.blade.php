@@ -24,7 +24,6 @@
                 <h2 style="color: #fff;">Career</h2>
                 <ul class="breadcrumb-menu list-style">
                     <li style="color: #fff;"><a href="{{ route('front.index') }}">Home</a></li>
-                    <li style="color: #fff;"><a href="#">About</a></li>
                     <li style="color: #fff;">Career</li>
                 </ul>
                 <div class="option-item">

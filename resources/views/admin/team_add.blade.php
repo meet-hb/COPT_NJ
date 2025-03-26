@@ -67,6 +67,17 @@
                                             <small id="image_error"></small>
                                         </div>
                                         <div class="form-group mb-3">
+                                            <label for="position" class="form-label">Category</label>
+                                            <select class="form-control" name="category" id="category">
+                                                <option value="" selected disabled>Select Category</option>
+                                                <option value="Physical Therapists">Physical Therapists</option>
+                                                <option value="Occupational Therapist">Occupational Therapist</option>
+                                                <option value="Acupuncturist">Acupuncturist</option>
+                                                <option value="Administration">Administration</option>
+                                            </select>
+                                            <small id="category_error"></small>
+                                        </div>
+                                        <div class="form-group mb-3">
                                             <label for="position" class="form-label">Position</label>
                                             <input type="text" class="form-control" name="position" id="position"
                                                 placeholder="Enter position">

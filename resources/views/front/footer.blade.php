@@ -1,4 +1,4 @@
-{{-- <div class="footer-subscribe" bis_skin_checked="1">
+<div class="footer-subscribe" bis_skin_checked="1">
     <div class="container" bis_skin_checked="1">
         <div class="subscribe-wrapper" bis_skin_checked="1">
             <div class="subscribe-wrapper-inner" bis_skin_checked="1">
@@ -6,31 +6,34 @@
                     <div id="inline-7n2Z1C2ZYW2KiyyZKRjV-div" class="ep-iFrameContainer"
                         style="border-radius: 4px; display: block;" bis_skin_checked="1">
                         <div id="inline-7n2Z1C2ZYW2KiyyZKRjV-wrapper" class="ep-wrapper" style="border-radius: 4px;"
-                            bis_skin_checked="1"><iframe
-                                src="https://api.leadconnectorhq.com/widget/form/7n2Z1C2ZYW2KiyyZKRjV"
-                                style="width: 100%; height: 206px; border: none; border-radius: 4px; overflow: hidden; display: block;"
-                                id="inline-7n2Z1C2ZYW2KiyyZKRjV" data-layout="{'id':'INLINE'}"
-                                data-trigger-type="alwaysShow" data-trigger-value=""
-                                data-activation-type="alwaysActivated" data-activation-value=""
-                                data-deactivation-type="neverDeactivate" data-deactivation-value=""
-                                data-form-name="Subscribe" data-height="400"
-                                data-layout-iframe-id="inline-7n2Z1C2ZYW2KiyyZKRjV" data-form-id="7n2Z1C2ZYW2KiyyZKRjV"
-                                title="Subscribe" scrolling="no"
-                                bis_size="{&quot;x&quot;:542,&quot;y&quot;:2800,&quot;w&quot;:300,&quot;h&quot;:206,&quot;abs_x&quot;:542,&quot;abs_y&quot;:2800}">
-                            </iframe></div>
+                            bis_skin_checked="1">
+
+                            <form id="blogRequestForm">
+                                @csrf
+                                <div class="form-group" style="max-width:700px;margin-bottom:0 !important;">
+                                    <input type="email" class="form-control" name="email" id="email"
+                                        placeholder="Enter your email"
+                                        style="color: #000000 !important; border: 1px solid #04BFB3FF !important; border: 1px solid #04BFB3FF !important;border-radius: 40px !important;padding: 10px 25px 10px 25px;box-shadow: 0px 0px 5px 1px #CBCBCB82;font-family: 'Poppins';font-size: 14px;font-weight: 400;background-clip: inherit !important;"
+                                        required>
+                                </div>
+                                <button type="submit" id="btn-submit" class="mt-2"
+                                    style="background-color:#1F2B44FF;color:#fff; border:0px solid #04BFB300;border-radius:40px;padding:10px 25px 10px 25px;white-space:normal;width:100%;box-shadow:0px 0px 0px 0px #FFFFFF;">Subscribe</button>
+                            </form>
+                        </div>
                     </div>
-                    <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+
 
 
                 </div>
-                <div class="footer-title" bis_skin_checked="1">Subscribe today for bimonthly free<br>healthy
+                <div class="footer-title mt-2" bis_skin_checked="1">Subscribe today for bimonthly free<br>healthy
                     tips
                     and exclusive offers.
                 </div>
             </div>
         </div>
     </div>
-</div> --}}
+</div>
+
 
 <!-- Footer Section Start -->
 <footer class="footer-wrap">
@@ -223,8 +226,9 @@
             </div>
         </div>
     </div>
-    <p class="copyright-text"><i class="ri-copyright-line"></i>Comprehensive Orthopedic Physical Therapy 2024 | <a
-            href="#">Sitemap</a> | <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a>
+    <p class="copyright-text"><i class="ri-copyright-line"></i>Comprehensive Orthopedic Physical Therapy 2025 | <a
+            href="{{ route('front.sitemap') }}">Sitemap</a> | <a href="{{ route('front.privacy_policy') }}">Privacy
+            Policy</a> | <a href="{{ route('front.terms_and_conditions') }}">Terms & Conditions</a>
     </p>
 </footer>
 <!-- Footer Section End -->

@@ -96,6 +96,9 @@ $(document).ready(function () {
                         required: true,
                         minlength: 3,
                     },
+                    category: {
+                        required: true,
+                    },
                     description: {
                         required: true,
                     },
@@ -113,6 +116,9 @@ $(document).ready(function () {
                     position: {
                         required: " position is required",
                         minlength: " min length 3 char",
+                    },
+                    category: {
+                        required: " category is required",
                     },
                     description: {
                         required: " description is required",
@@ -223,6 +229,9 @@ $(document).ready(function () {
                         required: true,
                         minlength: 3,
                     },
+                    category: {
+                        required: true,
+                    },
                     description: {
                         required: true,
                     },
@@ -240,6 +249,9 @@ $(document).ready(function () {
                     position: {
                         required: " position is required",
                         minlength: " min length 3 char",
+                    },
+                    category: {
+                        required: "category is required",
                     },
                     description: {
                         required: " description is required",

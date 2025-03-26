@@ -76,6 +76,25 @@
                                             <small id="position_error"></small>
                                         </div>
                                         <div class="form-group mb-3">
+                                            <label for="position" class="form-label">Category</label>
+                                            <select class="form-control" name="category" id="category">
+                                                <option value="" selected disabled>Select Category</option>
+                                                <option value="Physical Therapists"
+                                                    @if ($team->category == 'Physical Therapists') selected @endif>Physical
+                                                    Therapists</option>
+                                                <option value="Occupational Therapist"
+                                                    @if ($team->category == 'Occupational Therapist') selected @endif>Occupational
+                                                    Therapist</option>
+                                                <option value="Acupuncturist"
+                                                    @if ($team->category == 'Acupuncturist') selected @endif>Acupuncturist
+                                                </option>
+                                                <option value="Administration"
+                                                    @if ($team->category == 'Administration') selected @endif>Administration
+                                                </option>
+                                            </select>
+                                            <small id="category_error"></small>
+                                        </div>
+                                        <div class="form-group mb-3">
                                             <label for="description" class="form-label">Description</label>
                                             <div id="description-quill" class="quill-editor">{!! $team->description !!}
                                             </div>

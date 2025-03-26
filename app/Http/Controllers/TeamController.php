@@ -13,6 +13,7 @@ class TeamController extends Controller
     {
         return view("admin.team");
     }
+
     public function teamList(Request $request)
     {
         $draw = filter_var($request->get('draw'), FILTER_VALIDATE_INT);
@@ -120,6 +121,7 @@ class TeamController extends Controller
         $addteam = Team::find($request->id);
         $addteam->name = $request->name;
         $addteam->position = $request->position;
+        $addteam->category = $request->category;
         $addteam->description = $request->description;
         if ($request->hasFile('image')) {
             $imagePath = $request->file('image')->store('public/team');
@@ -140,6 +142,7 @@ class TeamController extends Controller
         $addteam = new Team();
         $addteam->name = $request->name;
         $addteam->position = $request->position;
+        $addteam->category = $request->category;
         $addteam->description = $request->description;
         $addteam->sequence = $sequenceno + 1;
         if ($request->hasFile('image')) {

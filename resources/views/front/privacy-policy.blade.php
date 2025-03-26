@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     @include('front.assets.css')
-    <title>Insurance Info | Somerset, NJ -
+    <title>Privacy Policy | Somerset, NJ -
         Comprehensive Orthopedic PT</title>
 </head>
 
@@ -21,15 +21,12 @@
             class="br-shape-two animationFramesTwo">
         <div class="container">
             <div class="breadcrumb-content">
-                <h2 style="color: #fff;">Insurance Info</h2>
+                <h2 style="color: #fff;">Privacy Policy</h2>
                 <ul class="breadcrumb-menu list-style">
-                    <li style="color: #fff;"><a href="{{ route('front.index') }}" class="">Home</a></li>
-                    <li style="color: #fff;">Insurance Info</li>
+                    <li style="color: #fff;"><a href="{{route('front.index')}}">Home</a></li>
+                    <li style="color: #fff;">Privacy Policy</li>
                 </ul>
-                <div class="option-item">
-                    <a href="{{ route('front.appointment') }}" class="btn-two">Request
-                        Appointment</a>
-                </div>
+                
             </div>
         </div>
     </div>
@@ -45,17 +42,9 @@
                 </div>
             </div>
             <div class="row gx-5 align-items-center">
-
+                
                 <div class="project-desc">
-                    <p>Comprehensive Orthopedic Physical Therapy accepts a variety of health insurance plans, and we are
-                        here to assist you in navigating the world of claims and benefits. Before you arrive, please
-                        give us a call to verify your health benefits to see whether treatment services will require a
-                        copay, deductible, or coinsurance. Please call our office at (732) 846-9400.</p>
-                    <p>
-                        Comprehensive Orthopedic Physical Therapy also offers a private pay plan if you do not have
-                        health insurance or have exhausted your benefits. For additional information about our service
-                        rates and payment options, please contact us as soon as possible!
-                    </p>
+                    {!! $privacyPolicy !!}
                 </div>
 
             </div>
@@ -64,9 +53,9 @@
         </div>
     </div>
 
-    <!-- Project Details Section End -->
-
+    <!-- Footer Section Start -->
     @include('front.footer')
+    <!-- Footer Section End -->
 
     <!-- Back to Top -->
     <button type="button" id="backtotop" class="position-fixed text-center border-0 p-0">
@@ -96,5 +85,6 @@
     @include('front.assets.js')
 </body>
 
+<!-- Mirrored from templates.hibootstrap.com/zigo/default/project-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Feb 2025 06:03:34 GMT -->
 
 </html>

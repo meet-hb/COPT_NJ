@@ -224,3 +224,8 @@
     max-width: 80%;
   }
 }/*# sourceMappingURL=footer.css.map */
+@media only screen and (max-width: 575px) {
+    .footer-subscribe .subscribe-wrapper-inner {
+    display:  block !important;  
+  }
+}

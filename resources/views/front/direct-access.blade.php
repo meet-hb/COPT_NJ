@@ -23,9 +23,7 @@
             <div class="breadcrumb-content">
                 <h2 style="color: #fff;">Direct Access</h2>
                 <ul class="breadcrumb-menu list-style">
-                    <li style="color: #fff;"><a href="index.html">Home</a></li>
-                    <li style="color: #fff;"><a href="#">Patient
-                            Info</a></li>
+                    <li style="color: #fff;"><a href="{{route('front.index')}}">Home</a></li>
                     <li style="color: #fff;">Direct Access</li>
                 </ul>
                 <div class="option-item">

@@ -10,12 +10,6 @@
 </head>
 
 <body>
-    <!--  Preloader Start -->
-    <div class="loader-wrapper">
-        <div class="loader"></div>
-        <div class="loader-section section-left"></div>
-        <div class="loader-section section-right"></div>
-    </div>
     <!-- Start Navbar Area -->
 
     @include('front.layout')
@@ -43,9 +37,10 @@
 
                                 <!-- <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Physical Therapy
                                     Somerset, NJ - Comprehensive Orthopedic PT</span> -->
-                                <h2 style="color: #1F2A44">Individualized
-                                    To
-                                    You Live Pain-Free</h2>
+                                <h2>Individualized Hands-On
+                                    Treatment, Including
+                                    Acupuncture, To Help You Live
+                                    Pain-Free</h2>
                                 <p>
                                     Comprehensive Orthopedic
                                     Physical Therapy (COPT) Is
@@ -217,16 +212,19 @@
                 <div class="col-lg-6 img-pint" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                     <div class="about-img">
                         <img src="{{ url('/') }}/assets/front/img/human-body.png" alt="Image">
-                        <a href="#" title="Knee, Balance and Walking" id="knee-balance-and-walking"
-                            class="condition-body-link knee-balance-and-walking"></a>
-                        <a href="#" title="Back" id="back" class="condition-body-link back"></a>
-                        <a href="#" title="Hip" id="hip" class="condition-body-link hip"></a>
-                        <a href="#" title="Elbow, Wrist and Hand" id="elbow-wrist-and-hand"
-                            class="condition-body-link elbow-wrist-and-hand"></a>
-                        <a href="#" title="Foot and Ankle" id="foot-and-ankle"
+                        <a href="{{ route('front.knee-balance-and-walking') }}" title="Knee, Balance and Walking"
+                            id="knee-balance-and-walking" class="condition-body-link knee-balance-and-walking"></a>
+                        <a href="{{ route('front.back') }}" title="Back" id="back"
+                            class="condition-body-link back"></a>
+                        <a href="{{ route('front.hip') }}" title="Hip" id="hip"
+                            class="condition-body-link hip"></a>
+                        <a href="{{ route('front.elbow-wrist-hand') }}" title="Elbow, Wrist and Hand"
+                            id="elbow-wrist-and-hand" class="condition-body-link elbow-wrist-and-hand"></a>
+                        <a href="{{ route('front.foot-and-ankle') }}" title="Foot and Ankle" id="foot-and-ankle"
                             class="condition-body-link foot-and-ankle"></a>
-                        <a href="#" title="Shoulder" id="shoulder" class="condition-body-link shoulder"></a>
-                        <a href="#" title="Head and Neck" id="head-and-neck"
+                        <a href="{{ route('front.shoulder') }}" title="Shoulder" id="shoulder"
+                            class="condition-body-link shoulder"></a>
+                        <a href="{{ route('front.head-and-neck') }}" title="Head and Neck" id="head-and-neck"
                             class="condition-body-link head-and-neck"></a>
                     </div>
                 </div>
@@ -353,7 +351,7 @@
         <div class="container">
             <div class="condition-listing" data-aos="fade-up" data-aos-duration="1000">
                 <div class="condition-item">
-                    <a href="physical-therapy-clinic-services/back-pain-relief/" class="condition-item-inner">
+                    <a href="{{ route('front.whatWeTreat', ['Back Pain Relief']) }}" class="condition-item-inner">
                         <div class="condition-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="59.952" height="60"
                                 viewBox="0 0 59.952 60">
@@ -366,7 +364,7 @@
                     </a>
                 </div>
                 <div class="condition-item">
-                    <a href="physical-therapy-clinic-services/sports-injuries/" class="condition-item-inner">
+                    <a href="{{ route('front.whatWeTreat', ['Sports Injuries']) }}" class="condition-item-inner">
                         <div class="condition-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="59.213" height="60"
                                 viewBox="0 0 59.213 60">
@@ -379,7 +377,8 @@
                     </a>
                 </div>
                 <div class="condition-item">
-                    <a href="physical-therapy-clinic-services/stroke-rehabilitation/" class="condition-item-inner">
+                    <a href="{{ route('front.whatWeTreat', ['Stroke Rehabilitation']) }}"
+                        class="condition-item-inner">
                         <div class="condition-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="45.941" height="60"
                                 viewBox="0 0 45.941 60">
@@ -388,11 +387,12 @@
                                     transform="translate(0 0)"></path>
                             </svg>
                         </div>
-                        <h4 class="h6">Stroke Recovery</h4>
+                        <h4 class="h6">Stroke Rehabilitation</h4>
                     </a>
                 </div>
                 <div class="condition-item">
-                    <a href="physical-therapy-clinic-services/shoulder-pain-relief/" class="condition-item-inner">
+                    <a href="{{ route('front.whatWeTreat', ['Shoulder Pain Relief']) }}"
+                        class="condition-item-inner">
                         <div class="condition-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="62.825" height="60"
                                 viewBox="0 0 62.825 60">
@@ -405,7 +405,7 @@
                     </a>
                 </div>
                 <div class="condition-item">
-                    <a href="physical-therapy-clinic-services/knee-pain-relief/" class="condition-item-inner">
+                    <a href="{{ route('front.whatWeTreat', ['Knee Pain Relief']) }}" class="condition-item-inner">
                         <div class="condition-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="54.742" height="60"
                                 viewBox="0 0 54.742 60">
@@ -418,7 +418,7 @@
                     </a>
                 </div>
                 <div class="condition-item">
-                    <a href="physical-therapy-clinic-services/balance-and-gait-disorders/"
+                    <a href="{{ route('front.whatWeTreat', ['Balance and Gait Disorders']) }}"
                         class="condition-item-inner">
                         <div class="condition-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="64.185" height="60.012"
@@ -432,7 +432,8 @@
                     </a>
                 </div>
                 <div class="condition-item">
-                    <a href="physical-therapy-clinic-services/" class="condition-item-inner">
+                    <a href="{{ route('front.whatWeTreat', ['View More Conditions']) }}"
+                        class="condition-item-inner">
                         <div class="condition-icon">
                             <svg id="Group_3811" data-name="Group 3811" xmlns="http://www.w3.org/2000/svg"
                                 width="127.738" height="127.738" viewBox="0 0 127.738 127.738">
@@ -475,7 +476,7 @@
                                 do not know what is causing your pain, it is easy to discount physical therapy as an
                                 option that can help you feel better. We want you to know that physical therapy is a
                                 healthy, natural way to find pain relief for your condition.</p>
-                            <a href="#" class="btn-one">View All Treatment</a>
+                            {{-- <a href="#" class="btn-one">View All Treatment</a> --}}
                         </div>
                     </div>
                 </div>
@@ -489,7 +490,8 @@
                                             alt="Image">
                                     </div>
                                     <div class="service-info">
-                                        <h3><a href="#">Acupuncture</a></h3>
+                                        <h3><a href="{{ route('front.howWeTreat', ['Acupuncture']) }}">Acupuncture</a>
+                                        </h3>
                                         <p>Many patients find acupuncture helpful for both decreasing pain and relaxing
                                             the body overall. Working with a Somerset, NJ physical therapist to address
                                             muscle tension is the most effective way to take long-term action in
@@ -505,7 +507,8 @@
                                             alt="Image">
                                     </div>
                                     <div class="service-info">
-                                        <h3><a href="#">Alter-G Treadmill</a></h3>
+                                        <h3><a href="{{ route('front.howWeTreat', ['Alter-G']) }}">Alter-G
+                                                Treadmill</a></h3>
                                         <p>The term “anti-gravity” admittedly makes it sound like a contraption from a
                                             science-fiction universe. In reality, this treadmill was created using
                                             advanced contemporary science and technology. The Differential Air Pressure
@@ -520,7 +523,8 @@
                                         <img src="{{ url('/') }}/assets/front/img/Normatec.png" alt="Image">
                                     </div>
                                     <div class="service-info">
-                                        <h3><a href="#">Game Ready/ Normatec</a></h3>
+                                        <h3><a href="{{ route('front.howWeTreat', ['Game Ready']) }}">Game Ready/
+                                                Normatec</a></h3>
                                         <p>Game Ready is the first-ever sports injury and post-op recovery device of its
                                             kind features innovative, patented ACCEL® Technology, enabling the
                                             integrated delivery of continuous cold and
@@ -536,7 +540,8 @@
                                             alt="Image">
                                     </div>
                                     <div class="service-info">
-                                        <h3><a href="#">Physical Therapy</a></h3>
+                                        <h3><a href="{{ route('front.howWeTreat', ['Physical Therapy']) }}">Physical
+                                                Therapy</a></h3>
                                         <p>Comprehensive Orthopedic Physical Therapy will help you achieve your desired
                                             levels of health and fitness while alleviating your discomfort. Movement is
                                             necessary for living a healthy lifestyle; get started right away by
@@ -551,7 +556,8 @@
                                         <img src="{{ url('/') }}/assets/front/img/Graston.png" alt="Image">
                                     </div>
                                     <div class="service-info">
-                                        <h3><a href="#">IASTM/ Graston</a></h3>
+                                        <h3><a href="{{ route('front.howWeTreat', ['Graston-IASTM']) }}">IASTM/
+                                                Graston</a></h3>
                                         <p>The Graston technique is another form of instrument assisted soft tissue
                                             mobilization (IASTM). It is a type of manual therapy that incorporates
                                             special ergonomic tools that are used to gently massage and scrape parts of
@@ -567,7 +573,8 @@
                                             alt="Image">
                                     </div>
                                     <div class="service-info">
-                                        <h3><a href="#">Workman's Comp</a></h3>
+                                        <h3><a href="{{ route('front.whatWeTreat', ['Workers Compensation']) }}">Workman's
+                                                Comp</a></h3>
                                         <p>The good news is, Comprehensive Orthopedic Physical Therapy can help you on
                                             your recovery journey and get you back to work quickly! Physical therapy
                                             plays a key role in helping people recover from their work injuries,
@@ -893,7 +900,7 @@
                                 <li><i class="ri-check-line"></i>Velit esse cillum dolore eu fugiat nulla pariatur.</li>
                             </ul>
                              -->
-                            <a href="#" class="btn-one">Learn More</a>
+                            <a href="{{ route('front.our-practice') }}" class="btn-one">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -914,6 +921,21 @@
     </button>
 
     @include('front.assets.js')
+    <script>
+        var swiper = new Swiper('.hero-slider-one', {
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.hero-pagination',
+                clickable: true,
+            },
+            speed: 800,
+        });
+    </script>
+
 </body>
 
 </html>

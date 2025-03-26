@@ -26,7 +26,6 @@
                 <h2 style="color: #fff;">{{ $therapy_name }}</h2>
                 <ul class="breadcrumb-menu list-style">
                     <li style="color: #fff;"><a href="{{ route('front.index') }}">Home</a></li>
-                    <li style="color: #fff;"><a href="#">How we Treat</a></li>
                     <li style="color: #fff;">{{ $therapy_name }}</li>
                 </ul>
                 <div class="option-item">

@@ -95,7 +95,7 @@ $(document).ready(function () {
                         required: true,
                     },
                     image: {
-                        required: true,
+                        required: false,
                         extension: "jpg|jpeg|png|gif",
                         filesize: 5 * 1024 * 1024, // 5 MB max file size
                     },
@@ -233,11 +233,11 @@ $(document).ready(function () {
                     therapy_name: {
                         required: true,
                     },
-                    image: {
-                        required: false,
-                        extension: "jpg|jpeg|png|gif",
-                        filesize: 5 * 1024 * 1024, // 5 MB max file size
-                    },
+                    // image: {
+                    //     required: false,
+                    //     extension: "jpg|jpeg|png|gif",
+                    //     filesize: 5 * 1024 * 1024, // 5 MB max file size
+                    // },
                     banner: {
                         required: false,
                         extension: "jpg|jpeg|png|gif",
@@ -248,11 +248,11 @@ $(document).ready(function () {
                     therapy_name: {
                         required: "Please enter the treatment name",
                     },
-                    image: {
-                        required: "Please upload an image",
-                        extension: "Allowed file types: jpg, jpeg, png, gif",
-                        filesize: "Image size must not exceed 5 MB",
-                    },
+                    // image: {
+                    //     required: "Please upload an image",
+                    //     extension: "Allowed file types: jpg, jpeg, png, gif",
+                    //     filesize: "Image size must not exceed 5 MB",
+                    // },
                     banner: {
                         required: "Please upload a banner",
                         extension: "Allowed file types: jpg, jpeg, png, gif",

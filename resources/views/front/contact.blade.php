@@ -196,7 +196,6 @@
     </div>
 
     @include('front.assets.js')
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $('#contactForm').on('submit', function(e) {
             e.preventDefault();

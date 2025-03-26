@@ -35,7 +35,16 @@ Route::get('/career', [FrontController::class, 'career'])->name('front.career');
 Route::get('/blog', [FrontController::class, 'healthBlog'])->name('front.health-blog');
 Route::get('/blog-details/{id}', [FrontController::class, 'blogDetails'])->name('front.blog_details');
 
+Route::get('/privacy-policy', [FrontController::class, 'privacyPolicy'])->name('front.privacy_policy');
+Route::get('/terms-and-conditions', [FrontController::class, 'termsAndConditions'])->name('front.terms_and_conditions');
+Route::get('/sitemap', [FrontController::class, 'siteMap'])->name('front.sitemap');
+
+Route::view('/areas-we-serve', 'front.areas-we-serve')->name('front.areas_we_serve');
+Route::view('/teletherapy', 'front.teletherapy')->name('front.teletherapy');
+
 Route::post('/contactop', [FrontController::class, 'contactUs'])->name('contactus');
+
+Route::post('/blogRequestFormSubmit', [FrontController::class, 'blogRequestFormSubmit'])->name('blogRequestFormSubmit');
 
 Route::post('/leavecomment', [FrontController::class, 'leaveComment'])->name('leavecomment');
 
@@ -49,6 +58,15 @@ Route::get('/patient-info', [FrontController::class, 'patientInfo'])->name('fron
 Route::view('/direct-access', 'front.direct-access')->name('front.directAccess');
 Route::view('/insurance-info', 'front.insurance-info')->name('front.insuranceInfo');
 Route::get('/refer-a-friend', [FrontController::class, 'refererAFriend'])->name('front.referAFriend');
+
+Route::view('/knee-balance-and-walking', 'front.knee-balance-and-walking')->name('front.knee-balance-and-walking');
+
+Route::view('/back', 'front.back')->name('front.back');
+Route::view('/head-and-neck', 'front.head-and-neck')->name('front.head-and-neck');
+Route::view('/shoulder', 'front.shoulder')->name('front.shoulder');
+Route::view('/hip', 'front.hip')->name('front.hip');
+Route::view('/elbow-wrist-and-hand', 'front.elbow-wrist-and-hand')->name('front.elbow-wrist-hand');
+Route::view('/foot-and-ankle', 'front.foot-and-ankle')->name('front.foot-and-ankle');
 
 Route::post('/send-mail', [FrontController::class, 'sendmail'])->middleware('throttle:3,10')->name('appointment.store');
 Route::get('/login', function () {

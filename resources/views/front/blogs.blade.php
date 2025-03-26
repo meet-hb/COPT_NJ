@@ -24,12 +24,12 @@
             <div class="breadcrumb-content">
                 <h2 style="color: #fff;">Health Blog</h2>
                 <ul class="breadcrumb-menu list-style">
-                    <li style="color: #fff;"><a href="index.html">Home</a></li>
+                    <li style="color: #fff;"><a href="{{ route('front.index') }}">Home</a></li>
 
                     <li style="color: #fff;">Health Blog</li>
                 </ul>
                 <div class="option-item">
-                    <a href="appointment.html" class="btn-two">Request Appointment</a>
+                    <a href="{{ route('front.appointment') }}" class="btn-two">Request Appointment</a>
                 </div>
             </div>
         </div>
@@ -116,9 +116,10 @@
                             <div class="popular-post-widget">
                                 @foreach ($popularBlogs as $popularBlog)
                                     <div class="pp-post-item">
-                                        <a href="{{ route('front.blog_details', $popularBlog->id) }}" class="pp-post-img">
+                                        <a href="{{ route('front.blog_details', $popularBlog->id) }}"
+                                            class="pp-post-img">
                                             <img src="{{ Storage::url($popularBlog->image) }}" alt="Image">
-                                            
+
                                         </a>
                                         <div class="pp-post-info">
                                             <span>{{ \Carbon\Carbon::parse($popularBlog->date)->format('d') }}

@@ -24,8 +24,7 @@
                 <h2 style="color: #fff;">Our Team</h2>
                 <ul class="breadcrumb-menu list-style">
                     <li style="color: #fff;"><a href="{{ route('front.index') }}">Home</a></li>
-                    <li style="color: #fff;"><a href="#">About</a></li>
-                    <li style="color: #fff;">Our Teamn</li>
+                    <li style="color: #fff;">Our Team</li>
                 </ul>
                 <div class="option-item">
                     <a href="{{ route('front.appointment') }}" class="btn-two">Request Appointment</a>
@@ -37,8 +36,56 @@
     <!-- Team Section Start -->
     <div class="container gx-5 pt-100 pb-75">
         <div class="row justify-content-center">
-            <!-- <h2 class="text-center">Physical Therapists</h2> -->
-            @foreach ($teams as $team)
+            <h2 class="text-center">Physical Therapists</h2>
+            @foreach ($physicalTherapist as $team)
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <a href="javascript:void(0)">
+                        <div class="team-card-one">
+                            <div class="team-img">
+                                <img src="{{ Storage::url($team->image) }}" alt="Image">
+                                <a href="{{ route('front.team-detail', $team->id) }}" class="btn-one add-to-cart">Read
+                                    More</a>
+                            </div>
+                            <h3>{{ $team->name }}</h3>
+                            <span>{{ $team->position }}</span>
+                        </div>
+                    </a>
+                </div>
+            @endforeach
+            <h2 class="text-center">Occupational Therapist</h2>
+            @foreach ($OccupationalTherapist as $team)
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <a href="javascript:void(0)">
+                        <div class="team-card-one">
+                            <div class="team-img">
+                                <img src="{{ Storage::url($team->image) }}" alt="Image">
+                                <a href="{{ route('front.team-detail', $team->id) }}" class="btn-one add-to-cart">Read
+                                    More</a>
+                            </div>
+                            <h3>{{ $team->name }}</h3>
+                            <span>{{ $team->position }}</span>
+                        </div>
+                    </a>
+                </div>
+            @endforeach
+            <h2 class="text-center">Acupuncturist</h2>
+            @foreach ($Acupuncturist as $team)
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <a href="javascript:void(0)">
+                        <div class="team-card-one">
+                            <div class="team-img">
+                                <img src="{{ Storage::url($team->image) }}" alt="Image">
+                                <a href="{{ route('front.team-detail', $team->id) }}" class="btn-one add-to-cart">Read
+                                    More</a>
+                            </div>
+                            <h3>{{ $team->name }}</h3>
+                            <span>{{ $team->position }}</span>
+                        </div>
+                    </a>
+                </div>
+            @endforeach
+            <h2 class="text-center">Administration</h2>
+            @foreach ($Administration as $team)
                 <div class="col-xl-3 col-lg-4 col-md-6">
                     <a href="javascript:void(0)">
                         <div class="team-card-one">

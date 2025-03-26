@@ -29,7 +29,7 @@
                     <li style="color: #fff;">{{ $blogDetails->name }}</li>
                 </ul>
                 <div class="option-item">
-                    <a href="appointment.html" class="btn-two">Request Appointment</a>
+                    <a href="{{ route('front.appointment') }}" class="btn-two">Request Appointment</a>
                 </div>
             </div>
         </div>
@@ -45,7 +45,7 @@
                             <img src="{{ Storage::url($blogDetails->image) }}" alt="Image">
                         </div>
                         <div class="blog-title">
-                            <a href="posts-by-date.html"
+                            <a href="javascript:void(0)"
                                 class="blog-date"><span>{{ \Carbon\Carbon::parse($blogDetails->date)->format('d') }}</span>{{ \Carbon\Carbon::parse($blogDetails->date)->format('M') }}</a>
                             <h2>{{ $blogDetails->name }}</h2>
                         </div>
@@ -62,7 +62,7 @@
                         </div>
                         <form id="commentForm" method="POST">
                             @csrf
-                            <input type="hidden" name="blog" id="blog" value="{{$blogDetails->name}}">
+                            <input type="hidden" name="blog" id="blog" value="{{ $blogDetails->name }}">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -85,9 +85,9 @@
                                     <button type="submit" class="btn-one" id="submit-btn">Post A Comment</button>
                                 </div>
                                 <div class="col-12 mt-3" id="success-message" style="display:none;">
-                            <p style="text-align: center; color: green;">Your appointment request has been sent
-                                successfully!</p>
-                        </div>
+                                    <p style="text-align: center; color: green;">Your appointment request has been sent
+                                        successfully!</p>
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -105,7 +105,8 @@
                             <div class="popular-post-widget">
                                 @foreach ($popularBlogs as $popularBlog)
                                     <div class="pp-post-item">
-                                        <a href="{{ route('front.blog_details', $popularBlog->id) }}" class="pp-post-img">
+                                        <a href="{{ route('front.blog_details', $popularBlog->id) }}"
+                                            class="pp-post-img">
                                             <img src="{{ Storage::url($popularBlog->image) }}" alt="Image">
                                         </a>
                                         <div class="pp-post-info">

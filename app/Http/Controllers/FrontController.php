@@ -10,6 +10,7 @@ use App\Models\Team;
 use App\Models\Therapy;
 use App\Models\TherapyDetail;
 use App\Models\Treatment;
+use App\Models\Setting;
 use Illuminate\Http\Request;
 
 class FrontController extends Controller
@@ -62,7 +63,11 @@ class FrontController extends Controller
     public function ourteam()
     {
         $teams = Team::all();
-        return view("front.our-team", compact("teams"));
+        $physicalTherapist = Team::where('category', 'Physical Therapists')->where('is_active', 1)->where('is_deleted', 0)->get();
+        $OccupationalTherapist = Team::where('category', 'Occupational Therapist')->where('is_active', 1)->where('is_deleted', 0)->get();
+        $Acupuncturist = Team::where('category', 'Acupuncturist')->where('is_active', 1)->where('is_deleted', 0)->get();
+        $Administration = Team::where('category', 'Administration')->where('is_active', 1)->where('is_deleted', 0)->get();
+        return view("front.our-team", compact("teams", 'physicalTherapist', 'OccupationalTherapist', 'Acupuncturist', 'Administration'));
     }
 
     public function ourteamop($id)
@@ -216,5 +221,43 @@ class FrontController extends Controller
         dispatch(new SendEmailJob($details));
 
         return redirect()->back()->with('success', 'Your Comments has been sent successfully!');
+    }
+
+
+    public function blogRequestFormSubmit(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email|max:255',
+        ]);
+
+        $details = [
+            "email" => $request->email,
+            "message" => $request->comments,
+            'template' => 'emails.blog_subscribe_mail',
+        ];
+
+        dispatch(new SendEmailJob($details));
+
+        return redirect()->back()->with('success', 'Your Request has been sent successfully!');
+    }
+
+
+    public function privacyPolicy()
+    {
+        $privacyPolicy = Setting::where('name', 'privacy')->value('value');
+        return view('front.privacy-policy', compact('privacyPolicy'));
+    }
+
+
+    public function termsAndConditions()
+    {
+        $termsAndConditions = Setting::where('name', 'terms')->value('value');
+        return view('front.terms-and-conditions', compact('termsAndConditions'));
+    }
+
+
+    public function siteMap()
+    {
+        return view('front.sitemap');
     }
 }
