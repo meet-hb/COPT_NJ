@@ -32,7 +32,6 @@
     <div class="project-details-wrap ptb-100">
         <div class="container">
             <div class="row align-items-center">
-
                 <div class="col-xl-12 col-lg-12">
                     <div class="project-desc">
                         <p>At Comprehensive Orthopedic Physical Therapy in Somerset, NJ, our physical therapy team is
