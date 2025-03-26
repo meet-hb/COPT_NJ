@@ -35,46 +35,51 @@
     <!-- Project Details Section Start -->
     <div class="project-details-wrap ptb-100">
         <div class="container gx-5">
-            @if($treatment_name != 'View More Conditions')
-            <div class="row align-items-center">
-                <div class="col-xl-7 col-lg-6">
-                    <div class="single-img">
-                        <img src="{{ Storage::url($treatments->image) }}" alt="Image">
+            @if ($treatment_name != 'View More Conditions')
+                <div class="row align-items-center">
+                    <div class="col-xl-7 col-lg-6">
+                        <div class="single-img">
+                            <img src="{{ Storage::url($treatments->image) }}" alt="Image">
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-6">
+                        <div class="project-desc">
+                            {!! $treatments->body_description !!}
+                        </div>
                     </div>
                 </div>
-                <div class="col-xl-5 col-lg-6">
-                    <div class="project-desc">
-                        {!! $treatments->body_description !!}
-                    </div>
-                </div>
-            </div>
             @else
-            <div class="row align-items-center">
-                <div class="col-xl-12">
-                    <div class="project-desc">
-                        {!! $treatments->body_description !!}
+                <div class="row align-items-center">
+                    <div class="col-xl-12">
+                        <div class="project-desc">
+                            {!! $treatments->body_description !!}
+                        </div>
                     </div>
-                </div>
-                <div class="row justify-content-center">
-                <div class="col-lg-6 img-pint align-items-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="about-img">
-                        <img src="{{ url('/') }}/assets/front/img/human-body.png" alt="Image">
-                        <a href="{{route('front.whatWeTreat',['Knee Pain Relief'])}}" title="Knee, Balance and Walking" id="knee-balance-and-walking"
-                            class="condition-body-link knee-balance-and-walking"></a>
-                        <a href="{{route('front.whatWeTreat',['Back Pain Relief'])}}" title="Back" id="back" class="condition-body-link back"></a>
-                        <a href="{{route('front.whatWeTreat',['Hip Pain Relief'])}}" title="Hip" id="hip" class="condition-body-link hip"></a>
-                        <!--<a href="#" title="Elbow, Wrist and Hand" id="elbow-wrist-and-hand"-->
-                        <!--    class="condition-body-link elbow-wrist-and-hand"></a>-->
-                        <a href="{{route('front.whatWeTreat',['Foot Pain Relief'])}}" title="Foot and Ankle" id="foot-and-ankle"
-                            class="condition-body-link foot-and-ankle"></a>
-                        <a href="#" title="Shoulder" id="shoulder" class="condition-body-link shoulder"></a>
-                        <a href="#" title="Head and Neck" id="head-and-neck"
-                            class="condition-body-link head-and-neck"></a>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6 img-pint align-items-center" data-aos="fade-up" data-aos-duration="1000"
+                            data-aos-delay="200">
+                            <div class="about-img">
+                                <img src="{{ url('/') }}/assets/front/img/human-body.png" alt="Image">
+                                <a href="{{ route('front.whatWeTreat', ['Knee Pain Relief']) }}"
+                                    title="Knee, Balance and Walking" id="knee-balance-and-walking"
+                                    class="condition-body-link knee-balance-and-walking"></a>
+                                <a href="{{ route('front.whatWeTreat', ['Back Pain Relief']) }}" title="Back"
+                                    id="back" class="condition-body-link back"></a>
+                                <a href="{{ route('front.whatWeTreat', ['Hip Pain Relief']) }}" title="Hip"
+                                    id="hip" class="condition-body-link hip"></a>
+                                <!--<a href="#" title="Elbow, Wrist and Hand" id="elbow-wrist-and-hand"-->
+                                <!--    class="condition-body-link elbow-wrist-and-hand"></a>-->
+                                <a href="{{ route('front.whatWeTreat', ['Foot Pain Relief']) }}" title="Foot and Ankle"
+                                    id="foot-and-ankle" class="condition-body-link foot-and-ankle"></a>
+                                <a href="#" title="Shoulder" id="shoulder"
+                                    class="condition-body-link shoulder"></a>
+                                <a href="#" title="Head and Neck" id="head-and-neck"
+                                    class="condition-body-link head-and-neck"></a>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
-                </div>
-                
-            </div>
             @endif
 
             <div class="row gx-5 align-items-center mt-5">

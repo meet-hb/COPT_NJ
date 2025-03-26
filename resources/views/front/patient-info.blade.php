@@ -36,7 +36,8 @@
                     <div class="project-desc">
                         <p>At Comprehensive Orthopedic Physical Therapy in Somerset, NJ, our physical therapy team is
                             committed to finding the root cause of your discomfort and developing a treatment plan to
-                            help you return to a fulfilling and active lifestyle.</p>
+                            help you return to a fulfilling and active lifestyle.
+                        </p>
                         <p>
                             Our Somerset, NJ physical therapy clinic can help you do what you love again!
                         </p>
@@ -68,10 +69,8 @@
                         Make a list of any signs or symptoms that the therapist should know. What has been irritating or
                         hurting you lately? How long have you been dealing with the issue? What does it prevent you from
                         doing?
-
                     </li>
                 </ul>
-
             </div>
             <div class="row gx-5 align-items-center">
                 <h2>What your first appointment at Comprehensive Orthopedic Physical Therapy will be like:</h2>
