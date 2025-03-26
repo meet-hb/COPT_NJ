@@ -1,21 +1,14 @@
 <!DOCTYPE html>
 <html lang="zxx">
-
-
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     @include('front.assets.css')
     <title>Patient Info / Forms | Physical Therapy Somerset, NJ - Comprehensive Orthopedic PT</title>
-
 </head>
-
 <body>
-
     @include('front.layout')
-
     <!-- Breadcrumb Section Start -->
     <div class="breadcrumb-wrapr">
         <!-- <img src="assets/img/br-shape-1.webp" alt="Image" class="br-shape-one moveHorizontal"> -->
@@ -35,7 +28,6 @@
         </div>
     </div>
     <!-- Breadcrumb Section End -->
-
     <!-- Project Details Section Start -->
     <div class="project-details-wrap ptb-100">
         <div class="container">
