@@ -61,19 +61,11 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="hero-slide-item bg-f hero-slide-two">
-                            <!-- <div class="hero-video" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
-                                <img src="{{ url('/') }}/assets/front/img/hero/hero-video-bg.webp" alt="Image">
-                                <a class="play-now" data-fslightbox href="https://www.youtube.com/watch?v=qZV1j8lHOgA">
-                                    <i class="ri-play-fill"></i>
-                                    <span class="ripple"></span>
-                                </a>
-                                <p>Stay Healthy With Physical Therapy</p>
-                            </div> -->
+                            
                             <div class="hero-content"
                                 style="background-color: rgba(255, 255, 255, .85); border-radius: .63rem; justify-content: center; padding: 2rem;">
 
-                                <!-- <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">24/7 Service
-                                    Available </span> -->
+                                
                                 <h2>Individualized Hands-On
                                     Treatment, Including
                                     Acupuncture, To Help You Live
@@ -84,15 +76,7 @@
                                     Committed To Getting You Healthy
                                 <div class="hero-btn">
                                     <a href="{{ route('front.appointment') }}" class="btn-one">Request Appointment</a>
-                                    <!-- <div class="client-likes">
-                                        <ul class="list-style">
-                                            <li><img src="{{ url('/') }}/assets/front/img/clients/client-3.webp" alt="Image"></li>
-                                            <li><img src="{{ url('/') }}/assets/front/img/clients/client-4.webp" alt="Image"></li>
-                                            <li><img src="{{ url('/') }}/assets/front/img/clients/client-2.webp" alt="Image"></li>
-                                            <li><img src="{{ url('/') }}/assets/front/img/clients/client-1.webp" alt="Image"></li>
-                                        </ul>
-                                        <h6>10k+ Members</h6>
-                                    </div> -->
+                                   
                                 </div>
                             </div>
                         </div>
@@ -920,6 +904,10 @@
 
     @include('front.assets.js')
 
+
+
+
+    
 </body>
 
 </html>
