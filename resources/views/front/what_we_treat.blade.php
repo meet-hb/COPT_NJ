@@ -6,7 +6,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     @include('front.assets.css')
     <title>{{ $treatment_name }}, NJ - Comprehensive Orthopedic Physical Therapy</title>
 </head>
@@ -112,9 +111,6 @@
                         @endforeach
                     </div>
                 @endif
-
-
-
             </div>
             @if (!empty(strip_tags($treatments->causes_note)))
                 <div class="row mt-3 align-items-center">
@@ -143,7 +139,6 @@
 
         </div>
     </div>
-
     <section class="appointment-steps-section">
         <div class="container gx-5" bis_skin_checked="1">
             <h3>Your Next Steps…</h3>
@@ -175,7 +170,8 @@
                     <h4>YOUR ROAD TO RECOVERY STARTS TODAY!</h4>
                     <div class="appointment-button" bis_skin_checked="1"><a href="{{ route('front.appointment') }}"
                             target="_self" class="btn">Request
-                            Appointment</a></div>
+                            Appointment</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -212,7 +208,5 @@
 
     @include('front.assets.js')
 </body>
-
-<!-- Mirrored from templates.hibootstrap.com/zigo/default/project-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Feb 2025 06:03:34 GMT -->
 
 </html>
