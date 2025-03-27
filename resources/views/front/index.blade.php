@@ -919,20 +919,6 @@
     </button>
 
     @include('front.assets.js')
-    <script>
-        var swiper = new Swiper('.hero-slider-one', {
-            loop: true,
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.hero-pagination',
-                clickable: true,
-            },
-            speed: 800,
-        });
-    </script>
 
 </body>
 

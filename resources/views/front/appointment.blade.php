@@ -79,7 +79,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <select name="service_time" id="service_time" required>
-                                    <option value="">Preferred Time</option>
+                                    <option value="" selected disabled>Preferred Time</option>
                                     <option value="1">Morning</option>
                                     <option value="2">Afternoon</option>
                                     <option value="3">Evening</option>
@@ -89,7 +89,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <select name="service_refer" id="service_refer" required>
-                                    <option value="">How did you hear about us?</option>
+                                    <option value="" selected disabled>How did you hear about us?</option>
                                     <option value="Physician referral">Physician referral</option>
                                     <option value="Google">Google</option>
                                     <option value="Facebook">Facebook</option>
@@ -149,7 +149,6 @@
     </div>
 
     @include('front.assets.js')
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $('#appointment-form').on('submit', function(e) {
             e.preventDefault();

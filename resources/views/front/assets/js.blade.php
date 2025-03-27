@@ -5,6 +5,7 @@
 <script src="{{ url('/') }}/assets/front/js/aos.js"></script>
 <script src="{{ url('/') }}/assets/front/js/main.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://kit.fontawesome.com/2e81685459.js" crossorigin="anonymous"></script>
 <script>
     $('#blogRequestForm').on('submit', function(e) {
         e.preventDefault();

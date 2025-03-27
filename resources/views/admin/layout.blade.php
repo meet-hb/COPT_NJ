@@ -160,7 +160,7 @@
                     <a href="{{ route('admin.terms') }}" class="nav-link @yield('terms')">
                         <i class="nav-icon fas fa-warning"></i>
                         <p>
-                            Terms and Conditions
+                            Terms of Use
                         </p>
                     </a>
                 </li>

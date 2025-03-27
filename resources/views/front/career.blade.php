@@ -550,6 +550,4 @@
     @include('front.assets.js')
 </body>
 
-<!-- Mirrored from templates.hibootstrap.com/zigo/default/project-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Feb 2025 06:03:34 GMT -->
-
 </html>

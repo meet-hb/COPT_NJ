@@ -15,7 +15,7 @@
 
 <body>
 
- 
+
 
 
     @include('front.layout')
@@ -143,7 +143,7 @@
                         </li>
                         <li>
                             <span>
-                                <i class="ri-phone-fill"></i>
+                                <i class="fa fa-fax" aria-hidden="true"></i>
                             </span>
                             <a href="tel:(732) 846-9404">(732) 846-9404</a>
                         </li>
@@ -151,7 +151,7 @@
                             <span>
                                 <i class="ri-mail-fill"></i>
                             </span>
-                            <a href="#">info@coptnj.com</a>
+                            <a href="mailto:info@coptnj.com">info@coptnj.com</a>
                         </li>
                         <div class="location-action mt-2" style="justify-content: space-between;"
                             bis_skin_checked="1">
@@ -221,7 +221,5 @@
         });
     </script>
 </body>
-
-<!-- Mirrored from templates.hibootstrap.com/zigo/default/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Feb 2025 06:03:41 GMT -->
 
 </html>

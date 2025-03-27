@@ -63,7 +63,7 @@
                             </li>
                             <li>
                                 <span>
-                                    <i class="ri-phone-fill"></i>
+                                    <i class="fa fa-fax" aria-hidden="true"></i>
                                 </span>
                                 <a href="tel:(732) 846-9404">(732) 846-9404</a>
                             </li>
@@ -112,7 +112,7 @@
                             </li>
                             <li>
                                 <span>
-                                    <i class="ri-phone-fill"></i>
+                                    <i class="fa fa-fax" aria-hidden="true"></i>
                                 </span>
                                 <a href="tel:(732) 846-9404">(732) 846-9404</a>
                             </li>
@@ -134,7 +134,7 @@
                 </div>
             </div>
         </div>
-        <div class="container gx-5 mt-5">
+        <div class="container gx-5 mt-5 mb-5">
             <div class="row justify-content-center">
                 <div class="col-lg-6 p-0">
                     <iframe
@@ -162,7 +162,7 @@
                             </li>
                             <li>
                                 <span>
-                                    <i class="ri-phone-fill"></i>
+                                    <i class="fa fa-fax" aria-hidden="true"></i>
                                 </span>
                                 <a href="tel:(732) 846-9404">(732) 846-9404</a>
                             </li>

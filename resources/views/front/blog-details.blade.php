@@ -24,7 +24,7 @@
             <div class="breadcrumb-content">
                 <h2 style="color: #fff;">{{ $blogDetails->name }}</h2>
                 <ul class="breadcrumb-menu list-style">
-                    <li style="color: #fff;"><a href="index.html">Home</a></li>
+                    <li style="color: #fff;"><a href="{{ route('front.index') }}">Home</a></li>
 
                     <li style="color: #fff;">{{ $blogDetails->name }}</li>
                 </ul>
@@ -176,7 +176,6 @@
     </button>
 
     @include('front.assets.js')
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $('#commentForm').on('submit', function(e) {
             e.preventDefault();
