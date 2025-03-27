@@ -11,7 +11,6 @@
 
 <body>
     <!-- Start Navbar Area -->
-
     @include('front.layout')
     <!-- End Navbar Area -->
     <!-- Hero Section Start -->
@@ -21,7 +20,7 @@
         <div class="container-fluid">
             <div class="swiper hero-slider-one">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
+                    <div class="swiper-slide ">
                         <div class="hero-slide-item bg-f hero-slide-one">
                             <!-- <div class="hero-video" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
                                 <img src="{{ url('/') }}/assets/front/img/hero/hero-video-bg.webp" alt="Image">
@@ -886,7 +885,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" style="text-align: center;">
                     <div class="about-img">
                         <img src="{{ url('/') }}/assets/front/img/img.png" alt="Image">
                     </div>
@@ -896,18 +895,12 @@
     </div>
     <!-- About Section End -->
     @include('front.footer')
-
     <!-- Back to Top -->
     <button type="button" id="backtotop" class="position-fixed text-center border-0 p-0">
         <i class="ri-arrow-up-line"></i>
     </button>
 
-    @include('front.assets.js')
-
-
-
-
-    
+    @include('front.assets.js')  
 </body>
 
 </html>
