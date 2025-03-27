@@ -60,11 +60,11 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="hero-slide-item bg-f hero-slide-two">
-                            
+
                             <div class="hero-content"
                                 style="background-color: rgba(255, 255, 255, .85); border-radius: .63rem; justify-content: center; padding: 2rem;">
 
-                                
+
                                 <h2>Individualized Hands-On
                                     Treatment, Including
                                     Acupuncture, To Help You Live
@@ -75,7 +75,7 @@
                                     Committed To Getting You Healthy
                                 <div class="hero-btn">
                                     <a href="{{ route('front.appointment') }}" class="btn-one">Request Appointment</a>
-                                   
+
                                 </div>
                             </div>
                         </div>
@@ -885,7 +885,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" style="text-align: center;">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"
+                    style="text-align: center;">
                     <div class="about-img">
                         <img src="{{ url('/') }}/assets/front/img/img.png" alt="Image">
                     </div>
@@ -900,7 +901,27 @@
         <i class="ri-arrow-up-line"></i>
     </button>
 
-    @include('front.assets.js')  
+    @include('front.assets.js')
+
+    <script>
+        var swiperOptions = {
+            loop: true,
+            freeMode: true,
+            autoplay: {
+                delay: 2500,
+                // pauseOnMouseEnter:true,
+                disableOnInteraction: false,
+            },
+            loopAddBlankSlides: true,
+            cssMode: true,
+            slidesPerView: 1,
+            speed: 100,
+            grabCursor: true,
+            loopAdditionalSlides: 4,
+        };
+
+        var swiper = new Swiper(".swiper", swiperOptions);
+    </script>
 </body>
 
 </html>

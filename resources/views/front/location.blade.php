@@ -82,7 +82,7 @@
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-10 ">
-                                <div class="two-section" >
+                                <div class="two-section">
                                     <div class="row" style="background-color: #eaeaea">
                                         <div class="col-lg-10 justify-content-center">
                                             <div class="row">
@@ -120,30 +120,31 @@
                                                                 Sat-Sun | Closed
                                                             </li>
                                                         </ul>
-                
+
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-2 justify-content-end">
                                                     <div class="title-1">
                                                         <iframe
                                                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d24267.51630128956!2d-74.485536!3d40.509775!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3c726c56688b9%3A0x5e4632ff8d8371b8!2sComprehensive%20Orthopedic%20Physical%20Therapy!5e0!3m2!1sen!2sus!4v1743073584455!5m2!1sen!2sus"
-                                                            width="317" height="265" style="border:0;" allowfullscreen=""
-                                                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                                            width="317" height="265" style="border:0;"
+                                                            allowfullscreen="" loading="lazy"
+                                                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                     </div>
-        
+
                                 </div>
                             </div>
-                          
-    
+
+
                         </div>
                     </div>
 
-                   
+
 
                 </div>
 
