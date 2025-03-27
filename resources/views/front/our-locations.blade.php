@@ -73,7 +73,6 @@
                                 </span>
                                 <a href="#">info@coptnj.com</a>
                             </li>
-
                         </ul>
                         <div class="location-action mt-2" style="justify-content: space-between;" bis_skin_checked="1">
                             <a href="#" title="Physiotherapy Somerset, NJ" class="btn primary"

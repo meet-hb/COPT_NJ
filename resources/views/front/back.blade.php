@@ -83,45 +83,16 @@
                                 type="button">Degenerative Diseases</a></li>
                         <li><a href="javascript:void(0);" data-toggle="modal" data-target="#exampleModal"
                                 type="button">Spondylolisthesis</a></li>
-                        <li>Osteoporosis
-                        </li>
-                        <li>Herniated or Bulging Disc
-                        </li>
-                        <li>Spinal Arthritis and Spinal Stenosis
-                        </li>
-                        <li>Sciatica and Radiating Pain
-                        </li>
-                        <li>Mid Back Pain
-                        </li>
-                        <li>Low Back Pain
-                        </li>
-                        <li>Sprain / Strain
-                        </li>
-
+                        <li>Osteoporosis</li>
+                        <li>Herniated or Bulging Disc</li>
+                        <li>Spinal Arthritis and Spinal Stenosisq</li>
+                        <li>Sciatica and Radiating Pain</li>
+                        <li>Mid Back Pain</li>
+                        <li>Low Back Pain</li>
+                        <li>Sprain / Strain</li>
                     </ul>
                 </div>
             </div>
-
-            {{-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
         </div>
     </div>
 
