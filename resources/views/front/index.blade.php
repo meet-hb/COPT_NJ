@@ -18,7 +18,7 @@
         <img src="{{ url('/') }}/assets/front/img/hero/hero-shape-1.webp" alt="Image"
             class="hero-shape-one md-none">
         <div class="container-fluid">
-            <div class="swiper hero-slider-one">
+            <div class="swiper swiper-move hero-slider-one">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide ">
                         <div class="hero-slide-item bg-f hero-slide-one">
@@ -920,7 +920,7 @@
             loopAdditionalSlides: 4,
         };
 
-        var swiper = new Swiper(".swiper", swiperOptions);
+        var swiper = new Swiper(".swiper-move", swiperOptions);
     </script>
 </body>
 
