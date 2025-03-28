@@ -1517,6 +1517,10 @@
   .lg-none {
     display: none !important;
   }
+  .point-image{
+    max-height: 280px !important;
+  }
+
 
   .sidebar {
     margin-top: 50px;
@@ -1571,6 +1575,12 @@
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+  .point-image{
+    max-height: 235px !important;
+  }
+
+
 
   .footer-wrap .footer-widget .social-profile li a {
     width: 24px;
@@ -1854,6 +1864,11 @@
   .condition-section .condition-listing .condition-item h4 {
     font-size: 15px !important;
   }
+  .point-image{
+    max-height: 280px !important;
+  }
+
+
 
   .feature-card-wrap .row>div:nth-child(2),
   .feature-card-wrap .row>div:nth-child(3),
@@ -1924,6 +1939,11 @@
   .call-icon{
     margin-left: 120px !important;
   }
+  .point-image{
+    max-height: 280px !important;
+  }
+
+
 }
 
   /* .navbar-area.header-one .navbar .navbar-nav,
@@ -2243,7 +2263,9 @@
   .ps-xxl-6 {
     padding-left: 5rem !important;
   }
-
+  .point-image {
+    max-height: 310px !important;
+}
   .ps-xxl-7 {
     padding-left: 9.5rem !important;
   }
@@ -2430,6 +2452,9 @@
   .hero-wrap .container {
     max-width: 1720px;
   }
+  .point-image {
+    max-height: 310px !important;
+}
 
   .hero-wrap.hero-two .hero-content h1 {
     font-size: 80px;
