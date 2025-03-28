@@ -159,7 +159,7 @@
 
     <div class="blog-wrap-two" style="background-color: #E4F6Fe;">
         <div class="container">
-            <div class="row p-5">
+            <div class="row p-5 gx-5">
                 <h3>Get To Know Our Clinic</h3>
                 <div class="col-lg-3">
                     <div class="blog-card-one">
@@ -201,7 +201,7 @@
 
     <div class="section-intro ptb-100">
         <div class="container">
-            <div class="row">
+            <div class="row gx-5">
                 <h3 class="text-center">Treatments We Offer At Our Somerset, NJ Physical Therapy Clinic</h3>
             </div>
             <div class="row justify-content-center pt-5  text-center">
@@ -244,7 +244,7 @@
         </div>
     </div>
     <section class="location-team">
-        <div class="container">
+        <div class="container gx-5">
             <div class="location-team-wrapper">
                 <div class="location-team-content">
                     <h2>Our Expert Somerset, NJ Physical Therapists &amp; Acupuncturist</h2>
@@ -266,7 +266,7 @@
     </section>
 
     <section class="location-about ptb-100">
-        <div class="container">
+        <div class="container gx-5">
             <h2>Begin Living Your Truth With Physical Therapy</h2>
             <div class="row">
                 <div class="col-lg-3">
@@ -284,7 +284,7 @@
         </div>
     </section>
 
-    <section class="location-appointment ptb-100">
+    <section class="location-appointment ptb-100 gx-5">
         <div class="container p-5">
             <div class="text-center">
                 <h2>Are you suffering from pain or limited range of motion?</h2>
