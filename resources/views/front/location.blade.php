@@ -157,6 +157,162 @@
         </div>
     </div>
 
+    <div class="blog-wrap-two" style="background-color: #E4F6Fe;">
+        <div class="container">
+            <div class="row p-5">
+                <h3>Get To Know Our Clinic</h3>
+                <div class="col-lg-3">
+                    <div class="blog-card-one">
+                        <div class="blog-card-img">
+                            <img src="{{ url('/') }}/assets/front/img/our-location-normatec-game-ready-comprehensive-orthopedic-physical-therapy-somerset-nj.png"
+                                alt="photo1" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="blog-card-one">
+                        <div class="blog-card-img">
+                            <img src="{{ url('/') }}/assets/front/img/Gallery-inside-clinic-equipment-comprehensive-orthopedic-physical-therapy-somerset-nj-10.jpg"
+                                alt="photo1" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="blog-card-one">
+                        <div class="blog-card-img">
+                            <img src="{{ url('/') }}/assets/front/img/Gallery-inside-clinic-equipment-comprehensive-orthopedic-physical-therapy-somerset-nj.jpg"
+                                alt="photo1" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="blog-card-one">
+                        <div class="blog-card-img">
+                            <img src="{{ url('/') }}/assets/front/img/Gallery-inside-clinic-equipment-comprehensive-orthopedic-physical-therapy-somerset-nj-12.jpg"
+                                alt="photo1" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section-intro ptb-100">
+        <div class="container">
+            <div class="row">
+                <h3 class="text-center">Treatments We Offer At Our Somerset, NJ Physical Therapy Clinic</h3>
+            </div>
+            <div class="row justify-content-center pt-5  text-center">
+                <div class="col-lg-4">
+                    <div class="details-image text-center">
+                        <img src="{{ url('/') }}/assets/front/img/physical-therapy-clinic-sports-performance-comprehensive-orthopedic-physical-therapy-somerset-nj-1.jpg"
+                            alt="photo1" class="img-fluid">
+                    </div>
+                    <div class="details-desc text-center pt-2">
+                        <h4>Sports Injuries</h4>
+                        <p>Did participating in physical activity or sport injure you? It makes no difference whether
+                            you're a professional athlete or a weekend warrior.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="details-image">
+                        <img src="{{ url('/') }}/assets/front/img/Physical-therapy-clinic-back-pain-relief-comprehensive-orthopedic-physical-therapy-somerset-nj-1.jpg"
+                            alt="photo1" class="img-fluid">
+                    </div>
+                    <div class="details-desc text-center pt-2">
+                        <h4>Back Pain/Sciatica Pain</h4>
+                        <p>Are you currently searching for back pain relief? Did you have a restless night's sleep or
+                            injure your back while lifting something too heavy? Did you sustain an injury while
+                            participating in a sporting event?</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="details-image">
+                        <img src="{{ url('/') }}/assets/front/img/physical-therapy-clinic-balance-and-gait-disorders-comprehensive-orthopedic-physical-therapy-somerset-nj-1.jpg"
+                            alt="photo1" class="img-fluid">
+                    </div>
+                    <div class="details-desc text-center pt-2">
+                        <h4>Balance and Gait Training</h4>
+                        <p>We've all experienced dizziness at some point in our lives, and we're sure you'd agree it's
+                            not a pleasant sensation. Nobody wants to feel as if the ground beneath their feet is giving
+                            way!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="location-team">
+        <div class="container">
+            <div class="location-team-wrapper">
+                <div class="location-team-content">
+                    <h2>Our Expert Somerset, NJ Physical Therapists &amp; Acupuncturist</h2>
+                    <h3>Meet The Comprehensive Orthopedic Physical Therapy Team!</h3>
+                    <p>Comprehensive Orthopedic Physical Therapy has a fantastic team. We are caring,
+                        sensitive, and attentive, and we will go to any length to assist you in finding
+                        pain relief.</p>
+                    <p>Our physical therapists and acupuncturist are trained to treat many types of
+                        pain, injury, and discomfort. We’d be delighted to meet with you and
+                        determine the source of your discomfort. Allow us to collaborate with you on a
+                        recovery plan that will help you feel your best again.</p>
+                    <p>In addition to teaching you how to avoid future injuries, we will also show you
+                        how to prevent them! If you are looking for true healing, and not just a mask
+                        for your symptoms, Comprehensive Orthopedic Physical Therapy is the right place
+                        for you!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="location-about ptb-100">
+        <div class="container">
+            <h2>Begin Living Your Truth With Physical Therapy</h2>
+            <div class="row">
+                <div class="col-lg-3">
+                    <img src="{{ url('/') }}/assets/front/img/Gallery-outside-clinic-comprehensive-orthopedic-physical-therapy-somerset-nj.jpg"
+                        alt="photo1" class="img-fluid">
+                </div>
+                <div class="col-lg-9">
+                    <p>Seeing a physical therapist or acupuncturist can help you to fully step into your true desired
+                        way of life. Physical therapy and Acupuncture can help relieve pain and improve mobility. Your
+                        daily tasks and hobbies will be more enjoyable, and you can live a full life again. All you need
+                        to do is ask for help. It is your choice. You deserve to live your life the way you want, and
+                        Comprehensive Orthopedic Physical Therapy wants to help you do so!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="location-appointment ptb-100">
+        <div class="container p-5">
+            <div class="text-center">
+                <h2>Are you suffering from pain or limited range of motion?</h2>
+                <p>If you’re suffering, fill out the form to request an appointment.</p>
+            </div>
+            <div class="location-appointment-form"><noscript class="ninja-forms-noscript-message">
+                    Notice: JavaScript is required for this content.</noscript>
+                <div id="inline-6ExxWYsXbb1iLfiK8s58-div" class="ep-iFrameContainer" style="display: block;">
+                    <div id="inline-6ExxWYsXbb1iLfiK8s58-wrapper" class="ep-wrapper" style=""><iframe
+                            src="https://api.leadconnectorhq.com/widget/form/6ExxWYsXbb1iLfiK8s58"
+                            style="width: 100%; height: 500px; border: none; border-radius: 4px; overflow: hidden; display: block;"
+                            id="inline-6ExxWYsXbb1iLfiK8s58" data-layout="{'id':'INLINE'}"
+                            data-trigger-type="alwaysShow" data-trigger-value=""
+                            data-activation-type="alwaysActivated" data-activation-value=""
+                            data-deactivation-type="neverDeactivate" data-deactivation-value=""
+                            data-form-name="Request Appointment" data-height="565"
+                            data-layout-iframe-id="inline-6ExxWYsXbb1iLfiK8s58" data-form-id="6ExxWYsXbb1iLfiK8s58"
+                            title="Request Appointment" scrolling="no">
+                        </iframe></div>
+                </div>
+                <script src="../../../link.msgsndr.com/js/form_embed.js"></script>
+
+            </div>
+
+
+        </div>
+    </section>
+
     <!-- Footer Section Start -->
     @include('front.footer')
     <!-- Footer Section End -->

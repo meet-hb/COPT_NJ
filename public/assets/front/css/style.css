@@ -8434,3 +8434,26 @@ p:last-child {
  background-color: #00BFB3;
 
 }
+
+ .location-team {
+  padding: 5rem;
+  background-color: #E5F5F0;
+}
+ .location-team .location-team-wrapper {
+  text-align: center;
+}
+ .location-team .location-team-content {
+  margin-bottom: 1.25rem;
+}
+.location-appointment {
+  background-color: #EAEAEA;
+  padding: var(--section-spacing) 0;
+}
+.location-appointment-form {
+  width: 100%;
+  max-width: 60rem;
+  margin: 1.25rem auto 0;
+}
+.ep-wrapper {
+  width: 100%;
+}

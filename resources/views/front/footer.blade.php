@@ -7,7 +7,6 @@
                         style="border-radius: 4px; display: block;" bis_skin_checked="1">
                         <div id="inline-7n2Z1C2ZYW2KiyyZKRjV-wrapper" class="ep-wrapper" style="border-radius: 4px;"
                             bis_skin_checked="1">
-
                             <form id="blogRequestForm">
                                 @csrf
                                 <div class="form-group" style="max-width:700px;margin-bottom:0 !important;">
@@ -21,9 +20,6 @@
                             </form>
                         </div>
                     </div>
-
-
-
                 </div>
                 <div class="footer-title mt-2" bis_skin_checked="1">Subscribe today for bimonthly free<br>healthy
                     tips
