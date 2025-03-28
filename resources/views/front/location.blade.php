@@ -38,7 +38,7 @@
 
     <!-- Project Details Section Start -->
     <div class="project-details-wrap ptb-100">
-        <div class="container">
+        <div class="container gx-5">
 
             <div class="row gx-5 align-items-center">
                 <h2>Physical Therapy Somerset, NJ</h2>
