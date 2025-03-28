@@ -1707,7 +1707,7 @@ select {
   content: "";
   height: 17px;
   width: 2px;
-  background-color: var(--paraColor);
+  background-color: #fff;
 }
 
 .breadcrumb-content .breadcrumb-menu li:first-child {

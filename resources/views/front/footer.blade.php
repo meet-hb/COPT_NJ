@@ -33,8 +33,6 @@
         </div>
     </div>
 </div>
-
-
 <!-- Footer Section Start -->
 <footer class="footer-wrap">
     <div class="footer-top">
@@ -45,7 +43,7 @@
         <div class="container gx-5">
 
             <div class="row pt-100 pb-75">
-                <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-sm-6">
                     <div class="footer-widget">
                         <a href="{{ route('front.index') }}" class="footer-logo">
                             <img class="logo-light"
@@ -101,7 +99,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xxl-1 col-xl-2 col-lg-2 col-md-6 col-sm-6">
+                <div class="col-xxl-2 col-xl-2 col-lg-3 col-md-6 col-sm-6">
                     <div class="footer-widget">
                         <h3 class="footer-widget-title">About</h3>
                         <ul class="footer-menu list-style">
@@ -203,7 +201,7 @@
                             </li>
                             <li>
                                 <span>
-                                    <i class="fa fa-fax" aria-hidden="true"></i>
+                                    <i class="ri-phone-fill"></i>
                                 </span>
                                 <a href="tel:(732) 846-9404">(732) 846-9404</a>
                             </li>
@@ -211,7 +209,7 @@
                                 <span>
                                     <i class="ri-mail-fill"></i>
                                 </span>
-                                <a href="mailto:info@coptnj.com">info@coptnj.com</a>
+                                <a href="#">info@coptnj.com</a>
                             </li>
                             <li>
                                 <span>
@@ -227,8 +225,8 @@
         </div>
     </div>
     <p class="copyright-text"><i class="ri-copyright-line"></i>Comprehensive Orthopedic Physical Therapy 2025 | <a
-            href="{{ route('front.sitemap') }}">Sitemap</a> | <a href="{{ route('front.privacy_policy') }}">Privacy
-            Policy</a> | <a href="{{ route('front.terms_and_conditions') }}">Terms of Use</a>
+            href="#">Sitemap</a> | <a href="{{ route('front.privacy_policy') }}">Privacy Policy</a> | <a
+            href="{{ route('front.terms_and_conditions') }}">Terms & Conditions</a>
     </p>
 </footer>
 <!-- Footer Section End -->
