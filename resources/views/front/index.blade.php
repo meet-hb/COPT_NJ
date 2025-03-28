@@ -903,25 +903,7 @@
 
     @include('front.assets.js')
 
-    <script>
-        var swiperOptions = {
-            loop: true,
-            freeMode: true,
-            autoplay: {
-                delay: 2500,
-                // pauseOnMouseEnter:true,
-                disableOnInteraction: false,
-            },
-            loopAddBlankSlides: true,
-            cssMode: true,
-            slidesPerView: 1,
-            speed: 100,
-            grabCursor: true,
-            loopAdditionalSlides: 4,
-        };
 
-        var swiper = new Swiper(".swiper-move", swiperOptions);
-    </script>
 </body>
 
 </html>
