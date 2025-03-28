@@ -158,7 +158,7 @@
     </div>
 
     <div class="blog-wrap-two" style="background-color: #E4F6Fe;">
-        <div class="container">
+        <div class="container gx-5">
             <div class="row p-5 gx-5">
                 <h3>Get To Know Our Clinic</h3>
                 <div class="col-lg-3">
@@ -200,11 +200,11 @@
     </div>
 
     <div class="section-intro ptb-100">
-        <div class="container">
+        <div class="container gx-5">
             <div class="row gx-5">
                 <h3 class="text-center">Treatments We Offer At Our Somerset, NJ Physical Therapy Clinic</h3>
             </div>
-            <div class="row justify-content-center pt-5  text-center">
+            <div class="row justify-content-center pt-5  gx-5 text-center">
                 <div class="col-lg-4">
                     <div class="details-image text-center">
                         <img src="{{ url('/') }}/assets/front/img/physical-therapy-clinic-sports-performance-comprehensive-orthopedic-physical-therapy-somerset-nj-1.jpg"
