@@ -140,4 +140,3 @@ Route::get($admin_url . '/terms', [SettingController::class, 'terms'])->name('ad
 Route::get($admin_url . '/privacy', [SettingController::class, 'privacy'])->name('admin.privacy');
 Route::post($admin_url . '/privacy', [SettingController::class, 'privacyOP'])->name('admin.privacyDetailOp');
 Route::post($admin_url . '/terms', [SettingController::class, 'termsOP'])->name('admin.termsDetailOp');
-
