@@ -52,21 +52,22 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-lg-6 img-pint" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <div class="col-lg-6 point-image" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                     <div class="about-img">
                         <img src="{{ url('/') }}/assets/front/img/human-body.png" alt="Image">
                         <a href="{{ route('front.knee-balance-and-walking') }}" title="Knee, Balance and Walking"
                             id="knee-balance-and-walking" class="condition-body-link knee-balance-and-walking"></a>
-                        <a href="{{ route('front.whatWeTreat', ['Back Pain Relief']) }}" title="Back" id="back"
+                        <a href="{{ route('front.back') }}" title="Back" id="back"
                             class="condition-body-link back"></a>
-                        <a href="{{ route('front.whatWeTreat', ['Hip Pain Relief']) }}" title="Hip" id="hip"
+                        <a href="{{ route('front.hip') }}" title="Hip" id="hip"
                             class="condition-body-link hip"></a>
-                        <a href="#" title="Elbow, Wrist and Hand" id="elbow-wrist-and-hand"
-                            class="condition-body-link elbow-wrist-and-hand"></a>
-                        <a href="{{ route('front.whatWeTreat', ['Foot Pain Relief']) }}" title="Foot and Ankle"
-                            id="foot-and-ankle" class="condition-body-link foot-and-ankle"></a>
-                        <a href="#" title="Shoulder" id="shoulder" class="condition-body-link shoulder"></a>
-                        <a href="#" title="Head and Neck" id="head-and-neck"
+                        <a href="{{ route('front.elbow-wrist-hand') }}" title="Elbow, Wrist and Hand"
+                            id="elbow-wrist-and-hand" class="condition-body-link elbow-wrist-and-hand"></a>
+                        <a href="{{ route('front.foot-and-ankle') }}" title="Foot and Ankle" id="foot-and-ankle"
+                            class="condition-body-link foot-and-ankle"></a>
+                        <a href="{{ route('front.shoulder') }}" title="Shoulder" id="shoulder"
+                            class="condition-body-link shoulder"></a>
+                        <a href="{{ route('front.head-and-neck') }}" title="Head and Neck" id="head-and-neck"
                             class="condition-body-link head-and-neck"></a>
                     </div>
                 </div>
@@ -75,62 +76,40 @@
                     <h6>Click on the body parts or the list below to find out more about your pain and how physical
                         therapy can help.</h6>
                     <ul type="square">
-                        <li><a href="javascript:void(0);" data-toggle="modal" data-target="#exampleModal"
+                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle1"
                                 type="button">Difficulty
                                 Walking</a></li>
-                        <li>Post-surgery Rehab
-                        </li>
-                        <li>Knee Pain
-                        </li>
-                        <li>Poor Balance / Risk of Falling
-                        </li>
-                        <li>Total Knee Replacement
-                        </li>
-                        <li>Lateral Collateral Ligament (LCL) Tears
-                        </li>
-                        <li>Medial Collateral Ligament (MCL) Tears
-                        </li>
-                        <li>Posterior Cruciate Ligament (PCL) Tears
-                        </li>
-                        <li>Anterior Cruciate Ligament (ACL) Tears
-                        </li>
-                        <li>Tendonitis
-                        </li>
-                        <li>Tendonitis
-                        </li>
-                        <li>Meniscus Injury
-                        </li>
-                        <li>Sprain / Strain</li>
-
+                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle2"
+                                type="button">Post-surgery Rehab
+                                Walking</a></li>
+                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle3"
+                                type="button">Knee Pain</a></li>
+                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle4"
+                                type="button">Poor Balance / Risk of Falling</a></li>
+                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle5"
+                                type="button">Total Knee Replacement</a></li>
+                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle6"
+                                type="button">Lateral Collateral Ligament (LCL) Tears</a></li>
+                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle7"
+                                type="button">Medial Collateral Ligament (MCL) Tears</a></li>
+                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle8"
+                                type="button">Posterior Cruciate Ligament (PCL) Tears</a></li>
+                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle9"
+                                type="button">Anterior Cruciate Ligament (ACL) Tears</a></li>
+                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle10"
+                                type="button">Tendonitis</a></li>
+                        <li><a href="javascript:void(0);" data-bs-toggle="modal"
+                                data-bs-target="#exampleModalToggle11" type="button">Meniscus Injury</a></li>
+                        <li><a href="javascript:void(0);" data-bs-toggle="modal"
+                                data-bs-target="#exampleModalToggle12" type="button">Sprain / Strain</a></li>
                     </ul>
                 </div>
             </div>
-
-            {{-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
         </div>
     </div>
 
 
-
+    @include('front.modal.knee_balance_and_walking_details')
     <!-- Footer Section Start -->
     @include('front.footer')
     <!-- Footer Section End -->

@@ -60,6 +60,20 @@ class FrontController extends Controller
     {
         return view("front.our-locations");
     }
+
+
+    public function loctionDetails($location)
+    {
+        if ($location == 'Somerset') {
+            return view("front.somerset", compact('location'));
+        } elseif ($location == 'Parsippany') {
+            return view("front.parsippany", compact('location'));
+        } elseif ($location == 'Fairlawn') {
+            return view("front.fairlawn", compact('location'));
+        }
+    }
+
+
     public function ourteam()
     {
         $teams = Team::all();

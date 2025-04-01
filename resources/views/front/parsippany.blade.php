@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     @include('front.assets.css')
-    <title>Our Locations - Physical Therapy Somerset, NJ - Comprehensive Orthopedic PT</title>
+    <title>Our Locations - Parsippany, NJ(Coming Soon) - Comprehensive Orthopedic PT</title>
 </head>
 
 <body>
@@ -21,10 +21,10 @@
             class="br-shape-two animationFramesTwo">
         <div class="container gx-5">
             <div class="breadcrumb-content">
-                <h2 style="color: #fff;">Physical Therapy Somerset, NJ</h2>
+                <h2 style="color: #fff;">Physical Therapy Parsippany, NJ(Coming Soon)</h2>
                 <ul class="breadcrumb-menu list-style">
                     <li style="color: #fff;"><a href="{{ route('front.index') }}">Home</a></li>
-                    <li style="color: #fff;">Physical Therapy Somerset, NJ</li>
+                    <li style="color: #fff;">Physical Therapy Parsippany, NJ(Coming Soon)</li>
                 </ul>
                 <div class="option-item">
                     <a href="{{ route('front.appointment') }}" class="btn-two">Request Appointment</a>
@@ -41,20 +41,20 @@
         <div class="container gx-5">
 
             <div class="row gx-5 align-items-center">
-                <h2>Physical Therapy Somerset, NJ</h2>
+                <h2>Physical Therapy Parsippany, NJ(Coming Soon)</h2>
                 <div class="project-desc">
-                    <p>Comprehensive Orthopedic Physical Therapy in Somerset, NJ is located at <b
-                            style="color: #00BFB3"> 900 Easton Ave , Suite #22 .</b></p>
+                    <p>Comprehensive Orthopedic Physical Therapy in Parsippany, NJ(Coming Soon) is located at <b
+                            style="color: #00BFB3"> 745 RT 46 .</b></p>
                     <p>It can be hard to take the first step toward recovery, and Comprehensive Orthopedic Physical
                         Therapy understands that. If you do not know what is causing your pain, it is easy to discount
                         physical therapy as an option that can help you feel better. We want you to know that physical
                         therapy and acupuncture are healthy, natural ways to find pain relief for your condition.</p>
                     <p>
-                        At our Somerset, NJ clinic, you will receive physical therapy or acupuncture that is tailored to
-                        your specific needs, taking into account your symptoms, medical history, and any health
-                        limitations. To identify which of our services will be most beneficial to you, we use advanced
-                        diagnostic techniques and technology. Long-term pain prevention, healing, and injury avoidance
-                        are the results of our thorough exams.
+                        At our Parsippany, NJ(Coming Soon) clinic, you will receive physical therapy or acupuncture that
+                        is tailored to your specific needs, taking into account your symptoms, medical history, and any
+                        health limitations. To identify which of our services will be most beneficial to you, we use
+                        advanced diagnostic techniques and technology. Long-term pain prevention, healing, and injury
+                        avoidance are the results of our thorough exams.
                     </p>
                     <p>
                         With Direct Access, health care becomes more efficient and effective, allowing you to prioritize
@@ -63,8 +63,8 @@
                     </p>
                     <p>
                         Physical therapy or acupuncture may be the answer if you have trouble living the life you want.
-                        Our Somerset, NJ physical therapists and acupuncturists can help you live a healthy, pain-free
-                        life again.
+                        Our Parsippany, NJ(Coming Soon) physical therapists and acupuncturists can help you live a
+                        healthy, pain-free life again.
                     </p>
                     <p>Let Comprehensive Orthopedic Physical Therapy help you find the source of your pain once and for
                         all!</p>
@@ -91,8 +91,8 @@
                                                         <h3>Address</h3>
                                                         <ul style="line-height: 2rem">
                                                             <li>
-                                                                900 Easton Ave #22, Somerset, NJ 08873
-                                                                Somerset, NJ 08873
+                                                                745 RT 46, Parsippany, NJ 07054
+                                                                Parsippany, NJ 07054
                                                             </li>
                                                             <li>
                                                                 P:(732) 846-9400
@@ -111,13 +111,10 @@
                                                         <h3>Business Hours</h3>
                                                         <ul style="line-height: 2rem">
                                                             <li>
-                                                                Mon-Thurs | 9AM - 8PM
+                                                                Mon-Fri | Coming Soon
                                                             </li>
                                                             <li>
-                                                                Friday | 9AM - 6PM
-                                                            </li>
-                                                            <li>
-                                                                Sat-Sun | Closed
+                                                                Sat-Sun | Coming Soon
                                                             </li>
                                                         </ul>
 
@@ -202,7 +199,8 @@
     <div class="section-intro ptb-100">
         <div class="container gx-5">
             <div class="row gx-5">
-                <h3 class="text-center">Treatments We Offer At Our Somerset, NJ Physical Therapy Clinic</h3>
+                <h3 class="text-center">Treatments We Offer At Our Parsippany, NJ(Coming Soon) Physical Therapy Clinic
+                </h3>
             </div>
             <div class="row justify-content-center pt-5  gx-5 text-center">
                 <div class="col-lg-4">
@@ -211,7 +209,7 @@
                             alt="photo1" class="img-fluid">
                     </div>
                     <div class="details-desc text-center pt-2">
-                        <h4>Sports Injuries</h4>
+                        <h4><a href="{{ route('front.whatWeTreat', 'Sports Injuries') }}">Sports Injuries</a></h4>
                         <p>Did participating in physical activity or sport injure you? It makes no difference whether
                             you're a professional athlete or a weekend warrior.</p>
                     </div>
@@ -222,7 +220,8 @@
                             alt="photo1" class="img-fluid">
                     </div>
                     <div class="details-desc text-center pt-2">
-                        <h4>Back Pain/Sciatica Pain</h4>
+                        <h4><a href="{{ route('front.whatWeTreat', 'Back Pain Relief') }}">Back Pain/Sciatica Pain</a>
+                        </h4>
                         <p>Are you currently searching for back pain relief? Did you have a restless night's sleep or
                             injure your back while lifting something too heavy? Did you sustain an injury while
                             participating in a sporting event?</p>
@@ -234,7 +233,8 @@
                             alt="photo1" class="img-fluid">
                     </div>
                     <div class="details-desc text-center pt-2">
-                        <h4>Balance and Gait Training</h4>
+                        <h4><a href="{{ route('front.whatWeTreat', 'Balance and Gait Disorders') }}">Balance and Gait
+                                Training</a></h4>
                         <p>We've all experienced dizziness at some point in our lives, and we're sure you'd agree it's
                             not a pleasant sensation. Nobody wants to feel as if the ground beneath their feet is giving
                             way!</p>
@@ -247,7 +247,7 @@
         <div class="container gx-5">
             <div class="location-team-wrapper">
                 <div class="location-team-content">
-                    <h2>Our Expert Somerset, NJ Physical Therapists &amp; Acupuncturist</h2>
+                    <h2>Our Expert Parsippany, NJ(Coming Soon) Physical Therapists &amp; Acupuncturist</h2>
                     <h3>Meet The Comprehensive Orthopedic Physical Therapy Team!</h3>
                     <p>Comprehensive Orthopedic Physical Therapy has a fantastic team. We are caring,
                         sensitive, and attentive, and we will go to any length to assist you in finding

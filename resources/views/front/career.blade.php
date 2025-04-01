@@ -331,185 +331,170 @@
                 <section id="form-builder" style="padding:0px !important;"
                     class="hl_form-builder--main-full hl_form-builder--main">
                     <!---->
-                    <div style="max-width:700px;margin-bottom:0 !important;" class="ghl-form-wrap">
-                        <div id="_builder-form"
-                            style="background-color:#FCFCFCFF;color:#000;border:1px none #CDE0EC;border-radius:4px;max-width:700px;width:100%;margin-top:0;border-color:#CDE0EC;padding-top:0px;padding-bottom:0px;padding-left:20px;padding-right:20px;box-shadow:0px 0px 15px 1px #CBCBCBC9;"
-                            name="builder-form" class="form-builder--wrap-full form-builder--wrap">
-                            <div class="flex-col fields-container row"><!--[-->
-                                <div id="el_KdGzddMoIhMxCYaIc6xI_full_name_0" style="margin-bottom:16px;"
-                                    class="col-12 form-field-wrapper">
-                                    <div class="f-even form-field-container">
-                                        <div>
-                                            <div class="field-container">
-                                                <div id="form-full_name" class="form-builder--item"><!----><label
-                                                        class="label-alignment">Name <span>*</span></label>
-                                                    <div class="flex-col"><input type="text" placeholder="Name"
-                                                            name="full_name" class="form-control" id="full_name"
-                                                            data-q="full_name" data-required="true"><!----></div>
-                                                    <!----><!----><!---->
+                    <div style="max-width:700px;margin-bottom:0 !important;" class="ghl-form-wrap mt-3">
+                        <form class="form-wrap" id="contactForm">
+                            @csrf
+                            <div id="_builder-form"
+                                style="background-color:#FCFCFCFF;color:#000;border:1px none #CDE0EC;border-radius:4px;max-width:700px;width:100%;margin-top:0;border-color:#CDE0EC;padding-top:0px;padding-bottom:0px;padding-left:20px;padding-right:20px;box-shadow:0px 0px 15px 1px #CBCBCBC9;"
+                                name="builder-form" class="form-builder--wrap-full form-builder--wrap">
+                                <div class="flex-col fields-container row">
+                                    <div id="el_KdGzddMoIhMxCYaIc6xI_full_name_0" style="margin-bottom:16px;"
+                                        class="col-12 form-field-wrapper">
+                                        <div class="f-even form-field-container">
+                                            <div>
+                                                <div class="field-container">
+                                                    <div id="form-full_name" class="form-builder--item"><label
+                                                            class="label-alignment">Name <span>*</span></label>
+                                                        <div class="flex-col"><input type="text"
+                                                                placeholder="Name" name="full_name"
+                                                                class="form-control" id="full_name" required></div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div><!---->
-                                    </div>
-                                </div>
-                                <div id="el_KdGzddMoIhMxCYaIc6xI_phone_1" style="margin-bottom:16px;"
-                                    class="col-12 form-field-wrapper">
-                                    <div class="f-odd form-field-container">
-                                        <div>
-                                            <div class="field-container">
-                                                <div id="form-phone" class="form-builder--item"><!----><label
-                                                        class="label-alignment">Phone <span>*</span></label>
-                                                    <div class="flex-col">
-                                                        <div class="flex phone-input" style=""><input
-                                                                type="tel" name="phone" placeholder="Phone"
-                                                                autocomplete="off" class="form-control"
-                                                                id="phone" data-q="phone"
-                                                                data-required="true"><!----></div>
-                                                        <!----><!----><!---->
-                                                    </div><!----><!----><!---->
-                                                </div>
-                                            </div>
-                                        </div><!---->
-                                    </div>
-                                </div>
-                                <div id="el_KdGzddMoIhMxCYaIc6xI_email_2" style="margin-bottom:16px;"
-                                    class="col-12 form-field-wrapper">
-                                    <div class="f-even form-field-container">
-                                        <div class="form-builder--item field-container"><!----><label
-                                                class="label-alignment">Email
-                                                <span>*</span></label>
-                                            <div class="flex-col">
-                                                <div class="flex email-input"><input placeholder="Email"
-                                                        name="email" type="email" class="form-control"
-                                                        data-q="email" data-required="true"><!----></div>
-                                                <!----><!----><!---->
-                                            </div><!----><!----><!---->
-                                        </div><!---->
-                                    </div>
-                                </div>
-                                <div id="el_KdGzddMoIhMxCYaIc6xI_TvBt09Zkes20icGw8NSm_3" style="margin-bottom:16px;"
-                                    class="col-12 form-field-wrapper">
-                                    <div class="f-odd form-field-container"><!---->
-                                        <div class="file-upload">
-                                            <div class="form-builder--item"><!----><label
-                                                    class="label-alignment">Resume(pdf,
-                                                    doc/docx only) <span>*</span></label>
-                                                <div class="flex-col"><label class="custom-file-upload"
-                                                        for="c78e3e88-ab6b-4d40-95e3-8c143c2ded0c"><svg width="1em"
-                                                            height="2em" viewBox="0 0 16 16" class="bi bi-upload"
-                                                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                                            <path fill-rule="evenodd"
-                                                                d="M.5 8a.5.5 0 0 1 .5.5V12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8.5a.5.5 0 0 1 1 0V12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V8.5A.5.5 0 0 1 .5 8zM5 4.854a.5.5 0 0 0 .707 0L8 2.56l2.293 2.293A.5.5 0 1 0 11 4.146L8.354 1.5a.5.5 0 0 0-.708 0L5 4.146a.5.5 0 0 0 0 .708z">
-                                                            </path>
-                                                            <path fill-rule="evenodd"
-                                                                d="M8 2a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0v-8A.5.5 0 0 1 8 2z">
-                                                            </path>
-                                                        </svg><!--[-->
-                                                        <section class="mb-6 flex-between file-upload-item">
-                                                            <div class="flex-between file-details">
-                                                                <div class="file-placeholder"></div>
-                                                                <div></div>
-                                                            </div><!---->
-                                                        </section><!--]-->
-                                                    </label><input class="file-input" type="file"
-                                                        accept=".pdf,.docx,.doc" name="Resume(pdf, doc/docx only)"
-                                                        id="c78e3e88-ab6b-4d40-95e3-8c143c2ded0c"><!----></div><!---->
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div id="el_KdGzddMoIhMxCYaIc6xI_Si4XoOYRkjoi1HQhvXcE_4" style="margin-bottom:16px;"
-                                    class="col-12 form-field-wrapper">
-                                    <div class="f-even form-field-container"><!---->
-                                        <div class="form-builder--item"><!----><label
-                                                class="field-label label-alignment">Availability <span>*</span></label>
-                                            <div class="flex-col">
-                                                <div style="width:100%;"><!--[-->
-                                                    <div style="position:relative;display:inline-block;width:100%;">
-                                                        <div class="in-r-c"><input
-                                                                id="Full-time-Si4XoOYRkjoi1HQhvXcE-0-tmh3q6u8mpn"
-                                                                value="Full-time" name="Si4XoOYRkjoi1HQhvXcE"
-                                                                type="checkbox" data-q="availability"
-                                                                data-required="true"><label style="margin-left:10px;"
-                                                                for="Full-time-Si4XoOYRkjoi1HQhvXcE-0-tmh3q6u8mpn">Full-time</label><!---->
+                                    <div id="el_KdGzddMoIhMxCYaIc6xI_phone_1" style="margin-bottom:16px;"
+                                        class="col-12 form-field-wrapper">
+                                        <div class="f-odd form-field-container">
+                                            <div>
+                                                <div class="field-container">
+                                                    <div id="form-phone" class="form-builder--item"><!----><label
+                                                            class="label-alignment">Phone <span>*</span></label>
+                                                        <div class="flex-col">
+                                                            <div class="flex phone-input" style=""><input
+                                                                    type="tel" name="phone" placeholder="Phone"
+                                                                    autocomplete="off" class="form-control"
+                                                                    id="phone" required></div>
                                                         </div>
                                                     </div>
-                                                    <div style="position:relative;display:inline-block;width:100%;">
-                                                        <div class="in-r-c"><input
-                                                                id="Part-time-Si4XoOYRkjoi1HQhvXcE-1-tmh3q6u8mpn"
-                                                                value="Part-time" name="Si4XoOYRkjoi1HQhvXcE"
-                                                                type="checkbox" data-q="availability"
-                                                                data-required="true"><label style="margin-left:10px;"
-                                                                for="Part-time-Si4XoOYRkjoi1HQhvXcE-1-tmh3q6u8mpn">Part-time</label><!---->
-                                                        </div>
-                                                    </div><!--]-->
                                                 </div>
-                                            </div><!----><!---->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="el_KdGzddMoIhMxCYaIc6xI_x6ddPtd403KNEXewZIHA_5" style="margin-bottom:16px;"
-                                    class="col-12 form-field-wrapper">
-                                    <div class="f-odd form-field-container"><!---->
-                                        <div class="form-builder--item field-container"><!----><label
-                                                class="label-alignment">Additional Details <!----></label>
-                                            <div class="flex-col">
-                                                <textarea placeholder="" name="x6ddPtd403KNEXewZIHA" class="form-control" data-q="job_application_message"
-                                                    data-required="false"></textarea><!---->
                                             </div><!---->
                                         </div>
                                     </div>
-                                </div>
-                                <div id="el_KdGzddMoIhMxCYaIc6xI_button_6" style="margin-bottom:16px;"
-                                    class="col-12 form-field-wrapper">
-                                    <div class="f-even form-field-container"><!----><!--[--><!----><!---->
-                                        <div class="form-builder--item form-builder--btn-submit"
-                                            style="text-align:center;margin-top:15px;" data-v-46d7fa5a="">
-                                            <div style="display:inline-block;position:relative;width:100%;"
-                                                data-v-46d7fa5a="">
-                                                <button type="submit" class="btn btn-dark button-element"
-                                                    style="background-color:#1F2B44FF;border:0px solid #04BFB300;border-radius:40px;padding:10px 10px 10px 10px;white-space:normal;width:100%;box-shadow:0px 0px 0px 0px #FFFFFF;"
-                                                    data-v-46d7fa5a="">
-                                                    <div style="color:#ffffffFF;font-size:18px;font-weight:500;font-family:'Poppins';"
-                                                        data-v-46d7fa5a="">
-                                                        Submit
-                                                    </div><!---->
-                                                </button>
-                                                <div style="display:none;position:absolute;left:50%;transform:translate(-50%, -50%);top:50%;"
-                                                    class="loader-submit" data-v-46d7fa5a="">
-                                                    <div data-v-46d7fa5a="" class="v-spinner" style="display: none;">
-                                                        <div class="v-moon v-moon1"
-                                                            style="height: 15px; width: 15px; border-radius: 100%;">
-                                                            <div class="v-moon v-moon2"
-                                                                style="height: 2.14286px; width: 2.14286px; border-radius: 100%; top: 6.42857px; background-color: rgb(24, 139, 246);">
-                                                            </div>
-                                                            <div class="v-moon v-moon3"
-                                                                style="height: 15px; width: 15px; border-radius: 100%; border: 2.14286px solid rgb(24, 139, 246);">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div><!--]-->
-                                    </div>
-                                </div>
-                                <div id="el_KdGzddMoIhMxCYaIc6xI_header_7" style="margin-bottom:16px;"
-                                    class="col-12 form-field-wrapper">
-                                    <div class="f-odd form-field-container"><!---->
-                                        <div class="form-builder--item heading-element">
-                                            <div class="text-element text-center">
-                                                <div>
-                                                    <p
-                                                        style="text-align: center; color:#00000078;background-color:#FFFFFF;border:0px none #FFFFFF;border-radius:0px;font-family:'Roboto';font-size:12px;font-weight:400;padding:0px 20px 0px 20px;box-shadow:0px 0px 0px 0px #FFFFFF;line-height:1.5;">
-                                                        By clicking above button, I consent to receive
-                                                        email, text and other communication.</p>
+                                    <div id="el_KdGzddMoIhMxCYaIc6xI_email_2" style="margin-bottom:16px;"
+                                        class="col-12 form-field-wrapper">
+                                        <div class="f-even form-field-container">
+                                            <div class="form-builder--item field-container"><!----><label
+                                                    class="label-alignment">Email
+                                                    <span>*</span></label>
+                                                <div class="flex-col">
+                                                    <div class="flex email-input"><input placeholder="Email"
+                                                            name="email" type="email" class="form-control"></div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div><!--]--><!---->
-                            </div><!---->
-                        </div><!----><!----><!---->
+                                    <div id="el_KdGzddMoIhMxCYaIc6xI_TvBt09Zkes20icGw8NSm_3"
+                                        style="margin-bottom:16px;" class="col-12 form-field-wrapper">
+                                        <div class="f-odd form-field-container">
+                                            <div id="form-phone" class="form-builder--item"><!----><label
+                                                    class="label-alignment">Phone <span>*</span></label>
+                                                <div class="flex-col">
+                                                    <div class="flex phone-input" style=""><input
+                                                            type="file" name="phone" placeholder="Phone"
+                                                            autocomplete="off" class="form-control" id="phone"
+                                                            required></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="el_KdGzddMoIhMxCYaIc6xI_Si4XoOYRkjoi1HQhvXcE_4"
+                                        style="margin-bottom:16px;" class="col-12 form-field-wrapper">
+                                        <div class="f-even form-field-container"><!---->
+                                            <div class="form-builder--item"><!----><label
+                                                    class="field-label label-alignment">Availability
+                                                    <span>*</span></label>
+                                                <div class="flex-col">
+                                                    <div style="width:100%;"><!--[-->
+                                                        <div
+                                                            style="position:relative;display:inline-block;width:100%;">
+                                                            <div class="in-r-c"><input
+                                                                    id="Full-Time-Si4XoOYRkjoi1HQhvXcE-1-tmh3q6u8mpn"
+                                                                    value="Full Time" name="availability"
+                                                                    type="radio"><label style="margin-left:10px;"
+                                                                    for="Full-Time-Si4XoOYRkjoi1HQhvXcE-1-tmh3q6u8mpn"">Full
+                                                                    Time</label><!---->
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            style="position:relative;display:inline-block;width:100%;">
+                                                            <div class="in-r-c"><input
+                                                                    id="Part-time-Si4XoOYRkjoi1HQhvXcE-1-tmh3q6u8mpn"
+                                                                    value="Part Time" name="availability"
+                                                                    type="radio"><label style="margin-left:10px;"
+                                                                    for="Part-time-Si4XoOYRkjoi1HQhvXcE-1-tmh3q6u8mpn">Part
+                                                                    Time</label><!---->
+                                                            </div>
+                                                        </div><!--]-->
+                                                    </div>
+                                                </div><!----><!---->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="el_KdGzddMoIhMxCYaIc6xI_x6ddPtd403KNEXewZIHA_5"
+                                        style="margin-bottom:16px;" class="col-12 form-field-wrapper">
+                                        <div class="f-odd form-field-container"><!---->
+                                            <div class="form-builder--item field-container"><!----><label
+                                                    class="label-alignment">Additional Details <!----></label>
+                                                <div class="flex-col">
+                                                    <textarea placeholder="" name="x6ddPtd403KNEXewZIHA" class="form-control" data-q="job_application_message"
+                                                        data-required="false"></textarea><!---->
+                                                </div><!---->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="el_KdGzddMoIhMxCYaIc6xI_button_6" style="margin-bottom:16px;"
+                                        class="col-12 form-field-wrapper">
+                                        <div class="f-even form-field-container"><!----><!--[--><!----><!---->
+                                            <div class="form-builder--item form-builder--btn-submit"
+                                                style="text-align:center;margin-top:15px;" data-v-46d7fa5a="">
+                                                <div style="display:inline-block;position:relative;width:100%;"
+                                                    data-v-46d7fa5a="">
+                                                    <button type="submit" class="btn btn-dark button-element"
+                                                        style="background-color:#1F2B44FF;border:0px solid #04BFB300;border-radius:40px;padding:10px 10px 10px 10px;white-space:normal;width:100%;box-shadow:0px 0px 0px 0px #FFFFFF;"
+                                                        data-v-46d7fa5a="">
+                                                        <div style="color:#ffffffFF;font-size:18px;font-weight:500;font-family:'Poppins';"
+                                                            data-v-46d7fa5a="">
+                                                            Submit
+                                                        </div><!---->
+                                                    </button>
+                                                    <div style="display:none;position:absolute;left:50%;transform:translate(-50%, -50%);top:50%;"
+                                                        class="loader-submit" data-v-46d7fa5a="">
+                                                        <div data-v-46d7fa5a="" class="v-spinner"
+                                                            style="display: none;">
+                                                            <div class="v-moon v-moon1"
+                                                                style="height: 15px; width: 15px; border-radius: 100%;">
+                                                                <div class="v-moon v-moon2"
+                                                                    style="height: 2.14286px; width: 2.14286px; border-radius: 100%; top: 6.42857px; background-color: rgb(24, 139, 246);">
+                                                                </div>
+                                                                <div class="v-moon v-moon3"
+                                                                    style="height: 15px; width: 15px; border-radius: 100%; border: 2.14286px solid rgb(24, 139, 246);">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div><!--]-->
+                                        </div>
+                                    </div>
+                                    <div id="el_KdGzddMoIhMxCYaIc6xI_header_7" style="margin-bottom:16px;"
+                                        class="col-12 form-field-wrapper">
+                                        <div class="f-odd form-field-container"><!---->
+                                            <div class="form-builder--item heading-element">
+                                                <div class="text-element text-center">
+                                                    <div>
+                                                        <p
+                                                            style="text-align: center; color:#00000078;background-color:#FFFFFF;border:0px none #FFFFFF;border-radius:0px;font-family:'Roboto';font-size:12px;font-weight:400;padding:0px 20px 0px 20px;box-shadow:0px 0px 0px 0px #FFFFFF;line-height:1.5;">
+                                                            By clicking above button, I consent to receive
+                                                            email, text and other communication.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!--]--><!---->
+                                </div><!---->
+                            </div>
+                        </form>
                     </div>
                 </section>
             </div>

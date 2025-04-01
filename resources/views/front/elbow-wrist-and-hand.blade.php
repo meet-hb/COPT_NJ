@@ -55,18 +55,19 @@
                 <div class="col-lg-6 img-pint" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                     <div class="about-img">
                         <img src="{{ url('/') }}/assets/front/img/human-body.png" alt="Image">
-                        <a href="{{ route('front.knee-balance-and-walking') }}" title="Back"
+                        <a href="{{ route('front.knee-balance-and-walking') }}" title="Knee, Balance and Walking"
                             id="knee-balance-and-walking" class="condition-body-link knee-balance-and-walking"></a>
-                        <a href="{{ route('front.whatWeTreat', ['Back Pain Relief']) }}" title="Back" id="back"
+                        <a href="{{ route('front.back') }}" title="Back" id="back"
                             class="condition-body-link back"></a>
-                        <a href="{{ route('front.whatWeTreat', ['Hip Pain Relief']) }}" title="Hip" id="hip"
+                        <a href="{{ route('front.hip') }}" title="Hip" id="hip"
                             class="condition-body-link hip"></a>
-                        <a href="#" title="Elbow, Wrist and Hand" id="elbow-wrist-and-hand"
-                            class="condition-body-link elbow-wrist-and-hand"></a>
-                        <a href="{{ route('front.whatWeTreat', ['Foot Pain Relief']) }}" title="Foot and Ankle"
-                            id="foot-and-ankle" class="condition-body-link foot-and-ankle"></a>
-                        <a href="#" title="Shoulder" id="shoulder" class="condition-body-link shoulder"></a>
-                        <a href="#" title="Shoulder" id="head-and-neck"
+                        <a href="{{ route('front.elbow-wrist-hand') }}" title="Elbow, Wrist and Hand"
+                            id="elbow-wrist-and-hand" class="condition-body-link elbow-wrist-and-hand"></a>
+                        <a href="{{ route('front.foot-and-ankle') }}" title="Foot and Ankle" id="foot-and-ankle"
+                            class="condition-body-link foot-and-ankle"></a>
+                        <a href="{{ route('front.shoulder') }}" title="Shoulder" id="shoulder"
+                            class="condition-body-link shoulder"></a>
+                        <a href="{{ route('front.head-and-neck') }}" title="Head and Neck" id="head-and-neck"
                             class="condition-body-link head-and-neck"></a>
                     </div>
                 </div>
@@ -75,49 +76,28 @@
                     <h6>Click on the body parts or the list below to find out more about your pain and how physical
                         therapy can help.</h6>
                     <ul type="square">
-                        <li><a href="javascript:void(0);" data-toggle="modal" data-target="#exampleModal"
+                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle1"
                                 type="button">Sprain / Strain</a></li>
-                        <li><a href="javascript:void(0);" data-toggle="modal" data-target="#exampleModal"
+                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle2"
                                 type="button">Tendon Repair & Post-surgery Rehab</a></li>
-                        <li><a href="javascript:void(0);" data-toggle="modal" data-target="#exampleModal"
+                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle3"
                                 type="button">Carpal Tunnel Syndrome</a></li>
-                        <li><a href="javascript:void(0);" data-toggle="modal" data-target="#exampleModal"
+                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle4"
                                 type="button">Nerve Injuries</a></li>
-                        <li><a href="javascript:void(0);" data-toggle="modal" data-target="#exampleModal"
+                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle5"
                                 type="button">Tennis and Golfer’s Elbow</a></li>
-                        <li><a href="javascript:void(0);" data-toggle="modal" data-target="#exampleModal"
+                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModal"
                                 type="button">Elbow Pain, Wrist Pain, Hand Pain</a></li>
-                        <li><a href="javascript:void(0);" data-toggle="modal" data-target="#exampleModal"
+                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModal"
                                 type="button">Fractures</a></li>
                     </ul>
                 </div>
             </div>
-
-            {{-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
         </div>
     </div>
 
 
-
+    @include('front.modal.elbow_wrist_and_hand_details')
     <!-- Footer Section Start -->
     @include('front.footer')
     <!-- Footer Section End -->

@@ -75,7 +75,8 @@
                             </li>
                         </ul>
                         <div class="location-action mt-2" style="justify-content: space-between;" bis_skin_checked="1">
-                            <a href="{{ route('front.location') }}" title="Physiotherapy Somerset, NJ" class="btn primary"
+                            <a href="{{ route('front.location-details', 'Somerset') }}"
+                                title="Physiotherapy Somerset, NJ" class="btn primary"
                                 aria-label="Location Info">Info</a><a href="#" target="_blank"
                                 class="btn secondary mx-2" aria-label="Map Link">Map</a>
                         </div>
@@ -124,7 +125,8 @@
 
                         </ul>
                         <div class="location-action mt-2" style="justify-content: space-between;" bis_skin_checked="1">
-                            <a href="{{ route('front.location') }}" title="Physiotherapy Somerset, NJ" class="btn primary"
+                            <a href="{{ route('front.location-details', 'Parsippany') }}"
+                                title="Parsippany, NJ(Coming Soon)" class="btn primary"
                                 aria-label="Location Info">Info</a><a href="#" target="_blank"
                                 class="btn secondary mx-2" aria-label="Map Link">Map</a>
                         </div>
@@ -175,7 +177,8 @@
                         </ul>
                         <div class="location-action mt-2" style="justify-content: space-between;"
                             bis_skin_checked="1">
-                            <a href="{{ route('front.location') }}" title="Physiotherapy Somerset, NJ" class="btn primary"
+                            <a href="{{ route('front.location-details', 'Fairlawn') }}"
+                                title="Physiotherapy Somerset, NJ" class="btn primary"
                                 aria-label="Location Info">Info</a><a href="#" target="_blank"
                                 class="btn secondary mx-2" aria-label="Map Link">Map</a>
                         </div>
@@ -197,10 +200,8 @@
         <i class="ri-arrow-up-line"></i>
     </button>
 
-   
+
     @include('front.assets.js')
 </body>
-
-<!-- Mirrored from templates.hibootstrap.com/zigo/default/project-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Feb 2025 06:03:34 GMT -->
 
 </html>

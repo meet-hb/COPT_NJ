@@ -67,7 +67,7 @@ Route::view('/shoulder', 'front.shoulder')->name('front.shoulder');
 Route::view('/hip', 'front.hip')->name('front.hip');
 Route::view('/elbow-wrist-and-hand', 'front.elbow-wrist-and-hand')->name('front.elbow-wrist-hand');
 Route::view('/foot-and-ankle', 'front.foot-and-ankle')->name('front.foot-and-ankle');
-Route::view('/location-details', 'front.location')->name('front.location');
+Route::get('/location-details/{location}', [FrontController::class, 'loctionDetails'])->name('front.location-details');
 
 Route::post('/send-mail', [FrontController::class, 'sendmail'])->middleware('throttle:3,10')->name('appointment.store');
 Route::get('/login', function () {
@@ -140,4 +140,3 @@ Route::get($admin_url . '/terms', [SettingController::class, 'terms'])->name('ad
 Route::get($admin_url . '/privacy', [SettingController::class, 'privacy'])->name('admin.privacy');
 Route::post($admin_url . '/privacy', [SettingController::class, 'privacyOP'])->name('admin.privacyDetailOp');
 Route::post($admin_url . '/terms', [SettingController::class, 'termsOP'])->name('admin.termsDetailOp');
-
