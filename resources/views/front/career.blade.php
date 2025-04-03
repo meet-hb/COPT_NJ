@@ -9,6 +9,15 @@
 
     @include('front.assets.css')
     <title>Career - Comprehensive Orthopedic Physical Therapy</title>
+    <style>
+        #resume {
+            border: none !important;
+            padding: 10px;
+            outline: none;
+            width: 100%;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
@@ -332,7 +341,7 @@
                     class="hl_form-builder--main-full hl_form-builder--main">
                     <!---->
                     <div style="max-width:700px;margin-bottom:0 !important;" class="ghl-form-wrap mt-3">
-                        <form class="form-wrap" id="contactForm">
+                        <form class="form-wrap" id="careerForm" enctype="multipart/form-data">
                             @csrf
                             <div id="_builder-form"
                                 style="background-color:#FCFCFCFF;color:#000;border:1px none #CDE0EC;border-radius:4px;max-width:700px;width:100%;margin-top:0;border-color:#CDE0EC;padding-top:0px;padding-bottom:0px;padding-left:20px;padding-right:20px;box-shadow:0px 0px 15px 1px #CBCBCBC9;"
@@ -362,7 +371,7 @@
                                                             class="label-alignment">Phone <span>*</span></label>
                                                         <div class="flex-col">
                                                             <div class="flex phone-input" style=""><input
-                                                                    type="tel" name="phone" placeholder="Phone"
+                                                                    type="number" name="phone" placeholder="Phone"
                                                                     autocomplete="off" class="form-control"
                                                                     id="phone" required></div>
                                                         </div>
@@ -379,7 +388,8 @@
                                                     <span>*</span></label>
                                                 <div class="flex-col">
                                                     <div class="flex email-input"><input placeholder="Email"
-                                                            name="email" type="email" class="form-control"></div>
+                                                            name="email" type="email" class="form-control"
+                                                            required></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -388,46 +398,42 @@
                                         style="margin-bottom:16px;" class="col-12 form-field-wrapper">
                                         <div class="f-odd form-field-container">
                                             <div id="form-phone" class="form-builder--item"><!----><label
-                                                    class="label-alignment">Phone <span>*</span></label>
+                                                    class="label-alignment">Resume(pdf, doc/docx only)
+                                                    <span>*</span></label>
                                                 <div class="flex-col">
-                                                    <div class="flex phone-input" style=""><input
-                                                            type="file" name="phone" placeholder="Phone"
-                                                            autocomplete="off" class="form-control" id="phone"
-                                                            required></div>
+                                                    <input type="file" id="resume" name="resume" required>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div id="el_KdGzddMoIhMxCYaIc6xI_Si4XoOYRkjoi1HQhvXcE_4"
                                         style="margin-bottom:16px;" class="col-12 form-field-wrapper">
-                                        <div class="f-even form-field-container"><!---->
-                                            <div class="form-builder--item"><!----><label
-                                                    class="field-label label-alignment">Availability
+                                        <div class="f-even form-field-container">
+                                            <div class="form-builder--item">
+                                                <label class="field-label label-alignment">Availability
                                                     <span>*</span></label>
                                                 <div class="flex-col">
-                                                    <div style="width:100%;"><!--[-->
+                                                    <div style="width:100%;">
                                                         <div
                                                             style="position:relative;display:inline-block;width:100%;">
-                                                            <div class="in-r-c"><input
-                                                                    id="Full-Time-Si4XoOYRkjoi1HQhvXcE-1-tmh3q6u8mpn"
-                                                                    value="Full Time" name="availability"
-                                                                    type="radio"><label style="margin-left:10px;"
-                                                                    for="Full-Time-Si4XoOYRkjoi1HQhvXcE-1-tmh3q6u8mpn"">Full
-                                                                    Time</label><!---->
+                                                            <div class="in-r-c">
+                                                                <input id="Full-Time" value="Full Time"
+                                                                    name="availability" type="radio" required>
+                                                                <label style="margin-left:10px;" for="Full-Time">Full
+                                                                    Time</label>
                                                             </div>
                                                         </div>
                                                         <div
                                                             style="position:relative;display:inline-block;width:100%;">
-                                                            <div class="in-r-c"><input
-                                                                    id="Part-time-Si4XoOYRkjoi1HQhvXcE-1-tmh3q6u8mpn"
-                                                                    value="Part Time" name="availability"
-                                                                    type="radio"><label style="margin-left:10px;"
-                                                                    for="Part-time-Si4XoOYRkjoi1HQhvXcE-1-tmh3q6u8mpn">Part
-                                                                    Time</label><!---->
+                                                            <div class="in-r-c">
+                                                                <input id="Part-Time" value="Part Time"
+                                                                    name="availability" type="radio">
+                                                                <label style="margin-left:10px;" for="Part-Time">Part
+                                                                    Time</label>
                                                             </div>
-                                                        </div><!--]-->
+                                                        </div>
                                                     </div>
-                                                </div><!----><!---->
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -437,8 +443,8 @@
                                             <div class="form-builder--item field-container"><!----><label
                                                     class="label-alignment">Additional Details <!----></label>
                                                 <div class="flex-col">
-                                                    <textarea placeholder="" name="x6ddPtd403KNEXewZIHA" class="form-control" data-q="job_application_message"
-                                                        data-required="false"></textarea><!---->
+                                                    <textarea type="text" placeholder="" name="additional_details" class="form-control"
+                                                        data-q="job_application_message" data-required="false" required></textarea><!---->
                                                 </div><!---->
                                             </div>
                                         </div>
@@ -450,7 +456,8 @@
                                                 style="text-align:center;margin-top:15px;" data-v-46d7fa5a="">
                                                 <div style="display:inline-block;position:relative;width:100%;"
                                                     data-v-46d7fa5a="">
-                                                    <button type="submit" class="btn btn-dark button-element"
+                                                    <button type="submit" id="submit-btn"
+                                                        class="btn btn-dark button-element"
                                                         style="background-color:#1F2B44FF;border:0px solid #04BFB300;border-radius:40px;padding:10px 10px 10px 10px;white-space:normal;width:100%;box-shadow:0px 0px 0px 0px #FFFFFF;"
                                                         data-v-46d7fa5a="">
                                                         <div style="color:#ffffffFF;font-size:18px;font-weight:500;font-family:'Poppins';"
@@ -490,6 +497,10 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="col-12 mt-3" id="success-message" style="display: none;">
+                                                <p style="text-align: center; color: green;">Your request has been sent
+                                                    successfully!</p>
+                                            </div>
                                         </div>
                                     </div><!--]--><!---->
                                 </div><!---->
@@ -511,28 +522,38 @@
         <i class="ri-arrow-up-line"></i>
     </button>
 
-    <!-- Modal HTML -->
-    <!-- <div class="modal fade" id="quickview-modal" data-bs-keyboard="false" tabindex="-1"
-            aria-labelledby="quickview-modal" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
-                <div class="modal-content">
-                    <button type="button" class="btn_close" data-bs-dismiss="modal" aria-label="Close">
-                        <i class="ri-close-line"></i>
-                    </button>
-                    <div class="modal-body">
-                        <div class="video-popup">
-                            <iframe width="885" height="498" src="https://www.youtube.com/embed/3FjT7etqxt8"
-                                title="How to Design an Elvis Movie Poster in Photoshop" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
     <!-- Link of JS files -->
     @include('front.assets.js')
+    <script>
+        $('#careerForm').on('submit', function(e) {
+            e.preventDefault();
+
+            // Disable the submit button and change text
+            $('#submit-btn').prop('disabled', true).text('Submitting...');
+
+            // Submit the form via AJAX
+            $.ajax({
+                url: "{{ route('careerFormSubmit') }}",
+                type: "POST",
+                data: new FormData($('#careerForm')[0]), // Use FormData to handle file upload
+                contentType: false, // Prevent jQuery from setting the content type
+                processData: false, // Prevent jQuery from processing the data
+                cache: false, // Disable caching
+                beforeSend: function() {
+                    $('#submit-btn').prop('disabled', true).text('Submitting...');
+                },
+                success: function(response) {
+                    $('#submit-btn').prop('disabled', false).text('Send Message');
+                    $('#careerForm')[0].reset(); // Reset form fields
+                    $('#success-message').fadeIn().delay(5000).fadeOut(); // Show success message
+                },
+                error: function(xhr, status, error) {
+                    alert('There was an error. Please try again.');
+                    $('#submit-btn').prop('disabled', false).text('Send Message');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

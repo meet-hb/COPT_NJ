@@ -169,7 +169,7 @@
                 <div class="appointment-block-wrapper" bis_skin_checked="1">
                     <h4>YOUR ROAD TO RECOVERY STARTS TODAY!</h4>
                     <div class="appointment-button" bis_skin_checked="1"><a href="{{ route('front.appointment') }}"
-                            target="_self" class="btn">Request
+                            target="_blank" class="btn">Request
                             Appointment</a>
                     </div>
                 </div>

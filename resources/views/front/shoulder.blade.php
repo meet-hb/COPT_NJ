@@ -56,7 +56,7 @@
         <div class="container gx-5">
             <div class="row">
 
-                <div class="col-lg-6 img-pint point-image" data-aos="fade-up" data-aos-duration="1000"
+                <div class="col-lg-6 point-image img-pint" data-aos="fade-up" data-aos-duration="1000"
                     data-aos-delay="200">
                     <div class="about-img">
                         <img src="{{ url('/') }}/assets/front/img/human-body.png" alt="Image">
@@ -106,57 +106,8 @@
             </div>
         </div>
     </div>
-<<<<<<< HEAD
 
     @include('front.modal.shoulder_details')
-=======
-    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
-        tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <h5>What is Herniated or Bulging Disc?</h5>
-                    <p>A disc is a jelly like, fluid filled sac that acts as a cushion between the bones of your neck
-                        (vertebrae). Your discs change as you age, drying out and becoming more brittle. In addition, as
-                        the discs dry out with age, the change in height between the vertebrae decreases, causing
-                        changes in posture and function. In younger adults, the center of the disc (nucleus) is held in
-                        place by many rings of the disc (picture a cross section of a tree trunk). With minor or major
-                        injuries, poor posture and strain, these rings can rupture allowing a pressing outward of the
-                        disc nucleus. Finally, as the nucleus reaches the outer edges, the disc can begin to bulge,
-                        which in turn can rub and irritate nerve roots exiting your spine.</p>
-                    <p>In more severe cases, the disc can become herniated, which further presses into the spaces where
-                        nerves are exiting. Symptoms can range from localized pain, to numbness / tingling to a specific
-                        part of the shoulder, arm or hands. In more severe cases complete lack of sensation, muscle
-                        weakness and paralysis of an area of the upper extremity can occur.</p>
-                    <p>Changes in posture, strength and range of motion can all affect the positioning of the disc and
-                        how much bulging or herniation is occurring.</p>
-                    <h5>
-                        How physical therapy helps
-                    </h5>
-                    <p>
-                        The good news is that the majority of bulging and herniated discs can be treated conservatively
-                        with physical therapy. By working with your medical history, symptoms and testing, our physical
-                        therapists can determine what areas have been affected.
-                    </p>
-                    <p>
-                        A thorough plan is then created to relieve pressure on the disc by improving joint function,
-                        muscle strength and posture. Modalities, such as ultrasound or electrical stimulation may be
-                        used to reduce pain, muscle spasm or inflammation. Our therapists work with you to recover lost
-                        strength and range of motion. In addition, we then train you on the correct exercises to
-                        maintain good posture and reduce the risk of future episodes. Call us today to discover how we
-                        can help relieve your pain quickly and restore your function!
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
->>>>>>> 5fd72e497df235889fd338ccc903e8e6454d127e
 
     <!-- Footer Section Start -->
     @include('front.footer')

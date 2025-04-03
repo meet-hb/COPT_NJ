@@ -8,6 +8,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 
 class SendEmailJob implements ShouldQueue
@@ -28,7 +29,13 @@ class SendEmailJob implements ShouldQueue
      */
     public function handle(): void
     {
+        if (!empty($this->details['resume'])) {
+            $filePath = storage_path($this->details['resume']);
+            if (file_exists($filePath)) {
+                $this->details['email']->attach($filePath);
+            }
+        }
         // Send the same email to a static email address
-        Mail::to('info@coptnj.com')->send(new SendUserMail($this->details));
+        Mail::to('kaushalparekh.hackberrysoftech@gmail.com')->send(new SendUserMail($this->details));
     }
 }

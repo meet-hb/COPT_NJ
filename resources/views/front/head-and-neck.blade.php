@@ -52,7 +52,8 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-lg-6 img-pint" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <div class="col-lg-6 img-pint point-image" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="200">
                     <div class="about-img">
                         <img src="{{ url('/') }}/assets/front/img/human-body.png" alt="Image">
                         <a href="{{ route('front.knee-balance-and-walking') }}" title="Knee, Balance and Walking"

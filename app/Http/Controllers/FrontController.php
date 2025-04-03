@@ -208,6 +208,7 @@ class FrontController extends Controller
             "service_time" => $request->service_time,
             "service_refer" => $request->service_refer,
             "message" => $request->message,
+            'template' => 'emails.contactus_mail',
         ];
 
         dispatch(new SendEmailJob($details));
@@ -273,5 +274,30 @@ class FrontController extends Controller
     public function siteMap()
     {
         return view('front.sitemap');
+    }
+
+
+    public function careerFormSubmit(Request $request)
+    {
+
+        if ($request->hasFile('resume')) {
+            $resumePath = $request->file('resume')->store('resumes', 'public');
+        } else {
+            $resumePath = null;
+        }
+
+        $details = [
+            "name" => $request->full_name,
+            "email" => $request->email,
+            "phone" => $request->phone,
+            "resume" => $resumePath,
+            "availability" => $request->availability,
+            "additional_details" => $request->additional_details,
+            'template' => 'emails.career_mail',
+        ];
+
+        dispatch(new SendEmailJob($details));
+
+        return redirect()->back()->with('success', 'Appointment request sent successfully!');
     }
 }

@@ -44,6 +44,8 @@ Route::view('/teletherapy', 'front.teletherapy')->name('front.teletherapy');
 
 Route::post('/contactop', [FrontController::class, 'contactUs'])->name('contactus');
 
+Route::post('/career-form-submit', [FrontController::class, 'careerFormSubmit'])->name('careerFormSubmit');
+
 Route::post('/blogRequestFormSubmit', [FrontController::class, 'blogRequestFormSubmit'])->name('blogRequestFormSubmit');
 
 Route::post('/leavecomment', [FrontController::class, 'leaveComment'])->name('leavecomment');
@@ -139,8 +141,4 @@ Route::post($admin_url . '/faq_delete', [FaqController::class, 'faqDelete'])->na
 Route::get($admin_url . '/terms', [SettingController::class, 'terms'])->name('admin.terms');
 Route::get($admin_url . '/privacy', [SettingController::class, 'privacy'])->name('admin.privacy');
 Route::post($admin_url . '/privacy', [SettingController::class, 'privacyOP'])->name('admin.privacyDetailOp');
-<<<<<<< HEAD
 Route::post($admin_url . '/terms', [SettingController::class, 'termsOP'])->name('admin.termsDetailOp');
-=======
-Route::post($admin_url . '/terms', [SettingController::class, 'termsOP'])->name('admin.termsDetailOp');
->>>>>>> 5fd72e497df235889fd338ccc903e8e6454d127e
