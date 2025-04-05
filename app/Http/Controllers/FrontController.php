@@ -275,8 +275,8 @@ class FrontController extends Controller
     {
         return view('front.sitemap');
     }
-
-
+    
+    
     public function careerFormSubmit(Request $request)
     {
 

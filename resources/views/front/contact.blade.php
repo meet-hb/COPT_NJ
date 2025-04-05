@@ -145,7 +145,7 @@
                             <span>
                                 <i class="fa fa-fax" aria-hidden="true"></i>
                             </span>
-                            <a href="tel:7328469404">(732) 846-9404</a>
+                            <a href="tel:(732) 846-9404">(732) 846-9404</a>
                         </li>
                         <li>
                             <span>
