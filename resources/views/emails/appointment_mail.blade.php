@@ -73,6 +73,8 @@
             <p><span class="label">Appointment Date:</span> {{ $details['date'] ?? 'N/A' }}</p>
             <p><span class="label">Service Time:</span> {{ $details['service_time'] ?? 'N/A' }}</p>
             <p><span class="label">Service Reference:</span> {{ $details['service_refer'] ?? 'N/A' }}</p>
+            <p><span class="label">Prefer Location for Visit :</span>
+                {{ $details['prefer_location_for_visit'] ?? 'N/A' }}</p>
             <p><span class="label">Message:</span> {{ $details['message'] ?? 'N/A' }}</p>
         </div>
 

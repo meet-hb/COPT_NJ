@@ -47,7 +47,7 @@
                                 alt="Image">
                             <!-- <img class="logo-dark" src="assets/img/logo-white.webp" alt="Image"> -->
                         </a>
-                        <ul class="social-profile list-style">
+                        <ul class="social-profile list-style d-flex gap-1">
                             <li>
                                 <a href="https://facebook.com/coptnj" target="_blank">
                                     <i class="ri-facebook-fill"></i>
@@ -67,6 +67,11 @@
                             <li>
                                 <a href="https://instagram.com/coptnj" target="_blank">
                                     <i class="ri-instagram-fill"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/channel/UC4avEkzY30hpdvJUEbbr4wA" target="_blank">
+                                    <i class="ri-youtube-line"></i>
                                 </a>
                             </li>
                         </ul>

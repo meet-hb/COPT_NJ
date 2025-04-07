@@ -201,6 +201,11 @@
                                         alt="">
                                     Physical Therapist
                                 </li>
+                                <li>
+                                    <img src="{{ url('/') }}/assets/front/img/icons8-correct-25.png"
+                                        alt="">
+                                    Occupational Therapist
+                                </li>
                                 <p>We’re always on the lookout for therapists and administrative personnel that thrive
                                     on
                                     new challenges and are dedicated to assisting others. Our Somerset, NJ physical
@@ -394,6 +399,43 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div id="el_KdGzddMoIhMxCYaIc6xI_email_2" style="margin-bottom:16px;"
+                                        class="col-12 form-field-wrapper">
+                                        <div class="f-even form-field-container">
+                                            <div class="form-builder--item field-container"><label
+                                                    class="label-alignment">Education Institute
+                                                    <span>*</span></label>
+                                                <div class="flex-col">
+                                                    <div class="flex email-input"><input
+                                                            placeholder="Education Institute" name="edu_institute"
+                                                            type="text" class="form-control" required></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="el_KdGzddMoIhMxCYaIc6xI_email_2" style="margin-bottom:16px;"
+                                        class="col-12 form-field-wrapper">
+                                        <div class="f-even form-field-container">
+                                            <div class="form-builder--item field-container"><label
+                                                    class="label-alignment">Job Position
+                                                    <span>*</span></label>
+                                                <div class="flex-col">
+                                                    <div class="flex email-input">
+                                                        <select name="job_position" class="form-control"
+                                                            id="job_position">
+                                                            <option value="" selected disabled>Select Job
+                                                                Position</option>
+                                                            <option value="Physical Therapist">Physical Therapist
+                                                            </option>
+                                                            <option value="Physical Therapist Assistant">Physical
+                                                                Therapist Assistant</option>
+                                                            <option value="Acupuncturist">Acupuncturist</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div id="el_KdGzddMoIhMxCYaIc6xI_TvBt09Zkes20icGw8NSm_3"
                                         style="margin-bottom:16px;" class="col-12 form-field-wrapper">
                                         <div class="f-odd form-field-container">
@@ -439,9 +481,9 @@
                                     </div>
                                     <div id="el_KdGzddMoIhMxCYaIc6xI_x6ddPtd403KNEXewZIHA_5"
                                         style="margin-bottom:16px;" class="col-12 form-field-wrapper">
-                                        <div class="f-odd form-field-container"><!---->
-                                            <div class="form-builder--item field-container"><!----><label
-                                                    class="label-alignment">Additional Details <!----></label>
+                                        <div class="f-odd form-field-container">
+                                            <div class="form-builder--item field-container"><label
+                                                    class="label-alignment">Cover Letter</label>
                                                 <div class="flex-col">
                                                     <textarea type="text" placeholder="" name="additional_details" class="form-control"
                                                         data-q="job_application_message" data-required="false" required></textarea><!---->
@@ -502,7 +544,7 @@
                                                     successfully!</p>
                                             </div>
                                         </div>
-                                    </div><!--]--><!---->
+                                    </div>
                                 </div><!---->
                             </div>
                         </form>

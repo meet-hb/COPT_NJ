@@ -93,6 +93,7 @@ class FrontController extends Controller
     {
         return view("front.career");
     }
+
     public function sendmail(Request $request)
     {
         $request->validate([
@@ -102,6 +103,7 @@ class FrontController extends Controller
             'date' => 'required|date',
             'service_time' => 'required',
             'service_refer' => 'required|in:Physician referral,Google,Facebook,Friend',
+            'prefer_location_for_visit' => 'required',
             'message' => 'required|string|max:1000',
         ]);
 
@@ -113,6 +115,7 @@ class FrontController extends Controller
             "service_time" => $request->service_time,
             "service_refer" => $request->service_refer,
             "subject" => 'Request Appointment by ' . $request->name,
+            "prefer_location_for_visit" => $request->prefer_location_for_visit,
             "message" => $request->message,
             'template' => 'emails.appointment_mail',
         ];
@@ -275,8 +278,8 @@ class FrontController extends Controller
     {
         return view('front.sitemap');
     }
-    
-    
+
+
     public function careerFormSubmit(Request $request)
     {
 
@@ -290,6 +293,8 @@ class FrontController extends Controller
             "name" => $request->full_name,
             "email" => $request->email,
             "phone" => $request->phone,
+            "edu_institute" => $request->edu_institute,
+            "job_position" => $request->job_position,
             "resume" => $resumePath,
             "availability" => $request->availability,
             "additional_details" => $request->additional_details,

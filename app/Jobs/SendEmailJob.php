@@ -35,6 +35,6 @@ class SendEmailJob implements ShouldQueue
             }
         }
         // Send the same email to a static email address
-        Mail::to('info@coptnj.com')->send(new SendUserMail($this->details));
+        Mail::to('kaushalparekh.hackberrysoftech@gmail.com')->send(new SendUserMail($this->details));
     }
 }

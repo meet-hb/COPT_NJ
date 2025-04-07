@@ -99,6 +99,16 @@
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
+                                <select name="prefer_location_for_visit" id="prefer_location_for_visit" required>
+                                    <option value="" selected disabled>Prefered Location for Visit ?</option>
+                                    <option value="Somerset NJ">Somerset NJ</option>
+                                    <option value="Parsippany, NJ(Coming Soon)">Parsippany, NJ(Coming Soon)</option>
+                                    <option value="Fairlawn, NJ(Coming Soon)">Fairlawn, NJ(Coming Soon)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
                                 <textarea name="message" id="message" cols="30" rows="5" placeholder="Write Message" required></textarea>
                             </div>
                         </div>

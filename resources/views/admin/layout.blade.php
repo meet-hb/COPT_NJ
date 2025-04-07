@@ -149,6 +149,14 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="{{ route('admin.ourLocations') }}" class="nav-link @yield('ourlocations')">
+                        <i class="nav-icon fa fa-map-marker"></i>
+                        <p>
+                            Our Locations
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="{{ route('admin.faq') }}" class="nav-link @yield('faq')">
                         <i class="nav-icon fas fa-question"></i>
                         <p>
