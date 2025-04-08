@@ -133,7 +133,13 @@ Route::post($admin_url . '/team_delete', [TeamController::class, 'teamDelete'])-
 Route::post($admin_url . '/team/update-position', [TeamController::class, 'updatePosition'])->name('admin.teamUpdatePosition');
 
 Route::get($admin_url . '/our-locations', [OurLocationController::class, 'index'])->name('admin.ourLocations');
-Route::post($admin_url . '/team_list', [TeamController::class, 'teamList'])->name('admin.teamList');
+Route::post($admin_url . '/our-locations_list', [OurLocationController::class, 'ourlocationList'])->name('admin.ourlocationList');
+Route::get($admin_url . '/our-locations_add', [OurLocationController::class, 'ourlocationAdd'])->name('admin.ourlocationAdd');
+Route::post($admin_url . '/our-locations_add', [OurLocationController::class, 'ourlocationAddOp'])->name('admin.ourlocationAddOp');
+Route::get($admin_url . '/our-locations_edit/{id}', [OurLocationController::class, 'ourlocationedit'])->name('admin.ourlocationedit');
+Route::post($admin_url . '/our-locations_edit', [OurLocationController::class, 'ourlocationeditOp'])->name('admin.ourlocationeditOp');
+Route::post($admin_url . '/our-locations_delete', [OurLocationController::class, 'ourlocationDelete'])->name('admin.ourlocationDelete');
+Route::post($admin_url . '/our-locations/update-position', [OurLocationController::class, 'updatePosition'])->name('admin.ourlocationUpdatePosition');
 
 Route::get($admin_url . '/faqs', [FaqController::class, 'faqs'])->name('admin.faq');
 Route::post($admin_url . '/faq_list', [FaqController::class, 'faqList'])->name('admin.faqList');

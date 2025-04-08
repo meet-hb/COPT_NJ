@@ -1,4 +1,4 @@
-@section('team')
+@section('ourlocations')
     active
 @endsection
 <!DOCTYPE html>
@@ -7,7 +7,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Team</title>
+    <title>Our Location</title>
 
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/rowreorder/1.4.1/css/rowReorder.dataTables.min.css">
@@ -15,7 +15,7 @@
     @include('admin.assets.links')
 </head>
 
-<body class="hold-transition sidebar-mini layout-fixed" data-page="show-team">
+<body class="hold-transition sidebar-mini layout-fixed" data-page="show-ourlocation">
     <div class="wrapper">
 
         @include('admin.layout')
@@ -25,12 +25,12 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Team</h1>
+                            <h1 class="m-0">Our Location</h1>
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Home</a></li>
-                                <li class="breadcrumb-item active">Team</li>
+                                <li class="breadcrumb-item active">Our Location</li>
                             </ol>
                         </div>
                     </div>
@@ -43,22 +43,26 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h3 class="card-title">Team List</h3>
-                                    <a href="{{ route('admin.teamAdd') }}" class="btn btn-primary float-right">Add
-                                        Team</a>
+                                    <h3 class="card-title">Our Location List</h3>
+                                    <a href="{{ route('admin.ourlocationAdd') }}"
+                                        class="btn btn-primary float-right">Add Location</a>
                                 </div>
 
                                 <div class="card-body">
-                                    <table id="team_table" class="table table-bordered table-striped"
+                                    <table id="ourlocation_table" class="table table-bordered table-striped"
                                         style="width:100%">
                                         <thead>
                                             <tr>
                                                 <th>id</th>
                                                 <th>#</th>
                                                 <th>Image</th>
-                                                <th>Name</th>
-                                                <th>Position</th>
-                                                <th>Sequence</th>
+                                                <th>location_name</th>
+                                                <th>description</th>
+                                                <th>address</th>
+                                                <th>phone</th>
+                                                <th>fax</th>
+                                                <th>email</th>
+                                                <th>expertise</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -85,60 +89,60 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
-        var teamTableUrl = '{{ route('admin.teamList') }}';
+        var ourlocationTableUrl = '{{ route('admin.ourlocationList') }}';
         var updatePositionUrl = '{{ route('admin.teamUpdatePosition') }}';
         var teamDelete = '{{ route('admin.teamDelete') }}';
 
-        function deleteteam(id) {
-            Swal.fire({
-                title: "Are you sure?",
-                text: "You won't be able to revert this!",
-                icon: "warning",
-                showCancelButton: true,
-                confirmButtonColor: "#3085d6",
-                cancelButtonColor: "#d33",
-                confirmButtonText: "Yes, delete it!",
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    $.ajax({
-                        url: teamDelete,
-                        type: "POST",
-                        headers: {
-                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                        },
-                        data: {
-                            id: id,
-                        },
-                        success: function(response) {
-                            if (response.success) {
-                                Swal.fire(
-                                    "Deleted!",
-                                    "Your file has been deleted.",
-                                    "success"
-                                ).then((result) => {
-                                    if (result.isConfirmed) {
-                                        $("#team_table")
-                                            .DataTable()
-                                            .ajax.reload();
-                                    }
-                                });
-                            } else {
-                                Swal.fire(
-                                    "Error!",
-                                    "An error occurred while deleting the therapy.",
-                                    "error"
-                                );
-                            }
-                        },
-                        error: function(xhr, status, error) {
-                            console.error("AJAX error:", status, error);
-                        },
-                    });
-                }
-            });
-        }
+        // function deleteteam(id) {
+        //     Swal.fire({
+        //         title: "Are you sure?",
+        //         text: "You won't be able to revert this!",
+        //         icon: "warning",
+        //         showCancelButton: true,
+        //         confirmButtonColor: "#3085d6",
+        //         cancelButtonColor: "#d33",
+        //         confirmButtonText: "Yes, delete it!",
+        //     }).then((result) => {
+        //         if (result.isConfirmed) {
+        //             $.ajax({
+        //                 url: teamDelete,
+        //                 type: "POST",
+        //                 headers: {
+        //                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        //                 },
+        //                 data: {
+        //                     id: id,
+        //                 },
+        //                 success: function(response) {
+        //                     if (response.success) {
+        //                         Swal.fire(
+        //                             "Deleted!",
+        //                             "Your file has been deleted.",
+        //                             "success"
+        //                         ).then((result) => {
+        //                             if (result.isConfirmed) {
+        //                                 $("#ourlocation_table")
+        //                                     .DataTable()
+        //                                     .ajax.reload();
+        //                             }
+        //                         });
+        //                     } else {
+        //                         Swal.fire(
+        //                             "Error!",
+        //                             "An error occurred while deleting the therapy.",
+        //                             "error"
+        //                         );
+        //                     }
+        //                 },
+        //                 error: function(xhr, status, error) {
+        //                     console.error("AJAX error:", status, error);
+        //                 },
+        //             });
+        //         }
+        //     });
+        // }
         $(document).ready(function() {
-            const teamTable = $("#team_table").DataTable({
+            const ourlocationTable = $("#ourlocation_table").DataTable({
                 responsive: true,
                 scrollCollapse: true,
                 processing: true,
@@ -147,7 +151,7 @@
                     [5, 'asc']
                 ], // Order by sequence (index 5)
                 ajax: {
-                    url: teamTableUrl,
+                    url: ourlocationTableUrl,
                     type: "POST",
                     headers: {
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -163,24 +167,40 @@
                     }, // Hidden id column
                     {
                         data: "no",
-                        name: "no"
+                        name: "no",
                     },
                     {
                         data: "image",
-                        name: "image"
+                        name: "image",
                     },
                     {
-                        data: "name",
-                        name: "name"
+                        data: "location_name",
+                        name: "location_name",
                     },
                     {
-                        data: "position",
-                        name: "position"
+                        data: "description",
+                        name: "description",
                     },
                     {
-                        data: "sequence",
-                        name: "sequence"
-                    }, // Ensure this column exists
+                        data: "address",
+                        name: "address",
+                    },
+                    {
+                        data: "phone",
+                        name: "phone",
+                    },
+                    {
+                        data: "fax",
+                        name: "fax",
+                    },
+                    {
+                        data: "email",
+                        name: "email",
+                    },
+                    {
+                        data: "expertise",
+                        name: "expertise",
+                    },
                     {
                         data: "action",
                         name: "action",
@@ -197,11 +217,11 @@
                 },
             });
 
-            teamTable.on('row-reorder', function(e, diff, edit) {
+            ourlocationTable.on('row-reorder', function(e, diff, edit) {
                 let positions = [];
 
                 diff.forEach(function(change) {
-                    let rowData = teamTable.row(change.node).data();
+                    let rowData = ourlocationTable.row(change.node).data();
                     positions.push({
                         id: rowData.id,
                         position: change.newPosition + 1
@@ -224,7 +244,7 @@
                     success: function(response) {
                         if (response.success) {
                             Swal.fire("Updated!", "Team positions have been updated.", "success");
-                            $("#team_table").DataTable().ajax.reload(); // Reload DataTable
+                            $("#ourlocation_table").DataTable().ajax.reload(); // Reload DataTable
                         } else {
                             Swal.fire("Error!", response.message || "Unable to update positions.",
                                 "error");
