@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="zxx">
 
-
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -12,7 +11,6 @@
 </head>
 
 <body>
-
     <!-- Start Navbar Area -->
     @include('front.layout')
     <!-- Breadcrumb Section Start -->
@@ -199,8 +197,6 @@
     <button type="button" id="backtotop" class="position-fixed text-center border-0 p-0">
         <i class="ri-arrow-up-line"></i>
     </button>
-
-
     @include('front.assets.js')
 </body>
 
