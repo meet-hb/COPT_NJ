@@ -17,7 +17,7 @@
 </head>
 
 
-<body class="hold-transition sidebar-mini layout-fixed" data-page="add-ourlocation">
+<body class="hold-transition sidebar-mini layout-fixed" data-page="edit-ourlocation">
     <div class="wrapper">
 
         @include('admin.layout')
@@ -49,77 +49,98 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h3 class="card-title">Add New Our Location</h3>
+                                    <h3 class="card-title">Edit Our Location</h3>
 
                                 </div>
                                 <!-- /.card-header -->
                                 <div class="card-body">
                                     <form id="OurLocationForm" enctype="multipart/form-data">
+                                        <input type="hidden" name="id" id="id"
+                                            value="{{ $ourlocation->id }}">
                                         <div class="form-group mb-3">
                                             <label for="locationname" class="form-label">Location Name</label>
                                             <input type="text" class="form-control" name="locationname"
-                                                id="locationname" placeholder="Enter locationname">
+                                                id="locationname" placeholder="Enter locationname"
+                                                value="{{ $ourlocation->location_name }}">
                                             <small id="locationname_error"></small>
                                         </div>
                                         <div class="form-group mb-3">
                                             <label for="locationdetail" class="form-label">Location Detail</label>
                                             <textarea name="locationdetail" id="locationdetail" class="form-control" cols="30" rows="2"
-                                                placeholder="Location Detail"></textarea>
+                                                placeholder="Location Detail">{{ $ourlocation->location_details }}</textarea>
+
 
                                             <small id="locationdetail_error"></small>
                                         </div>
 
-
-
                                         <div class="form-group mb-3">
                                             <label for="description" class="form-label">Description</label>
-                                            <div id="description-quill" class="quill-editor"></div>
+                                            <div id="description-quill" class="quill-editor">{!! $ourlocation->description !!}
+                                            </div>
                                             <small id="description_error"></small>
                                         </div>
+
                                         <div class="form-group mb-3">
                                             <label for="address" class="form-label">Address</label>
-                                            <textarea name="address" id="address" class="form-control" cols="10" rows="2" placeholder="Address"></textarea>
+                                            <textarea name="address" id="address" class="form-control" cols="10" rows="2" placeholder="Address">{{ $ourlocation->address }}</textarea>
                                             <small id="address_error"></small>
                                         </div>
                                         <div class="form-group mb-3">
                                             <label for="phone" class="form-label">Phone Number</label>
                                             <input type="number" class="form-control" name="phone" id="phone"
-                                                placeholder="Phone Number">
+                                                placeholder="Phone Number" value="{{ $ourlocation->phone }}">
                                             <small id="phone_error"></small>
                                         </div>
                                         <div class="form-group mb-3">
                                             <label for="fax" class="form-label">Fax</label>
                                             <input type="text" class="form-control" name="fax" id="fax"
-                                                placeholder="Fax">
+                                                placeholder="Fax" value="{{ $ourlocation->fax }}">
                                             <small id="fax_error"></small>
                                         </div>
                                         <div class="form-group mb-3">
                                             <label for="email" class="form-label">Email</label>
                                             <input type="text" class="form-control" name="email" id="email"
-                                                placeholder="Email">
+                                                placeholder="Email" value="{{ $ourlocation->email }}">
                                             <small id="email_error"></small>
                                         </div>
                                         <div class="form-group mb-3">
                                             <label for="image" class="form-label">Image</label>
-                                            <input type="file" class="form-control" name="image" id="image">
+                                            <input type="file" class="form-control" name="image"
+                                                id="image">
                                             <small id="image_error"></small>
+                                            <div><img alt="" src="{{ Storage::url($ourlocation->images) }}"
+                                                    style="width: 200px; height: 100px;"></div>
                                         </div>
                                         <div class="form-group mb-3">
                                             <label for="expertise" class="form-label">Expertise</label>
                                             <input type="text" class="form-control" name="expertise"
-                                                id="expertise" placeholder="Expertise">
+                                                id="expertise" placeholder="Expertise"
+                                                value="{{ $ourlocation->expertise }}">
                                             {{-- <textarea name="expertise" id="expertise" class="form-control" cols="30" rows="2"></textarea> --}}
                                             <small id="expertise_error"></small>
                                         </div>
+                                        {{-- <div class="form-group mb-3">
+                                            <label for="extra_information" class="form-label">Extra
+                                                Information</label>
+                                            <div id="extra_information-quill" class="quill-editor">
+                                                {!! $ourlocation->extra_information !!}</div>
+                                            <small id="extra_information_error"></small>
+                                        </div> --}}
                                         <div class="form-group mb-3">
                                             <label for="extra_information" class="form-label">Extra
                                                 Information</label>
-                                            <div id="extra_information-quill" class="quill-editor"></div>
+                                            <div id="extra_information-quill" class="quill-editor">
+                                                {!! $ourlocation->extra_information !!}</div>
+                                            <input type="hidden" name="extrainformation" id="extrainformation">
                                             <small id="extra_information_error"></small>
                                         </div>
 
+
                                         <div class="form-group mb-3">
                                             <label class="form-label d-block">Business Hours</label>
+                                            @php
+                                                $businessHours = json_decode($ourlocation->business_hours, true) ?? [];
+                                            @endphp
                                             @php
                                                 $days = [
                                                     'Sunday',
@@ -132,19 +153,25 @@
                                                 ];
                                             @endphp
                                             @foreach ($days as $day)
-                                                @php $dayKey = strtolower($day); @endphp
+                                                @php
+                                                    $dayKey = strtolower($day);
+                                                    $dayData = $businessHours[$dayKey] ?? null;
+                                                    $isChecked = $dayData ? 'checked' : '';
+                                                    $fromTime = $dayData['from'] ?? '09:00';
+                                                    $toTime = $dayData['to'] ?? '17:00';
+                                                @endphp
                                                 <div class="d-flex align-items-center mb-2 business-hour-row">
                                                     <input type="checkbox" class="bh-day-toggle mr-2"
-                                                        data-day="{{ $dayKey }}">
+                                                        data-day="{{ $dayKey }}" {{ $isChecked }}>
                                                     <label class="mr-2 mb-0"
                                                         style="width: 80px;">{{ $day }}</label>
                                                     <input type="time" class="form-control mr-2 bh-from"
                                                         data-day="{{ $dayKey }}" style="width: 150px;"
-                                                        value="09:00">
+                                                        value="{{ $fromTime }}">
                                                     <span class="mr-2">to</span>
                                                     <input type="time" class="form-control bh-to"
                                                         data-day="{{ $dayKey }}" style="width: 150px;"
-                                                        value="17:00">
+                                                        value="{{ $toTime }}">
                                                 </div>
                                             @endforeach
                                             <small id="business_hours_error"></small>
@@ -158,6 +185,7 @@
                                                     class="btn btn-danger">Close</button></a>
                                         </div>
                                     </form>
+
                                 </div>
                             </div>
                         </div>
@@ -183,7 +211,7 @@
 
     {{-- <script src="{{ url('/') }}/assets/admin/ajax/Therapys.js"></script> --}}
     <script>
-        var ourlocationAddOp = '{{ route('admin.ourlocationAddOp') }}';
+        var ourlocationeditOp = '{{ route('admin.ourlocationeditOp') }}';
         var ourlocationhome = '{{ route('admin.ourLocations') }}';
     </script>
 </body>

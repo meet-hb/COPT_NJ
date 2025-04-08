@@ -36,7 +36,6 @@ class OurLocationController extends Controller
         $columnIndex = $order_arr[0]['column'];
         $columnSortOrder = $order_arr[0]['dir'] ?? 'asc';
 
-        // Update columns array to prioritize "sequence"
         $columns = [
             0 => 'id',
             1 => DB::raw('ROW_NUMBER() OVER(ORDER BY id ASC) as no'),
@@ -51,10 +50,6 @@ class OurLocationController extends Controller
         ];
         $columnName = $columns[$columnIndex] ?? 'id';
 
-        // Ensure sorting by sequence
-        // $columnName = $columns[$columnIndex] ?? 'sequence';
-
-        // Build the query with ROW_NUMBER based on sequence
         $query = DB::table('our_locations')
             ->select([
                 'id',
@@ -104,11 +99,14 @@ class OurLocationController extends Controller
                 "email" => $ourlocation->email,
                 "expertise" => $ourlocation->expertise,
                 "action" => '
-                    <a href="' . route('admin.teamedit', $ourlocation->id) . '" class="btn btn-primary btn-sm">
+                    <a href="' . route('admin.ourlocationedit', $ourlocation->id) . '" class="btn btn-primary btn-sm">
                         <i class="fas fa-edit"></i>
                     </a>
-                    <a href="javascript:void(0)" onclick="deleteteam(' . $ourlocation->id . ')" class="btn btn-danger btn-sm">
+                    <a href="javascript:void(0)" onclick="deleteourlocation(' . $ourlocation->id . ')" class="btn btn-danger btn-sm">
                         <i class="fas fa-trash"></i>
+                    </a>
+                     <a href="' . route('admin.ourlocationview', $ourlocation->id) . '" class="btn btn-success btn-sm">
+                       <i class="fas fa-eye"></i>
                     </a>',
             ];
         }
@@ -150,50 +148,57 @@ class OurLocationController extends Controller
         $addourlocation->save();
         return redirect()->back();
     }
-    // public function teamedit($id)
-    // {
-    //     $team = Team::find($id);
-    //     return view("admin.team_edit", compact('team'));
-    // }
-    // public function teameditOp(Request $request)
-    // {
+    public function ourlocationedit($id)
+    {
+        $ourlocation = OurLocation::find($id);
+        return view("admin.our-location_edit", compact('ourlocation'));
+    }
+    public function ourlocationview($id)
+    {
+        $ourlocation = OurLocation::find($id);
+        return view("admin.our-location_view", compact('ourlocation'));
+    }
+    public function ourlocationeditOp(Request $request)
+    {
+        // dd($request->all());
+        $ourlocation = OurLocation::find($request->id);
+        $ourlocation->location_name = $request->locationname;
+        $ourlocation->location_details = $request->locationdetail;
+        $ourlocation->description = $request->description;
+        $ourlocation->address = $request->address;
+        $ourlocation->phone = $request->phone;
+        $ourlocation->fax = $request->fax;
+        $ourlocation->email = $request->email;
+        $ourlocation->business_hours = $request->business_hours;
+        $ourlocation->expertise = $request->expertise;
+        $ourlocation->extra_information = $request->extrainformation;
+        // if ($request->hasFile('image')) {
+        //     $imagePath = $request->file('image')->store('public/ourlocation');
+        //     $ourlocation->images = 'public/ourlocation/' . basename($imagePath);
+        // }
 
-    //     $addteam = Team::find($request->id);
-    //     $addteam->name = $request->name;
-    //     $addteam->position = $request->position;
-    //     $addteam->category = $request->category;
-    //     $addteam->description = $request->description;
-    //     if ($request->hasFile('image')) {
-    //         $imagePath = $request->file('image')->store('public/team');
-    //         $addteam->image = 'public/team/' . basename($imagePath);
-    //     }
-    //     $addteam->save();
-    //     return redirect()->back()->with('success', 'Team updated successfully');
-    // }
+        if ($request->hasFile('image')) {
+            if (!empty($ourlocation->images) && Storage::exists($ourlocation->images)) {
+                Storage::delete($ourlocation->images);
+            }
+
+            $imagePath = $request->file('image')->store('public/ourlocation');
+            $ourlocation->images = $imagePath;
+        }
+
+        $ourlocation->save();
+        return redirect()->back()->with('success', 'Our Location updated successfully');
+    }
 
 
-    // public function teamDelete(Request $request)
-    // {
-    //     $team = Team::find($request->id);
-    //     if ($team) {
-    //         $team->delete();
-    //         return response()->json(['success' => '200', 'message' => 'data deleted successfully!']);
-    //     } else {
-    //         return response()->json(['success' => '404', 'message' => 'data not found']);
-    //     }
-    // }
-
-    // public function updatePosition(Request $request)
-    // {
-    //     $request->validate([
-    //         'positions.*.id' => 'required|exists:teams,id',
-    //         'positions.*.position' => 'required|integer',
-    //     ]);
-
-    //     foreach ($request->positions as $position) {
-    //         Team::where('id', $position['id'])->update(['sequence' => $position['position']]);
-    //     }
-
-    //     return response()->json(['success' => true, 'message' => 'Positions updated successfully.']);
-    // }
+    public function ourlocationDelete(Request $request)
+    {
+        $ourlocation = OurLocation::find($request->id);
+        if ($ourlocation) {
+            $ourlocation->delete();
+            return response()->json(['success' => '200', 'message' => 'data deleted successfully!']);
+        } else {
+            return response()->json(['success' => '404', 'message' => 'data not found']);
+        }
+    }
 }

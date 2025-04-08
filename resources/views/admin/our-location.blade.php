@@ -56,13 +56,13 @@
                                                 <th>id</th>
                                                 <th>#</th>
                                                 <th>Image</th>
-                                                <th>location_name</th>
-                                                <th>description</th>
-                                                <th>address</th>
-                                                <th>phone</th>
-                                                <th>fax</th>
-                                                <th>email</th>
-                                                <th>expertise</th>
+                                                <th>Location Name</th>
+                                                <th>Description</th>
+                                                <th>Address</th>
+                                                <th>Phone</th>
+                                                <th>Fax</th>
+                                                <th>Email</th>
+                                                <th>Expertise</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -90,57 +90,56 @@
 
     <script>
         var ourlocationTableUrl = '{{ route('admin.ourlocationList') }}';
-        var updatePositionUrl = '{{ route('admin.teamUpdatePosition') }}';
-        var teamDelete = '{{ route('admin.teamDelete') }}';
+        var ourlocationDelete = '{{ route('admin.ourlocationDelete') }}';
 
-        // function deleteteam(id) {
-        //     Swal.fire({
-        //         title: "Are you sure?",
-        //         text: "You won't be able to revert this!",
-        //         icon: "warning",
-        //         showCancelButton: true,
-        //         confirmButtonColor: "#3085d6",
-        //         cancelButtonColor: "#d33",
-        //         confirmButtonText: "Yes, delete it!",
-        //     }).then((result) => {
-        //         if (result.isConfirmed) {
-        //             $.ajax({
-        //                 url: teamDelete,
-        //                 type: "POST",
-        //                 headers: {
-        //                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        //                 },
-        //                 data: {
-        //                     id: id,
-        //                 },
-        //                 success: function(response) {
-        //                     if (response.success) {
-        //                         Swal.fire(
-        //                             "Deleted!",
-        //                             "Your file has been deleted.",
-        //                             "success"
-        //                         ).then((result) => {
-        //                             if (result.isConfirmed) {
-        //                                 $("#ourlocation_table")
-        //                                     .DataTable()
-        //                                     .ajax.reload();
-        //                             }
-        //                         });
-        //                     } else {
-        //                         Swal.fire(
-        //                             "Error!",
-        //                             "An error occurred while deleting the therapy.",
-        //                             "error"
-        //                         );
-        //                     }
-        //                 },
-        //                 error: function(xhr, status, error) {
-        //                     console.error("AJAX error:", status, error);
-        //                 },
-        //             });
-        //         }
-        //     });
-        // }
+        function deleteourlocation(id) {
+            Swal.fire({
+                title: "Are you sure?",
+                text: "You won't be able to revert this!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, delete it!",
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        url: ourlocationDelete,
+                        type: "POST",
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        },
+                        data: {
+                            id: id,
+                        },
+                        success: function(response) {
+                            if (response.success) {
+                                Swal.fire(
+                                    "Deleted!",
+                                    "Your file has been deleted.",
+                                    "success"
+                                ).then((result) => {
+                                    if (result.isConfirmed) {
+                                        $("#ourlocation_table")
+                                            .DataTable()
+                                            .ajax.reload();
+                                    }
+                                });
+                            } else {
+                                Swal.fire(
+                                    "Error!",
+                                    "An error occurred while deleting the therapy.",
+                                    "error"
+                                );
+                            }
+                        },
+                        error: function(xhr, status, error) {
+                            console.error("AJAX error:", status, error);
+                        },
+                    });
+                }
+            });
+        }
         $(document).ready(function() {
             const ourlocationTable = $("#ourlocation_table").DataTable({
                 responsive: true,
@@ -208,56 +207,11 @@
                         searchable: false
                     },
                 ],
-                rowReorder: {
-                    dataSrc: 'no', // Correct source
-                    update: false, // Don't auto-update, we handle it
-                },
+
                 drawCallback: function() {
                     console.log("DataTable redrawn");
                 },
             });
-
-            ourlocationTable.on('row-reorder', function(e, diff, edit) {
-                let positions = [];
-
-                diff.forEach(function(change) {
-                    let rowData = ourlocationTable.row(change.node).data();
-                    positions.push({
-                        id: rowData.id,
-                        position: change.newPosition + 1
-                    });
-                });
-
-                if (positions.length) {
-                    updatePositions(positions);
-                }
-            });
-
-            function updatePositions(positions) {
-                $.ajax({
-                    url: updatePositionUrl, // URL to the route handling position updates
-                    method: "POST",
-                    data: {
-                        _token: "{{ csrf_token() }}",
-                        positions: positions
-                    },
-                    success: function(response) {
-                        if (response.success) {
-                            Swal.fire("Updated!", "Team positions have been updated.", "success");
-                            $("#ourlocation_table").DataTable().ajax.reload(); // Reload DataTable
-                        } else {
-                            Swal.fire("Error!", response.message || "Unable to update positions.",
-                                "error");
-                        }
-                    },
-                    error: function(xhr, status, error) {
-                        Swal.fire("Error!", "An error occurred while updating positions.", "error");
-                        console.error("Update Error:", xhr.responseText);
-                    },
-                });
-            }
-
-
 
         });
     </script>

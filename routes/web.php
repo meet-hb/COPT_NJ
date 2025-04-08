@@ -139,7 +139,7 @@ Route::post($admin_url . '/our-locations_add', [OurLocationController::class, 'o
 Route::get($admin_url . '/our-locations_edit/{id}', [OurLocationController::class, 'ourlocationedit'])->name('admin.ourlocationedit');
 Route::post($admin_url . '/our-locations_edit', [OurLocationController::class, 'ourlocationeditOp'])->name('admin.ourlocationeditOp');
 Route::post($admin_url . '/our-locations_delete', [OurLocationController::class, 'ourlocationDelete'])->name('admin.ourlocationDelete');
-Route::post($admin_url . '/our-locations/update-position', [OurLocationController::class, 'updatePosition'])->name('admin.ourlocationUpdatePosition');
+Route::get($admin_url . '/our-locations/ourlocationview/{id}', [OurLocationController::class, 'ourlocationview'])->name('admin.ourlocationview');
 
 Route::get($admin_url . '/faqs', [FaqController::class, 'faqs'])->name('admin.faq');
 Route::post($admin_url . '/faq_list', [FaqController::class, 'faqList'])->name('admin.faqList');
