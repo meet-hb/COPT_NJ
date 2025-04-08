@@ -484,8 +484,10 @@
                                             alt="Image">
                                     </div>
                                     <div class="service-info">
-                                        <h3><a href="{{ route('front.howWeTreat', ['Alter-G']) }}">Alter-G
-                                                Treadmill</a></h3>
+                                        <h3>
+                                            <a href="{{ route('front.howWeTreat', ['Alter-G']) }}">Alter-G
+                                                Treadmill</a>
+                                        </h3>
                                         <p>The term “anti-gravity” admittedly makes it sound like a contraption from a
                                             science-fiction universe. In reality, this treadmill was created using
                                             advanced contemporary science and technology. The Differential Air Pressure

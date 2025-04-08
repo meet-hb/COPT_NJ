@@ -31,19 +31,38 @@
         </div>
         {{-- <i class="address-close icon-close">x</i> --}}
     </div>
-    <div class="container-fluid">
-        <ul class="header-links container iconn-con">
-            <li class="call"><a href="tel:7328469400" class="call-tracking btn enable-act">(732) 846-9400</a></li>
-            <li class="review"><a href="javascript::void(0)" target="_blank" class="btn">Review Us</a></li>
-            <div class="option-item">
-                <a href="{{ route('front.appointment') }}" class="btn-two">Request Appointment</a>
+    <div class="container-fluid" style="overflow: hidden;">
+        <div class="container">
+            <div class="top d-flex justify-content-between align-items-center">
+
+                <a class="navbar-brand d-flex" href="{{ url('/') }}">
+                    <div class="logo-part d-flex container gap-3">
+                        <img class="logo-light"
+                            src="{{ url('/') }}/assets/front/img/comprehensive-orthopedic-physical-therapy-logo-somerset-nj-300x138.png"
+                            alt="logo">
+                        <img class="logo-light" src="{{ url('/') }}/assets/front/img/Reactive-trans.png"
+                            alt="logo">
+                    </div>
+
+                    <!-- <img class="logo-dark" src="{{ url('/') }}/assets/front/img/logo-white.webp" alt="logo"> -->
+                </a>
+                <ul class="header-links container iconn-con">
+                    <li class="call"><a href="tel:7328469400" class="call-tracking btn enable-act">(732) 846-9400</a>
+                    </li>
+                    <li class="review"><a href="javascript::void(0)" target="_blank" class="btn">Review Us</a></li>
+                    <div class="option-item">
+                        <a href="{{ route('front.appointment') }}" class="btn-two">Request Appointment</a>
+                    </div>
+                </ul>
             </div>
-        </ul>
+
+        </div>
+
 
 
         <nav class="navbar navbar-expand-lg container-fluid">
 
-            <a class="navbar-brand d-flex" href="{{ url('/') }}">
+            {{-- <a class="navbar-brand d-flex" href="{{ url('/') }}">
                 <div class="logo-part d-flex container gap-3">
                     <img class="logo-light"
                         src="{{ url('/') }}/assets/front/img/comprehensive-orthopedic-physical-therapy-logo-somerset-nj-300x138.png"
@@ -52,9 +71,9 @@
                         alt="logo">
                 </div>
 
-                <!-- <img class="logo-dark" src="{{ url('/') }}/assets/front/img/logo-white.webp" alt="logo"> -->
-            </a>
-            <div class="d-lg-none call-icon ms-5">
+                 <img class="logo-dark" src="{{ url('/') }}/assets/front/img/logo-white.webp" alt="logo">
+            </a> --}}
+            <div class="d-none call-icon ms-5">
                 <a class="sidebar-toggler">
                     <a href="tel:7328469400">
                         <img src="{{ url('/') }}/assets/front/img/icons8-call-40.png" alt="Image"></a>

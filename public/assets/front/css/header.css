@@ -12,7 +12,7 @@
 .navbar-area.sticky .navbar {
   border-radius: 0;
   padding-top: 5px;
-  padding-bottom: 5px;
+  /* padding-bottom: 5px; */
 }
 
 .navbar-area.header-one,
