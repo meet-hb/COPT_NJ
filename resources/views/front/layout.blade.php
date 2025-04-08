@@ -125,7 +125,7 @@
                         <a href="javascript:void(0)" class="dropdown-toggle nav-link">
                             What We Treat
                         </a>
-                        <ul class="dropdown-menu" style="width:600px">
+                        <ul class="dropdown-menu we">
                             <div class="row">
                                 <div class="col-lg-6">
                                     @foreach ($firstHalf as $treat)
