@@ -47,6 +47,7 @@
     <script src="{{ url('/') }}/assets/admin/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
     <!-- AdminLTE App -->
     <script src="{{ url('/') }}/assets/admin/dist/js/adminlte.js"></script>
+    <script src="https://kit.fontawesome.com/2e81685459.js" crossorigin="anonymous"></script>
 
     <script>
         function reloadPage() {

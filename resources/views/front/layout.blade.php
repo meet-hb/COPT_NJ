@@ -72,7 +72,7 @@
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a href="javascript:void(0)" class="dropdown-toggle nav-link">
+                        <a href="{{ route('front.our-practice') }}" class="dropdown-toggle nav-link">
                             About Us
                         </a>
                         <ul class="dropdown-menu">
@@ -130,7 +130,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="javascript:void(0)" class="dropdown-toggle nav-link">
+                        <a href="{{ route('front.patientInfo') }}" class="dropdown-toggle nav-link">
                             Patient Info
                         </a>
                         <ul class="dropdown-menu">

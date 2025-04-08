@@ -67,8 +67,10 @@
             <p><span class="label">Name:</span> {{ $details['name'] ?? 'N/A' }}</p>
             <p><span class="label">Email:</span> {{ $details['email'] ?? 'N/A' }}</p>
             <p><span class="label">Phone:</span> {{ $details['phone'] ?? 'N/A' }}</p>
+            <p><span class="label">Educational Institute:</span> {{ $details['edu_institute'] ?? 'N/A' }}</p>
+            <p><span class="label">Job Position:</span> {{ $details['job_position'] ?? 'N/A' }}</p>
             <p><span class="label">Availability:</span> {{ $details['availability'] ?? 'N/A' }}</p>
-            <p><span class="label">Additional Details:</span> {{ $details['additional_details'] ?? 'N/A' }}</p>
+            <p><span class="label">Cover Letter:</span> {{ $details['additional_details'] ?? 'N/A' }}</p>
         </div>
 
         <!-- Footer -->

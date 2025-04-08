@@ -29,4 +29,65 @@
             display: block !important;
         }
     }
+
+    /* Add this to your CSS */
+    .social-profile {
+        display: flex;
+        gap: 10px;
+        /* space between icons */
+        padding: 0;
+        margin-top: 15px;
+    }
+
+    .social-profile li {
+        list-style: none;
+    }
+
+    .social-profile li a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: #00b2a9;
+        /* Match your site theme */
+        color: white;
+        font-size: 16px;
+        transition: 0.3s ease;
+    }
+
+    .social-profile li a:hover {
+        background-color: #008a84;
+    }
+
+    .contact-info li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        color: #fff;
+    }
+
+    .contact-info li span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #00b2a9;
+        color: white;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        margin-right: 10px;
+        font-size: 16px;
+    }
+
+    .footer-widget {
+        margin-bottom: 30px;
+    }
+
+    .footer-widget-title {
+        margin-bottom: 15px;
+        font-weight: bold;
+        color: #fff;
+    }
 </style>

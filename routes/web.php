@@ -11,6 +11,7 @@ use App\Http\Controllers\TherapyController;
 use App\Http\Controllers\TreatmentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FaqController;
+use App\Http\Controllers\OurLocationController;
 use App\Http\Controllers\SettingController;
 
 /*
@@ -130,6 +131,9 @@ Route::get($admin_url . '/team_edit/{id}', [TeamController::class, 'teamedit'])-
 Route::post($admin_url . '/team_edit', [TeamController::class, 'teameditOp'])->name('admin.teameditOp');
 Route::post($admin_url . '/team_delete', [TeamController::class, 'teamDelete'])->name('admin.teamDelete');
 Route::post($admin_url . '/team/update-position', [TeamController::class, 'updatePosition'])->name('admin.teamUpdatePosition');
+
+Route::get($admin_url . '/our-locations', [OurLocationController::class, 'index'])->name('admin.ourLocations');
+Route::post($admin_url . '/team_list', [TeamController::class, 'teamList'])->name('admin.teamList');
 
 Route::get($admin_url . '/faqs', [FaqController::class, 'faqs'])->name('admin.faq');
 Route::post($admin_url . '/faq_list', [FaqController::class, 'faqList'])->name('admin.faqList');

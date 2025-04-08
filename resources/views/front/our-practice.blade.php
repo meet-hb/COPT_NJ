@@ -194,7 +194,8 @@
                     skills, and, of course, provide an exceptional team environment.
                 </p>
                 <p>
-                    <a href="#" style="color: #00bfb3; text-decoration: none;">Request an appointment</a> at
+                    <a href="{{ route('front.appointment') }}" style="color: #00bfb3; text-decoration: none;">Request
+                        an appointment</a> at
                     COPT with
                     one of our physical therapists today! We will be happy to meet
                     with you and create a plan for your journey toward health, healing, and pain relief.
@@ -257,7 +258,7 @@
                 </p>
                 <p>
                     We would be delighted to speak with you and work with you to create a treatment plan that will get
-                    you on the road to healing and relief from pain. <a href="#"
+                    you on the road to healing and relief from pain. <a href="{{ route('front.appointment') }}"
                         style="color: #00bfb3; text-decoration: none;">Request an appointment</a> in Somerset, NJ
                     today!
                 </p>
