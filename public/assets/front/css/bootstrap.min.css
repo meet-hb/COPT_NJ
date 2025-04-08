@@ -4529,7 +4529,7 @@ fieldset:disabled .btn {
     flex-wrap: inherit;
     align-items: center;
     justify-content: space-between;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .navbar-brand {

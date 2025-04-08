@@ -31,8 +31,8 @@
         </div>
         {{-- <i class="address-close icon-close">x</i> --}}
     </div>
-    <div class="container-fluid" style="overflow: hidden;">
-        <div class="container">
+    <div class="container-fluid">
+        <div class="container p-2">
             <div class="top d-flex justify-content-between align-items-center">
 
                 <a class="navbar-brand d-flex" href="{{ url('/') }}">
@@ -54,6 +54,14 @@
                         <a href="{{ route('front.appointment') }}" class="btn-two">Request Appointment</a>
                     </div>
                 </ul>
+                <a class="navbar-toggler" data-bs-toggle="offcanvas" href="#navbarOffcanvas" role="button"
+                    aria-controls="navbarOffcanvas">
+                    <span class="burger-menu">
+                        <span class="top-bar"></span>
+                        <span class="middle-bar"></span>
+                        <span class="bottom-bar"></span>
+                    </span>
+                </a>
             </div>
 
         </div>
@@ -79,14 +87,7 @@
                         <img src="{{ url('/') }}/assets/front/img/icons8-call-40.png" alt="Image"></a>
                 </a>
             </div>
-            <a class="navbar-toggler" data-bs-toggle="offcanvas" href="#navbarOffcanvas" role="button"
-                aria-controls="navbarOffcanvas">
-                <span class="burger-menu">
-                    <span class="top-bar"></span>
-                    <span class="middle-bar"></span>
-                    <span class="bottom-bar"></span>
-                </span>
-            </a>
+
 
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav ms-auto">

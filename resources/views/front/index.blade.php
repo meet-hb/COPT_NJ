@@ -31,7 +31,7 @@
                                 <p>Stay Healthy With Physical Therapy</p>
                             </div> -->
                             <div class="hero-content"
-                                style="background-color: rgba(255, 255, 255, .85); border-radius: .63rem; justify-content: center; padding: 2rem;">
+                                style="background-color: rgba(255, 255, 255, .65); border-radius: .63rem; justify-content: center; padding: 2rem;">
                                 <!-- <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Physical Therapy
                                     Somerset, NJ - Comprehensive Orthopedic PT</span> -->
                                 <h2>Individualized Hands-On
@@ -62,7 +62,7 @@
                         <div class="hero-slide-item bg-f hero-slide-two">
 
                             <div class="hero-content"
-                                style="background-color: rgba(255, 255, 255, .85); border-radius: .63rem; justify-content: center; padding: 2rem;">
+                                style="background-color: rgba(255, 255, 255, .65); border-radius: .63rem; justify-content: center; padding: 2rem;">
                                 <h2>Individualized Hands-On
                                     Treatment, Including
                                     Acupuncture, To Help You Live
@@ -89,7 +89,7 @@
                                 <p>Stay Healthy With Physical Therapy</p>
                             </div> -->
                             <div class="hero-content"
-                                style="background-color: rgba(255, 255, 255, .85); border-radius: .63rem; justify-content: center; padding: 2rem;">
+                                style="background-color: rgba(255, 255, 255, .65); border-radius: .63rem; justify-content: center; padding: 2rem;">
                                 <!-- <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">24/7 Service
                                     Available </span> -->
                                 <h2>Individualized Hands-On
@@ -126,7 +126,7 @@
                                 <p>Stay Healthy With Physical Therapy</p>
                             </div> -->
                             <div class="hero-content"
-                                style="background-color: rgba(255, 255, 255, .85); border-radius: .63rem; justify-content: center; padding: 2rem;">
+                                style="background-color: rgba(255, 255, 255, .65); border-radius: .63rem; justify-content: center; padding: 2rem;">
                                 <!-- <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">24/7 Service
                                     Available </span> -->
                                 <h2>Individualized Hands-On
