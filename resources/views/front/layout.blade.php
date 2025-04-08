@@ -1,6 +1,9 @@
 @php
     $howWeTreats = howWeTreat();
     $whatWeTreat = whatWeTreat();
+    $half = ceil($whatWeTreat->count() / 2);
+    $firstHalf = $whatWeTreat->slice(0, $half);
+    $secondHalf = $whatWeTreat->slice($half);
 @endphp
 
 
@@ -125,7 +128,7 @@
                         <ul class="dropdown-menu" style="width:600px">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    @foreach ($whatWeTreat as $treat)
+                                    @foreach ($firstHalf as $treat)
                                         <li class="nav-item">
                                             <a href="{{ route('front.whatWeTreat', $treat->treatment_name) }}"
                                                 class="nav-link">
@@ -135,7 +138,7 @@
                                     @endforeach
                                 </div>
                                 <div class="col-lg-6">
-                                    @foreach ($whatWeTreat as $treat)
+                                    @foreach ($secondHalf as $treat)
                                         <li class="nav-item">
                                             <a href="{{ route('front.whatWeTreat', $treat->treatment_name) }}"
                                                 class="nav-link">
@@ -145,7 +148,6 @@
                                     @endforeach
                                 </div>
                             </div>
-
                         </ul>
                     </li>
                     <li class="nav-item">
