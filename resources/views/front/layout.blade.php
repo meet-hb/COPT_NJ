@@ -122,15 +122,30 @@
                         <a href="javascript:void(0)" class="dropdown-toggle nav-link">
                             What We Treat
                         </a>
-                        <ul class="dropdown-menu" style="overflow: auto;height: 600px;">
-                            @foreach ($whatWeTreat as $treat)
-                                <li class="nav-item">
-                                    <a href="{{ route('front.whatWeTreat', $treat->treatment_name) }}"
-                                        class="nav-link">
-                                        {{ strtoupper($treat->treatment_name) }}
-                                    </a>
-                                </li>
-                            @endforeach
+                        <ul class="dropdown-menu" style="width:600px">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    @foreach ($whatWeTreat as $treat)
+                                        <li class="nav-item">
+                                            <a href="{{ route('front.whatWeTreat', $treat->treatment_name) }}"
+                                                class="nav-link">
+                                                {{ strtoupper($treat->treatment_name) }}
+                                            </a>
+                                        </li>
+                                    @endforeach
+                                </div>
+                                <div class="col-lg-6">
+                                    @foreach ($whatWeTreat as $treat)
+                                        <li class="nav-item">
+                                            <a href="{{ route('front.whatWeTreat', $treat->treatment_name) }}"
+                                                class="nav-link">
+                                                {{ strtoupper($treat->treatment_name) }}
+                                            </a>
+                                        </li>
+                                    @endforeach
+                                </div>
+                            </div>
+
                         </ul>
                     </li>
                     <li class="nav-item">
