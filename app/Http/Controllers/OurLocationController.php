@@ -145,11 +145,11 @@ class OurLocationController extends Controller
             $imagePath = $request->file('image')->store('public/ourlocation');
             $addourlocation->images = 'public/ourlocation/' . basename($imagePath);
         }
-
-        if ($request->hasFile('other_image')) {
+        // dd($request->other_images);
+        if ($request->hasFile('other_images')) {
             $otherImagePaths = [];
 
-            foreach ($request->file('other_image') as $file) {
+            foreach ($request->file('other_images') as $file) {
                 $path = $file->store('public/ourlocation');
                 $otherImagePaths[] = 'public/ourlocation/' . basename($path);
             }
@@ -198,6 +198,29 @@ class OurLocationController extends Controller
             $ourlocation->images = $imagePath;
         }
 
+        if ($request->hasFile('other_images')) {
+
+            if (!empty($ourlocation->other_images)) {
+                $oldOtherImages = explode(',', $ourlocation->other_images);
+
+                foreach ($oldOtherImages as $oldImage) {
+                    if (Storage::exists($oldImage)) {
+                        Storage::delete($oldImage);
+                    }
+                }
+            }
+
+            $otherImagePaths = [];
+
+            foreach ($request->file('other_images') as $file) {
+                $path = $file->store('public/ourlocation');
+                $otherImagePaths[] = 'public/ourlocation/' . basename($path);
+            }
+
+            // Store as comma-separated string
+            $ourlocation->other_images = implode(',', $otherImagePaths);
+        }
+
         $ourlocation->save();
         return redirect()->back()->with('success', 'Our Location updated successfully');
     }
@@ -207,6 +230,21 @@ class OurLocationController extends Controller
     {
         $ourlocation = OurLocation::find($request->id);
         if ($ourlocation) {
+            if (!empty($ourlocation->images) && Storage::exists($ourlocation->images)) {
+                Storage::delete($ourlocation->images);
+            }
+
+            // Delete other images
+            if (!empty($ourlocation->other_images)) {
+                $otherImages = explode(',', $ourlocation->other_images);
+
+                foreach ($otherImages as $image) {
+                    if (Storage::exists($image)) {
+                        Storage::delete($image);
+                    }
+                }
+            }
+
             $ourlocation->delete();
             return response()->json(['success' => '200', 'message' => 'data deleted successfully!']);
         } else {

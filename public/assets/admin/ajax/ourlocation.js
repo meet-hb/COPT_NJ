@@ -127,13 +127,13 @@ $(document).ready(function () {
                     },
                     phone: {
                         required: true,
-                        digits: true,
-                        minlength: 10,
-                        maxlength: 10,
+                        // digits: true,
+                        // minlength: 10,
+                        // maxlength: 10,
                     },
-                    fax: {
-                        required: true,
-                    },
+                    // fax: {
+                    //     // required: true,
+                    // },
                     email: {
                         required: true,
                     },
@@ -145,6 +145,11 @@ $(document).ready(function () {
                     },
                     description: {
                         required: true,
+                    },
+                    "other_images[]": {
+                        required: true,
+                        extension: "jpg|jpeg|png|gif",
+                        filesize: 5 * 1024 * 1024, // 5 MB max file size
                     },
                 },
                 messages: {
@@ -157,7 +162,7 @@ $(document).ready(function () {
                         filesize: "max file size 5MB",
                     },
                     locationdetail: {
-                        required: " Location Detail is required",
+                        required: " Location Link is required",
                     },
                     address: {
                         required: " Address is required",
@@ -165,9 +170,9 @@ $(document).ready(function () {
                     phone: {
                         required: " Phone is required",
                     },
-                    fax: {
-                        required: " Fax is required",
-                    },
+                    // fax: {
+                    //     required: " Fax is required",
+                    // },
                     email: {
                         required: " Email is required",
                     },
@@ -179,6 +184,11 @@ $(document).ready(function () {
                     },
                     description: {
                         required: " Description is required",
+                    },
+                    "other_images[]": {
+                        required: "image is required",
+                        extension: "jpg|jpeg|png|gif",
+                        filesize: "max file size 5MB",
                     },
                 },
                 errorElement: "small",
@@ -320,13 +330,13 @@ $(document).ready(function () {
                     },
                     phone: {
                         required: true,
-                        digits: true,
-                        minlength: 10,
-                        maxlength: 10,
+                        // digits: true,
+                        // minlength: 10,
+                        // maxlength: 10,
                     },
-                    fax: {
-                        required: true,
-                    },
+                    // fax: {
+                    //     required: true,
+                    // },
                     email: {
                         required: true,
                     },
@@ -350,7 +360,7 @@ $(document).ready(function () {
                     //     filesize: "max file size 5MB",
                     // },
                     locationdetail: {
-                        required: " Location Detail is required",
+                        required: " Location Link is required",
                     },
                     address: {
                         required: " Address is required",
@@ -358,9 +368,9 @@ $(document).ready(function () {
                     phone: {
                         required: " Phone is required",
                     },
-                    fax: {
-                        required: " Fax is required",
-                    },
+                    // fax: {
+                    //     required: " Fax is required",
+                    // },
                     email: {
                         required: " Email is required",
                     },
