@@ -7904,7 +7904,7 @@ input[type=submit] {
   }
 
   img {
-    max-width: 100% !important;
+    max-width: 80% !important;
     height: auto;
   }
 }
