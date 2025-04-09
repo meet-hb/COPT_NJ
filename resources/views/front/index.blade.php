@@ -158,11 +158,7 @@
                                 medical history, and any health constraints you might have. Our physical therapist will
                                 then devise a personalized treatment plan to help you get back on your feet.</p>
 
-                            <div class="hero-btn" bis_skin_checked="1">
-                                <a href="{{ route('front.whatWeTreat', ['View More Conditions']) }}" class="btn-one"
-                                    bis_skin_checked="1">View All Conditions</a>
-
-                            </div>
+                           
                             <!-- <ul class="content-feature-list list-style">
                                 <li><i class="ri-check-line"></i>Refresing to get such a personal touch.</li>
                                 <li><i class="ri-check-line"></i>Duis aute irure dolor in reprehenderit in voluptate.
@@ -399,7 +395,7 @@
                 <div class="condition-item">
                     <a href="{{ route('front.whatWeTreat', ['View More Conditions']) }}"
                         class="condition-item-inner">
-                        <div class="condition-icon">
+                        <div class="condition-icon" style="background-color: #1f2a44;">
                             <svg id="Group_3811" data-name="Group 3811" xmlns="http://www.w3.org/2000/svg"
                                 width="127.738" height="127.738" viewBox="0 0 127.738 127.738">
                                 <path id="Path_1546" data-name="Path 1546"
