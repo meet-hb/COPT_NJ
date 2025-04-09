@@ -157,6 +157,14 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="{{ route('admin.jobs') }}" class="nav-link @yield('jobs')">
+                        <i class="nav-icon fa fa-briefcase"></i>
+                        <p>
+                            Jobs
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="{{ route('admin.faq') }}" class="nav-link @yield('faq')">
                         <i class="nav-icon fas fa-question"></i>
                         <p>

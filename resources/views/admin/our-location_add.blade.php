@@ -62,7 +62,7 @@
                                             <small id="locationname_error"></small>
                                         </div>
                                         <div class="form-group mb-3">
-                                            <label for="locationdetail" class="form-label">Location Detail</label>
+                                            <label for="locationdetail" class="form-label">Location Link</label>
                                             <textarea name="locationdetail" id="locationdetail" class="form-control" cols="30" rows="2"
                                                 placeholder="Location Detail"></textarea>
 
@@ -83,7 +83,7 @@
                                         </div>
                                         <div class="form-group mb-3">
                                             <label for="phone" class="form-label">Phone Number</label>
-                                            <input type="number" class="form-control" name="phone" id="phone"
+                                            <input type="text" class="form-control" name="phone" id="phone"
                                                 placeholder="Phone Number">
                                             <small id="phone_error"></small>
                                         </div>

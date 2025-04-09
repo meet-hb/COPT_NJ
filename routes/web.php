@@ -11,6 +11,7 @@ use App\Http\Controllers\TherapyController;
 use App\Http\Controllers\TreatmentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FaqController;
+use App\Http\Controllers\JobController;
 use App\Http\Controllers\OurLocationController;
 use App\Http\Controllers\SettingController;
 
@@ -140,6 +141,15 @@ Route::get($admin_url . '/our-locations_edit/{id}', [OurLocationController::clas
 Route::post($admin_url . '/our-locations_edit', [OurLocationController::class, 'ourlocationeditOp'])->name('admin.ourlocationeditOp');
 Route::post($admin_url . '/our-locations_delete', [OurLocationController::class, 'ourlocationDelete'])->name('admin.ourlocationDelete');
 Route::get($admin_url . '/our-locations/ourlocationview/{id}', [OurLocationController::class, 'ourlocationview'])->name('admin.ourlocationview');
+
+Route::get($admin_url . '/jobs', [JobController::class, 'jobs'])->name('admin.jobs');
+Route::post($admin_url . '/job_list', [JobController::class, 'jobList'])->name('admin.jobList');
+Route::get($admin_url . '/job_add', [JobController::class, 'jobAdd'])->name('admin.jobAdd');
+Route::post($admin_url . '/job_add', [JobController::class, 'jobAddOp'])->name('admin.jobAddOp');
+Route::post($admin_url . '/job_delete', [JobController::class, 'jobDelete'])->name('admin.jobDelete');
+Route::post($admin_url . '/jobs/update-position', [JobController::class, 'updatePosition'])->name('admin.jobUpdatePosition');
+
+
 
 Route::get($admin_url . '/faqs', [FaqController::class, 'faqs'])->name('admin.faq');
 Route::post($admin_url . '/faq_list', [FaqController::class, 'faqList'])->name('admin.faqList');

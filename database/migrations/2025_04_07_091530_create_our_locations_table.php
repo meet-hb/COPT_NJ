@@ -18,12 +18,13 @@ return new class extends Migration
             $table->text('description');
             $table->string('address', 255);
             $table->string('phone', 20);
-            $table->string('fax', 20);
+            $table->string('fax', 20)->nullable();
             $table->string('email', 255);
             $table->text('images');
             $table->text('business_hours');
             $table->text('expertise')->nullable();
             $table->text('extra_information')->nullable();
+            $table->longText('other_images');
             $table->boolean('is_active')->default(1)->comment('1=Active, 0=Inactive');
             $table->boolean('is_deleted')->default(0)->comment('1=Deleted, 0=Not Deleted');
             $table->timestamps();

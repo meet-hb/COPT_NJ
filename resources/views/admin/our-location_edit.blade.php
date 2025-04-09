@@ -87,7 +87,7 @@
                                         </div>
                                         <div class="form-group mb-3">
                                             <label for="phone" class="form-label">Phone Number</label>
-                                            <input type="number" class="form-control" name="phone" id="phone"
+                                            <input type="text" class="form-control" name="phone" id="phone"
                                                 placeholder="Phone Number" value="{{ $ourlocation->phone }}">
                                             <small id="phone_error"></small>
                                         </div>
@@ -103,14 +103,7 @@
                                                 placeholder="Email" value="{{ $ourlocation->email }}">
                                             <small id="email_error"></small>
                                         </div>
-                                        <div class="form-group mb-3">
-                                            <label for="image" class="form-label">Image</label>
-                                            <input type="file" class="form-control" name="image"
-                                                id="image">
-                                            <small id="image_error"></small>
-                                            <div><img alt="" src="{{ Storage::url($ourlocation->images) }}"
-                                                    style="width: 200px; height: 100px;"></div>
-                                        </div>
+
                                         <div class="form-group mb-3">
                                             <label for="expertise" class="form-label">Expertise</label>
                                             <input type="text" class="form-control" name="expertise"
@@ -126,14 +119,7 @@
                                                 {!! $ourlocation->extra_information !!}</div>
                                             <small id="extra_information_error"></small>
                                         </div> --}}
-                                        <div class="form-group mb-3">
-                                            <label for="extra_information" class="form-label">Extra
-                                                Information</label>
-                                            <div id="extra_information-quill" class="quill-editor">
-                                                {!! $ourlocation->extra_information !!}</div>
-                                            <input type="hidden" name="extrainformation" id="extrainformation">
-                                            <small id="extra_information_error"></small>
-                                        </div>
+
 
 
                                         <div class="form-group mb-3">
@@ -175,6 +161,31 @@
                                                 </div>
                                             @endforeach
                                             <small id="business_hours_error"></small>
+                                        </div>
+
+                                        <div class="form-group mb-3">
+                                            <label for="image" class="form-label">Change Clinic Main Image</label>
+                                            <input type="file" class="" name="image" id="image">
+                                            <small id="image_error"></small>
+                                            <div><img alt="" src="{{ Storage::url($ourlocation->images) }}"
+                                                    style="width: 200px; height: 100px;"></div>
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label for="extra_information" class="form-label">Extra
+                                                Information</label>
+                                            <div id="extra_information-quill" class="quill-editor">
+                                                {!! $ourlocation->extra_information !!}</div>
+                                            <input type="hidden" name="extrainformation" id="extrainformation">
+                                            <small id="extra_information_error"></small>
+                                        </div>
+
+                                        <div class="form-group mb-3">
+                                            <label for="image" class="form-label">Change Clinic Other Images (you
+                                                can
+                                                select multiple images)</label>
+                                            <input type="file" class="" name="other_images[]"
+                                                id="other_images" multiple>
+                                            <small id="other_images_error"></small>
                                         </div>
 
 
