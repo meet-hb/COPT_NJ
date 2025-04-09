@@ -305,4 +305,14 @@ class FrontController extends Controller
 
         return redirect()->back()->with('success', 'Appointment request sent successfully!');
     }
+
+
+    public function whatWeTreatMain(Request $request)
+    {
+        return view('front.what-we-treat');
+    }
+    public function howWeTreatMain(Request $request)
+    {
+        return view('front.how-we-treat');
+    }
 }

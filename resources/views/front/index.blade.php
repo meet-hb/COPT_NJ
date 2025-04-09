@@ -34,14 +34,9 @@
                                 style="background-color: rgba(255, 255, 255, .65); border-radius: .63rem; justify-content: center; padding: 2rem;">
                                 <!-- <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Physical Therapy
                                     Somerset, NJ - Comprehensive Orthopedic PT</span> -->
-                                <h2>Individualized Hands-On
-                                    Treatment, Including
-                                    Acupuncture, To Help You Live
-                                    Pain-Free</h2>
+                                <h2>Individualized Hands-On Treatment To Help You Live Pain-Free</h2>
                                 <p>
-                                    Comprehensive Orthopedic
-                                    Physical Therapy (COPT) Is
-                                    Committed To Getting You Healthy
+                                    Comprehensive Orthopedic Physical Therapy (COPT) Is Committed To Getting You Healthy
                                 </p>
                                 <div class="hero-btn">
                                     <a href="{{ route('front.appointment') }}" class="btn-one">Request Appointment</a>
@@ -63,14 +58,9 @@
 
                             <div class="hero-content"
                                 style="background-color: rgba(255, 255, 255, .65); border-radius: .63rem; justify-content: center; padding: 2rem;">
-                                <h2>Individualized Hands-On
-                                    Treatment, Including
-                                    Acupuncture, To Help You Live
-                                    Pain-Free</h2>
+                                <h2>Individualized Hands-On Treatment, Including Acupuncture, To Help You Live Pain-Free</h2>
                                 <p>
-                                    Comprehensive Orthopedic
-                                    Physical Therapy (COPT) Is
-                                    Committed To Getting You Healthy
+                                    Comprehensive Orthopedic Physical Therapy (COPT) Is Committed To Getting You Healthy
                                 <div class="hero-btn">
                                     <a href="{{ route('front.appointment') }}" class="btn-one">Request Appointment</a>
 
@@ -92,13 +82,8 @@
                                 style="background-color: rgba(255, 255, 255, .65); border-radius: .63rem; justify-content: center; padding: 2rem;">
                                 <!-- <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">24/7 Service
                                     Available </span> -->
-                                <h2>Individualized Hands-On
-                                    Treatment To Help You Live
-                                    Pain-Free</h2>
-                                <p>
-                                    Comprehensive Orthopedic
-                                    Physical Therapy (COPT) Is
-                                    Committed To Getting You Healthy
+                                <h2>Individualized Hands-On Treatment To Help You Live Pain-Free</h2>
+                                <p>Comprehensive Orthopedic Physical Therapy (COPT) Is Committed To Getting You Healthy
                                 <div class="hero-btn">
                                     <a href="{{ route('front.appointment') }}" class="btn-one">Request
                                         Appointment</a>
@@ -129,13 +114,9 @@
                                 style="background-color: rgba(255, 255, 255, .65); border-radius: .63rem; justify-content: center; padding: 2rem;">
                                 <!-- <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">24/7 Service
                                     Available </span> -->
-                                <h2>Individualized Hands-On
-                                    Treatment To Help You Live
-                                    Pain-Free</h2>
+                                <h2>Individualized Hands-On Treatment To Help You Live Pain-Free</h2>
                                 <p>
-                                    Comprehensive Orthopedic
-                                    Physical Therapy (COPT) Is
-                                    Committed To Getting You Healthy
+                                    Comprehensive Orthopedic Physical Therapy (COPT) Is Committed To Getting You Healthy
                                 </p>
                                 <div class="hero-btn">
                                     <a href="{{ route('front.appointment') }}" class="btn-one">Request
@@ -211,7 +192,7 @@
                             class="condition-body-link head-and-neck"></a>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </div>
