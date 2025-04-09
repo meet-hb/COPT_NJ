@@ -211,7 +211,7 @@
                             class="condition-body-link head-and-neck"></a>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </div>
