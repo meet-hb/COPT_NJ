@@ -52,25 +52,6 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-lg-6 point-image" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="about-img">
-                        <img src="{{ url('/') }}/assets/front/img/human-body.png" alt="Image">
-                        <a href="{{ route('front.knee-balance-and-walking') }}" title="Knee, Balance and Walking"
-                            id="knee-balance-and-walking" class="condition-body-link knee-balance-and-walking"></a>
-                        <a href="{{ route('front.back') }}" title="Back" id="back"
-                            class="condition-body-link back"></a>
-                        <a href="{{ route('front.hip') }}" title="Hip" id="hip"
-                            class="condition-body-link hip"></a>
-                        <a href="{{ route('front.elbow-wrist-hand') }}" title="Elbow, Wrist and Hand"
-                            id="elbow-wrist-and-hand" class="condition-body-link elbow-wrist-and-hand"></a>
-                        <a href="{{ route('front.foot-and-ankle') }}" title="Foot and Ankle" id="foot-and-ankle"
-                            class="condition-body-link foot-and-ankle"></a>
-                        <a href="{{ route('front.shoulder') }}" title="Shoulder" id="shoulder"
-                            class="condition-body-link shoulder"></a>
-                        <a href="{{ route('front.head-and-neck') }}" title="Head and Neck" id="head-and-neck"
-                            class="condition-body-link head-and-neck"></a>
-                    </div>
-                </div>
                 <div class="col-lg-6">
                     <h4 style="color: black;">Back</h4>
                     <h6>Click on the body parts or the list below to find out more about your pain and how physical
@@ -100,6 +81,27 @@
                                 data-bs-target="#exampleModalToggle11" type="button">Sprain / Strain</a></li>
 
                     </ul>
+                </div>
+                
+                <div class="col-lg-4 img-pint " data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="200">
+                    <div class="about-img">
+                        <img src="{{ url('/') }}/assets/front/img/human-body.png" alt="Image">
+                        <a href="{{ route('front.knee-balance-and-walking') }}" title="Knee, Balance and Walking"
+                            id="knee-balance-and-walking" class="condition-body-link knee-balance-and-walking"></a>
+                        <a href="{{ route('front.back') }}" title="Back" id="back"
+                            class="condition-body-link back"></a>
+                        <a href="{{ route('front.hip') }}" title="Hip" id="hip"
+                            class="condition-body-link hip"></a>
+                        <a href="{{ route('front.elbow-wrist-hand') }}" title="Elbow, Wrist and Hand"
+                            id="elbow-wrist-and-hand" class="condition-body-link elbow-wrist-and-hand"></a>
+                        <a href="{{ route('front.foot-and-ankle') }}" title="Foot and Ankle" id="foot-and-ankle"
+                            class="condition-body-link foot-and-ankle"></a>
+                        <a href="{{ route('front.shoulder') }}" title="Shoulder" id="shoulder"
+                            class="condition-body-link shoulder"></a>
+                        <a href="{{ route('front.head-and-neck') }}" title="Head and Neck" id="head-and-neck"
+                            class="condition-body-link head-and-neck"></a>
+                    </div>
                 </div>
             </div>
         </div>
