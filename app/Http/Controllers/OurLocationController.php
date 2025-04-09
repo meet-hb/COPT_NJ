@@ -145,6 +145,18 @@ class OurLocationController extends Controller
             $imagePath = $request->file('image')->store('public/ourlocation');
             $addourlocation->images = 'public/ourlocation/' . basename($imagePath);
         }
+
+        if ($request->hasFile('other_image')) {
+            $otherImagePaths = [];
+
+            foreach ($request->file('other_image') as $file) {
+                $path = $file->store('public/ourlocation');
+                $otherImagePaths[] = 'public/ourlocation/' . basename($path);
+            }
+
+            // Store as comma-separated string
+            $addourlocation->other_images = implode(',', $otherImagePaths);
+        }
         $addourlocation->save();
         return redirect()->back();
     }

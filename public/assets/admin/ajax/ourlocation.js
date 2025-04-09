@@ -90,8 +90,12 @@ $(document).ready(function () {
                 "#description-quill",
                 editorOptions
             );
-            const extra_information = new Quill(
+            const expertiseEditor = new Quill(
                 "#extra_information-quill",
+                editorOptions
+            );
+            const extra_information = new Quill(
+                "#expertise-quill",
                 editorOptions
             );
             $.validator.addMethod(
@@ -200,6 +204,10 @@ $(document).ready(function () {
                     formData.append(
                         "description",
                         descriptionEditor.root.innerHTML
+                    );
+                    formData.append(
+                        "expertise",
+                        expertiseEditor.root.innerHTML
                     );
                     formData.append(
                         "extrainformation",
