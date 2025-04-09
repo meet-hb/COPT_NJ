@@ -40,10 +40,10 @@
 
                 <a class="navbar-brand d-flex" href="{{ url('/') }}">
                     <div class="logo-part d-flex container gap-3">
-                        <img class="logo-light"
+                        <img class="logo-light loog"
                             src="{{ url('/') }}/assets/front/img/comprehensive-orthopedic-physical-therapy-logo-somerset-nj-300x138.png"
-                            alt="logo">
-                        <img class="logo-light" src="{{ url('/') }}/assets/front/img/Reactive-trans.png"
+                            alt="logo" >
+                        <img class="logo-light loog" src="{{ url('/') }}/assets/front/img/Reactive-trans.png"
                             alt="logo">
                     </div>
 

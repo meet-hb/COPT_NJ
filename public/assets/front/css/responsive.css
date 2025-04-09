@@ -1633,6 +1633,9 @@
     .point-image {
         max-height: 235px !important;
     }
+    .loog{
+        max-width: 100% !important;
+    }
 
     .footer-wrap .footer-widget .social-profile li a {
         width: 24px;
@@ -1677,7 +1680,7 @@
 
     .navbar-area.header-one .navbar .navbar-nav,
     .navbar-area.header-two .navbar .navbar-nav {
-        margin-left: 150px !important;
+        margin-left: 326px !important;
     }
 
     .btn,
@@ -1690,7 +1693,7 @@
     input[type="reset"],
     input[type="submit"] {
         padding: 0.4rem 0.94rem !important;
-        font-size: 9px !important;
+        font-size: 12px !important;
         border-width: 0.1rem !important;
     }
 
@@ -1737,8 +1740,7 @@
     .btn-four,
     .btn-five {
         padding: 9px 9px 9px !important;
-
-        font-size: 9px !important;
+        font-size: 12px !important;
     }
 
     .footer-wrap .footer-widget .contact-info li span {
@@ -2015,7 +2017,7 @@
     input[type="reset"],
     input[type="submit"] {
         padding: 0.4rem 0.94rem !important;
-        font-size: 9px !important;
+        font-size: 14px !important;
         border-width: 0.1rem !important;
     }
 
@@ -2067,7 +2069,7 @@
     .btn-five {
         padding: 9px 9px 9px !important;
 
-        font-size: 9px !important;
+        font-size: 14px !important;
     }
 
     .footer-wrap .footer-widget .contact-info li span {
