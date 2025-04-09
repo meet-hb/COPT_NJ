@@ -122,7 +122,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="javascript:void(0)" class="dropdown-toggle nav-link">
+                        <a href="{{ route('front.whatWeTreatMain') }}" class="dropdown-toggle nav-link">
                             What We Treat
                         </a>
                         <ul class="dropdown-menu we">
@@ -151,7 +151,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="javascript:void(0)" class="dropdown-toggle nav-link">
+                        <a href="{{ route('front.howWeTreatMain') }}" class="dropdown-toggle nav-link">
                             How We Treat
                         </a>
                         <ul class="dropdown-menu">
