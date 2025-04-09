@@ -40,9 +40,12 @@
             @foreach ($physicalTherapist as $team)
                 <div class="col-xl-3 col-lg-4 col-md-6">
                     <a href="javascript:void(0)">
+
                         <div class="team-card-one">
                             <div class="team-img">
-                                <img src="{{ Storage::url($team->image) }}" alt="Image">
+                                <img src="{{ Storage::url($team->image) }}" alt="Image"
+                                    style="width: 244px;
+    height: 225px;">
                                 <a href="{{ route('front.team-detail', $team->id) }}" class="btn-one add-to-cart">Read
                                     More</a>
                             </div>
@@ -58,7 +61,9 @@
                     <a href="javascript:void(0)">
                         <div class="team-card-one">
                             <div class="team-img">
-                                <img src="{{ Storage::url($team->image) }}" alt="Image">
+                                <img src="{{ Storage::url($team->image) }}" alt="Image"
+                                    style="width: 244px;
+    height: 225px;">
                                 <a href="{{ route('front.team-detail', $team->id) }}" class="btn-one add-to-cart">Read
                                     More</a>
                             </div>
@@ -74,7 +79,9 @@
                     <a href="javascript:void(0)">
                         <div class="team-card-one">
                             <div class="team-img">
-                                <img src="{{ Storage::url($team->image) }}" alt="Image">
+                                <img src="{{ Storage::url($team->image) }}" alt="Image"
+                                    style="width: 244px;
+    height: 225px;">
                                 <a href="{{ route('front.team-detail', $team->id) }}" class="btn-one add-to-cart">Read
                                     More</a>
                             </div>
@@ -90,7 +97,9 @@
                     <a href="javascript:void(0)">
                         <div class="team-card-one">
                             <div class="team-img">
-                                <img src="{{ Storage::url($team->image) }}" alt="Image">
+                                <img src="{{ Storage::url($team->image) }}" alt="Image"
+                                    style="width: 244px;
+    height: 225px;">
                                 <a href="{{ route('front.team-detail', $team->id) }}" class="btn-one add-to-cart">Read
                                     More</a>
                             </div>
