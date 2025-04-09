@@ -1987,7 +1987,7 @@
         }
 
         .breadcrumb-wrap {
-            padding: 183px 0 110px !important;
+            /* padding: 183px 0 110px !important; */
             position: relative;
             z-index: 1;
             overflow: hidden;
