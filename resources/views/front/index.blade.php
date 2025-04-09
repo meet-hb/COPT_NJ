@@ -145,7 +145,7 @@
         <!-- <img src="{{ url('/') }}/assets/front/img/about/about-shape-1.webp" alt="Image" class="about-shape-one moveHorizontal md-none">
         <img src="{{ url('/') }}/assets/front/img/about/about-shape-2.webp" alt="Image" class="about-shape-two md-none">
         <img src="{{ url('/') }}/assets/front/img/about/about-thumb-1.webp" alt="Image" class="about-thumb-img bounce md-none"> -->
-        <div class="container gx-5 ptb-100">
+        <div class="container gx-5 pt-100">
             <div class="row align-items-center gx-5">
 
                 <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
