@@ -99,24 +99,6 @@
                                                 placeholder="Email">
                                             <small id="email_error"></small>
                                         </div>
-                                        <div class="form-group mb-3">
-                                            <label for="image" class="form-label">Image</label>
-                                            <input type="file" class="form-control" name="image" id="image">
-                                            <small id="image_error"></small>
-                                        </div>
-                                        <div class="form-group mb-3">
-                                            <label for="expertise" class="form-label">Expertise</label>
-                                            <input type="text" class="form-control" name="expertise"
-                                                id="expertise" placeholder="Expertise">
-                                            {{-- <textarea name="expertise" id="expertise" class="form-control" cols="30" rows="2"></textarea> --}}
-                                            <small id="expertise_error"></small>
-                                        </div>
-                                        <div class="form-group mb-3">
-                                            <label for="extra_information" class="form-label">Extra
-                                                Information</label>
-                                            <div id="extra_information-quill" class="quill-editor"></div>
-                                            <small id="extra_information_error"></small>
-                                        </div>
 
                                         <div class="form-group mb-3">
                                             <label class="form-label d-block">Business Hours</label>
@@ -150,6 +132,31 @@
                                             <small id="business_hours_error"></small>
                                         </div>
 
+                                        <div class="form-group mb-3">
+                                            <label for="expertise" class="form-label">Expertise</label>
+                                            <div id="expertise-quill" class="quill-editor"></div>
+                                            {{-- <textarea name="expertise" id="expertise" class="form-control" cols="30" rows="2"></textarea> --}}
+                                            <small id="expertise_error"></small>
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label for="image" class="form-label">Clinic Main Image</label>
+                                            <input type="file" class="" name="image" id="image">
+                                            <small id="image_error"></small>
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label for="extra_information" class="form-label">Extra
+                                                Information</label>
+                                            <div id="extra_information-quill" class="quill-editor"></div>
+                                            <small id="extra_information_error"></small>
+                                        </div>
+
+                                        <div class="form-group mb-3">
+                                            <label for="image" class="form-label">Clinic Other Images (you can
+                                                select multiple images)</label>
+                                            <input type="file" class="" name="other_images[]"
+                                                id="other_images" multiple>
+                                            <small id="other_images_error"></small>
+                                        </div>
 
                                         <div class="d-flex justify-content-end">
                                             <button type="submit" id="submitTherapy"
