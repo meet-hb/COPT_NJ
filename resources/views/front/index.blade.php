@@ -164,18 +164,24 @@
         <!-- <img src="{{ url('/') }}/assets/front/img/about/about-shape-1.webp" alt="Image" class="about-shape-one moveHorizontal md-none">
         <img src="{{ url('/') }}/assets/front/img/about/about-shape-2.webp" alt="Image" class="about-shape-two md-none">
         <img src="{{ url('/') }}/assets/front/img/about/about-thumb-1.webp" alt="Image" class="about-thumb-img bounce md-none"> -->
-        <div class="container gx-5">
+        <div class="container gx-5 ptb-100">
             <div class="row align-items-center gx-5">
 
                 <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                     <div class="about-content">
                         <div class="content-title-one">
                             <!-- <span>About Clinic</span> -->
-                            <h2>We'll Help You Find Relief From Your Pain</h2>
+                            <h1>We'll Help You Find Relief From Your Pain</h1>
                             <p>At Comprehensive Orthopedic Physical Therapy in Somerset, NJ, we believe in treating the
                                 whole patient rather than just the injury. We'll evaluate your symptoms, talk about your
                                 medical history, and any health constraints you might have. Our physical therapist will
                                 then devise a personalized treatment plan to help you get back on your feet.</p>
+
+                            <div class="hero-btn" bis_skin_checked="1">
+                                <a href="{{ route('front.whatWeTreat', ['View More Conditions']) }}" class="btn-one"
+                                    bis_skin_checked="1">View All Conditions</a>
+
+                            </div>
                             <!-- <ul class="content-feature-list list-style">
                                 <li><i class="ri-check-line"></i>Refresing to get such a personal touch.</li>
                                 <li><i class="ri-check-line"></i>Duis aute irure dolor in reprehenderit in voluptate.
@@ -186,7 +192,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 img-pint" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <div class="col-lg-4 img-pint" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
                     <div class="about-img">
                         <img src="{{ url('/') }}/assets/front/img/human-body.png" alt="Image">
                         <a href="{{ route('front.knee-balance-and-walking') }}" title="Knee, Balance and Walking"
@@ -205,6 +211,7 @@
                             class="condition-body-link head-and-neck"></a>
                     </div>
                 </div>
+                
             </div>
         </div>
     </div>

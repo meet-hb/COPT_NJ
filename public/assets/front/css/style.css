@@ -7599,38 +7599,36 @@ article .blog-title h6 {
 
 /*# sourceMappingURL=style.css.map */
 .condition-body-link.knee-balance-and-walking {
-  left: 4%;
-  bottom: 20%;
+  left: 46%;
+  bottom: 27%;
 }
 
 .condition-body-link.back {
-  top: 60%;
-  left: 30.5%;
+  top: 23%;
+  left: 38.5%;
 }
 
 .condition-body-link.hip {
-  top: 56%;
-  left: 24%;
+  top: 37%;
+  left: 47%;
 }
-
 .condition-body-link.elbow-wrist-and-hand {
-  top: 58%;
-  left: 36%;
+  top: 28%;
+  left: 55%;
 }
 
 .condition-body-link.foot-and-ankle {
-  left: 30%;
-  bottom: 10%;
+  left: 46%;
+  bottom: 2%;
 }
 
 .condition-body-link.shoulder {
-  top: 26%;
-  right: 67%;
+  top: 15%;
+  right: 38%;
 }
-
 .condition-body-link.head-and-neck {
-  top: 2%;
-  left: 42.5%;
+  top: 1%;
+  left: 38%;
 }
 
 .condition-body-link::before {
@@ -7676,8 +7674,8 @@ article .blog-title h6 {
 .condition-body-link.active,
 .condition-body-link:focus,
 .condition-body-link:hover {
-  background-color: rgba(31, 42, 68, .6);
-  border-color: #1F2A44;
+  background-color: #EB5323;
+  border-color: #f73e06;
 }
 
 a:focus,
@@ -7687,8 +7685,8 @@ a:hover {
 }
 
 .condition-body-link {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   position: absolute;
   display: block;
   background-color: rgba(0, 191, 179, .8);
