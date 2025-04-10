@@ -17,6 +17,19 @@
             width: 100%;
             cursor: pointer;
         }
+
+        .drop-select {
+            background-color: #FFFFFFFF !important;
+            color: #000000 !important;
+            border: 1px solid #04BFB3FF !important;
+            border-radius: 40px !important;
+            padding: 10px 20px 10px 20px !important;
+            box-shadow: 0px 0px 5px 1px #CBCBCB82;
+            font-family: 'Poppins';
+            font-size: 14px;
+            font-weight: 400;
+            background-clip: inherit !important;
+        }
     </style>
 </head>
 
@@ -389,7 +402,7 @@
                                                     <span>*</span></label>
                                                 <div class="flex-col">
                                                     <div class="flex email-input">
-                                                        <select name="job_position" class="form-control"
+                                                        <select name="job_position" class="form-control drop-select"
                                                             id="job_position">
                                                             <option value="" selected disabled>Select Job
                                                                 Position</option>
