@@ -2177,6 +2177,8 @@
 
     .navbar-area .navbar .navbar-nav .nav-item  .we {
         width: 600px !important;
+        overflow: auto;
+        height: 500px !important;
     }
     .navbar-area .navbar .navbar-nav .nav-item .how {
         width: 250px !important;
@@ -2197,8 +2199,10 @@
         width: 250px !important;
     }
 
-    .navbar-area .navbar .navbar-nav .nav-item .dropdown-menu  .we li  {
+    .navbar-area .navbar .navbar-nav .nav-item .dropdown-menu  .we   {
         width: 500px !important;
+        overflow: auto;
+        height: 500px !important;
     }
     .condition-body-link.shoulder {
         top: 15% !important;
