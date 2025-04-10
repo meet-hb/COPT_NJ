@@ -2179,9 +2179,13 @@
         width: 600px !important;
         overflow: auto;
         height: 350px !important;
+        overflow-x: hidden;
     }
     .navbar-area .navbar .navbar-nav .nav-item .how {
         width: 250px !important;
+        overflow: auto;
+        height: 350px !important;
+        overflow-x: hidden;
     }
 
     /* .navbar-area .navbar .navbar-nav .nav-item .dropdown-menu {
