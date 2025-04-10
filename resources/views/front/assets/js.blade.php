@@ -8,12 +8,9 @@
 <script>
     var botmanWidget = {
         aboutText: 'COPTNJ',
-        introMessage: 'Hi! Welcome to COPTNJ 😊',
-        chatBackgroundColor: 'transparent',
-        // mainColor: '#ffffff', // Chat bubble button color
-        // bubbleBackground: '#ffffff',
-        // headerTextColor: '#000000',
-        // headerBackgroundColor: '#ffffff',
+        introMessage: 'Hi! Welcome to COPTNJ 👋',
+        mainColor: "#00bfb3", // 👈 This changes header background color
+        bubbleBackground: "#e74c3c", // Optional: Chat button color
     };
 </script>
 <script src='https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/widget.js'></script>

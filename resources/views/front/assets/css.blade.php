@@ -23,7 +23,8 @@
 {{-- <link rel="stylesheet" href="{{secure_asset('public/assets/front/css/responsive.css')}}"> --}}
 <link rel="stylesheet" href="{{ url('/') }}/assets/front/css/dark-theme.css">
 <link rel="icon" type="image/png" href="{{ url('/') }}/assets/front/img/favicon.png">
-{{-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/assets/css/chat.min.css">  --}}
+{{-- <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/assets/css/chat.min.css"> --}}
 <style>
     body,
     html {
