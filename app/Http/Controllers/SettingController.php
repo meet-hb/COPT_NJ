@@ -13,6 +13,11 @@ class SettingController extends Controller
         $data = Setting::where('name', 'privacy')->first();
         return view('admin.privacy', compact('data'));
     }
+    public function ourpractice()
+    {
+        $data = Setting::where('name', 'ourpractice')->first();
+        return view('admin.ourpractice', compact('data'));
+    }
     public function terms()
     {
         $data = Setting::where('name', 'terms')->first();
@@ -49,5 +54,21 @@ class SettingController extends Controller
         }
 
         return response()->json(['success' => 'Terms updated successfully']);
+    }
+    public function ourpracticeOP(Request $request)
+    {
+        if ($request->id == null) {
+
+            $newdata = new Setting();
+            $newdata->name = 'ourpractice';
+            $newdata->value = $request->description;
+            $newdata->save();
+        } else {
+            $data = Setting::find($request->id);
+            $data->value = $request->description;
+            $data->save();
+        }
+
+        return response()->json(['success' => 'Our Practice updated successfully']);
     }
 }

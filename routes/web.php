@@ -168,6 +168,8 @@ Route::get($admin_url . '/terms', [SettingController::class, 'terms'])->name('ad
 Route::get($admin_url . '/privacy', [SettingController::class, 'privacy'])->name('admin.privacy');
 Route::post($admin_url . '/privacy', [SettingController::class, 'privacyOP'])->name('admin.privacyDetailOp');
 Route::post($admin_url . '/terms', [SettingController::class, 'termsOP'])->name('admin.termsDetailOp');
+Route::get($admin_url . '/ourpractice', [SettingController::class, 'ourpractice'])->name('admin.ourpractice');
+Route::post($admin_url . '/ourpractice', [SettingController::class, 'ourpracticeOP'])->name('admin.ourpracticeDetailOp');
 
 
 Route::match(['get', 'post'], '/botman', [ChatController::class, 'handle']);

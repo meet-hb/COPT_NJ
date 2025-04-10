@@ -188,7 +188,16 @@
                         </p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.ourpractice') }}" class="nav-link @yield('ourpractice')">
+                        <i class="nav-icon fas fa-book"></i>
+                        <p>
+                            Our Practice
+                        </p>
+                    </a>
+                </li>
             </ul>
+
         </nav>
 
         <!---------------------------------------------- Navigation for Super Admin Users------------------------------------------------------------------------------------------------------>
