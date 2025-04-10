@@ -76,10 +76,10 @@ class FrontController extends Controller
     public function ourteam()
     {
         $teams = Team::all();
-        $physicalTherapist = Team::where('category', 'Physical Therapists')->where('is_active', 1)->where('is_deleted', 0)->get();
-        $OccupationalTherapist = Team::where('category', 'Occupational Therapist')->where('is_active', 1)->where('is_deleted', 0)->get();
-        $Acupuncturist = Team::where('category', 'Acupuncturist')->where('is_active', 1)->where('is_deleted', 0)->get();
-        $Administration = Team::where('category', 'Administration')->where('is_active', 1)->where('is_deleted', 0)->get();
+        $physicalTherapist = Team::where('category', 'Physical Therapists')->where('is_active', 1)->where('is_deleted', 0)->orderBy('sequence', 'asc')->get();
+        $OccupationalTherapist = Team::where('category', 'Occupational Therapist')->where('is_active', 1)->where('is_deleted', 0)->orderBy('sequence', 'asc')->get();
+        $Acupuncturist = Team::where('category', 'Acupuncturist')->where('is_active', 1)->where('is_deleted', 0)->orderBy('sequence', 'asc')->get();
+        $Administration = Team::where('category', 'Administration')->where('is_active', 1)->where('is_deleted', 0)->orderBy('sequence', 'asc')->get();
         return view("front.our-team", compact("teams", 'physicalTherapist', 'OccupationalTherapist', 'Acupuncturist', 'Administration'));
     }
 

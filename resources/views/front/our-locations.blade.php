@@ -73,8 +73,9 @@
                                 bis_skin_checked="1">
                                 <a href="{{ route('front.location-details', $location->location_name) }}"
                                     title="{{ $location->location_name }}" class="btn primary"
-                                    aria-label="Location Info">Info</a><a href="#" target="_blank"
-                                    class="btn secondary mx-2" aria-label="Map Link">Map</a>
+                                    aria-label="Location Info">Info</a>
+                                {{-- <a href="#" target="_blank"
+                                    class="btn secondary mx-2" aria-label="Map Link">Map</a> --}}
                             </div>
                         </div>
 

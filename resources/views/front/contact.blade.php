@@ -155,8 +155,8 @@
                         </li>
                         <div class="location-action mt-2" style="justify-content: space-between;"
                             bis_skin_checked="1">
-                            <a href="#" target="_blank" class="btn secondary mx-2"
-                                aria-label="Map Link">Map</a>
+                            {{-- <a href="#" target="_blank" class="btn secondary mx-2"
+                                aria-label="Map Link">Map</a> --}}
                         </div>
                     </ul>
 

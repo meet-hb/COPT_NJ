@@ -62,11 +62,12 @@
                         <a href="javascript:void(0)">
                             <div class="team-card-one">
                                 <div class="team-img">
-                                    <img src="{{ Storage::url($therapy_details->image) }}" alt="Image" style="width: 345px; height: 345px;">
+                                    <img src="{{ Storage::url($therapy_details->image) }}" alt="Image"
+                                        style="width: 345px; height: 345px;">
                                     {{-- <a href="#" class="btn-one add-to-cart">Read
                                         More</a> --}}
                                 </div>
-                                <h3>{{ $howWeTreat->therapy_name }}</h3>
+                                <h4>{{ $howWeTreat->therapy_name }}</h4>
                                 <p>{{ \Illuminate\Support\Str::limit(strip_tags($therapy_details->description), 80, '...') }}
                                 </p>
                                 <a href="{{ route('front.howWeTreat', $howWeTreat->therapy_name) }}"
