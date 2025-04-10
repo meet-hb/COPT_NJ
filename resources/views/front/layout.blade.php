@@ -105,22 +105,22 @@
                         <ul class="dropdown-menu">
                             <li class="nav-item">
                                 <a href="{{ route('front.our-practice') }}" class="nav-link">
-                                    Our Practice
+                                    OUR PRACTICE
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ route('front.our-locations') }}" class="nav-link">
-                                    Our Locations
+                                    OUR LOCATIONS
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ route('front.our-team') }}" class="nav-link">
-                                    Our Team
+                                    OUR TEAM
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ route('front.career') }}" class="nav-link">
-                                    Career
+                                    CAREER
                                 </a>
                             </li>
                         </ul>
@@ -177,17 +177,17 @@
                         <ul class="dropdown-menu">
                             <li class="nav-item">
                                 <a href="{{ route('front.patientInfo') }}" class="nav-link">
-                                    Patient Info / Forms
+                                    PATIENT INFO / FORMS
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ route('front.directAccess') }}" class="nav-link">
-                                    Direct Access
+                                    DIRECT ACCESS
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ route('front.insuranceInfo') }}" class="nav-link">
-                                    Insurance Info
+                                    INSURANCE INFO
                                 </a>
                             </li>
                             {{-- <li class="nav-item">
@@ -197,12 +197,12 @@
                             </li> --}}
                             <li class="nav-item">
                                 <a href="{{ route('front.referAFriend') }}" class="nav-link">
-                                    Refer a Friend
+                                    REFER A FRIEND
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ route('front.faq') }}" class="nav-link">
-                                    FAQs
+                                    FAQS
                                 </a>
                             </li>
 
@@ -260,22 +260,22 @@
                         <div class="accordion" id="navbarAccordion2">
                             <div class="accordion-item">
                                 <a class="accordion-link active" href="{{ route('front.our-practice') }}">
-                                    Our Practice
+                                    OUR PRACTICE
                                 </a>
                             </div>
                             <div class="accordion-item">
                                 <a class="accordion-link" href="{{ route('front.our-locations') }}">
-                                    Our Locations
+                                    OUR LOCATIONS
                                 </a>
                             </div>
                             <div class="accordion-item">
                                 <a class="accordion-link" href="{{ route('front.our-team') }}">
-                                    Our Team
+                                    OUR TEAM
                                 </a>
                             </div>
                             <div class="accordion-item">
                                 <a class="accordion-link" href="{{ route('front.career') }}">
-                                    Career
+                                    CAREER
                                 </a>
                             </div>
                         </div>
@@ -335,17 +335,17 @@
                         <div class="accordion" id="navbarAccordion45">
                             <div class="accordion-item">
                                 <a href="{{ route('front.patientInfo') }}" class="nav-link">
-                                    Patient Info / Forms
+                                    PATIENT INFO / FORMS
                                 </a>
                             </div>
                             <div class="accordion-item">
                                 <a href="{{ route('front.directAccess') }}" class="nav-link">
-                                    Direct Access
+                                    DIRECT ACCESS
                                 </a>
                             </div>
                             <div class="accordion-item">
                                 <a href="{{ route('front.insuranceInfo') }}" class="nav-link">
-                                    Insurance Info
+                                    INSURANCE INFO
                                 </a>
                             </div>
                             {{-- <div class="accordion-item">
@@ -355,12 +355,12 @@
                             </div> --}}
                             <div class="accordion-item">
                                 <a href="{{ route('front.referAFriend') }}" class="nav-link">
-                                    Refer a Friend
+                                    REFER A FRIEND
                                 </a>
                             </div>
                             <div class="accordion-item">
                                 <a href="{{ route('front.faq') }}" class="nav-link">
-                                    FAQs
+                                    FAQS
                                 </a>
                             </div>
                         </div>
@@ -390,12 +390,15 @@
                 <li>
                     <i class="ri-mail-fill"></i>
                     <a href="mailto:info@coptnj.com">
-
                         info@coptnj.com</a>
                 </li>
                 <li>
                     <i class="ri-phone-fill"></i>
                     <a href="tel:(732) 846-9400">(732) 846-9400</a>
+                </li>
+                <li>
+                    <i class="fa fa-fax" aria-hidden="true"></i>
+                    <a href="tel:7328469404">(732) 846-9404</a>
                 </li>
             </ul>
             <ul class="social-profile list-style">
@@ -407,11 +410,16 @@
                         target="_blank"><i class="ri-linkedin-fill"></i></a></li>
                 <li><a href="https://www.twitter.com/coptnj" target="_blank"><i class="ri-twitter-x-fill"></i></a>
                 </li>
+                <li>
+                    <a href="https://www.youtube.com/channel/UC4avEkzY30hpdvJUEbbr4wA" target="_blank">
+                        <i class="ri-youtube-line"></i>
+                    </a>
+                </li>
             </ul>
         </div>
         <div class="others-option d-flex d-lg-none align-items-center">
             <div class="option-item">
-                <a href="{{ route('front.appointment') }}" class="btn-two">Book Appointment</a>
+                <a href="{{ route('front.appointment') }}" class="btn-two">Request Appointment</a>
             </div>
         </div>
     </div>

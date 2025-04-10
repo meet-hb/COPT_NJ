@@ -49,7 +49,7 @@
     <a href="{{ route('admin.dashboard') }}" class="brand-link">
         <img src="{{ url('/') }}/assets/admin/logo/favicon.png" alt="SarjanGate Logo"
             class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">CoptNJ</span>
+        <span class="brand-text font-weight-light">COPTNJ</span>
     </a>
 
     <!-- Sidebar -->

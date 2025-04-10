@@ -7,6 +7,7 @@
 <script src="https://kit.fontawesome.com/2e81685459.js" crossorigin="anonymous"></script>
 <script>
     var botmanWidget = {
+        title: 'Have a Question?',
         aboutText: 'COPTNJ',
         introMessage: 'Hi! Welcome to COPTNJ 👋',
         mainColor: "#00bfb3", // 👈 This changes header background color
