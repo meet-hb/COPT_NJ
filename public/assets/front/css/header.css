@@ -711,7 +711,7 @@
   }
 
   .navbar-area .navbar .navbar-nav .nav-item .nav-link.dropdown-toggle {
-    padding-right: 36px;
+    padding-right: 24px;
   }
 
   .navbar-area .navbar .navbar-nav .nav-item .dropdown-toggle::before {
@@ -729,7 +729,7 @@
   }
 
   .navbar-area .navbar .navbar-nav .nav-item .nav-link {
-    font-size: 18px !important;
+    font-size: 14px !important;
   }
 }
 
