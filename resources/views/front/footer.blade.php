@@ -210,7 +210,7 @@
                                 <span>
                                     <i class="ri-mail-fill"></i>
                                 </span>
-                                <a href="#">info@coptnj.com</a>
+                                <a href="mailto:info@coptnj.com">info@coptnj.com</a>
                             </li>
                             <li>
                                 <span>

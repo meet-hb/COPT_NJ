@@ -65,7 +65,7 @@
                                         <div class="d-flex justify-content-end">
                                             <button type="submit" id="submitjob"
                                                 class="btn btn-success mr-2">Submit</button>
-                                            <a href="{{ route('admin.therapys') }}"><button type="button"
+                                            <a href="{{ route('admin.jobs') }}"><button type="button"
                                                     class="btn btn-danger">Close</button></a>
                                         </div>
                                     </form>

@@ -6,6 +6,8 @@ use App\Jobs\SendEmailJob;
 use App\Models\Blog;
 use App\Models\cause;
 use App\Models\Faq;
+use App\Models\JobsTitle;
+use App\Models\OurLocation;
 use App\Models\Team;
 use App\Models\Therapy;
 use App\Models\TherapyDetail;
@@ -58,19 +60,16 @@ class FrontController extends Controller
     }
     public function ourlocations()
     {
-        return view("front.our-locations");
+        $getLocations = OurLocation::where('is_active', 1)->where('is_deleted', 0)->get();
+        return view("front.our-locations", compact('getLocations'));
     }
 
 
     public function loctionDetails($location)
     {
-        if ($location == 'Somerset') {
-            return view("front.somerset", compact('location'));
-        } elseif ($location == 'Parsippany') {
-            return view("front.parsippany", compact('location'));
-        } elseif ($location == 'Fairlawn') {
-            return view("front.fairlawn", compact('location'));
-        }
+        $getLocationDetails = OurLocation::where('location_name', $location)->where('is_active', 1)->where('is_deleted', 0)->first();
+
+        return view("front.location-details", compact('getLocationDetails'));
     }
 
 
@@ -91,7 +90,8 @@ class FrontController extends Controller
     }
     public function career()
     {
-        return view("front.career");
+        $jobs = JobsTitle::where('is_active', 1)->where('is_deleted', 0)->orderBy('sequence', 'desc')->get();
+        return view("front.career", compact("jobs"));
     }
 
     public function sendmail(Request $request)

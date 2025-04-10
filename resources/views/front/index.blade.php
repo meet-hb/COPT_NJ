@@ -36,7 +36,8 @@
                                     Somerset, NJ - Comprehensive Orthopedic PT</span> -->
                                 <h2>Individualized Hands-On Treatment To Help You Live Pain-Free</h2>
                                 <p>
-                                    Comprehensive Orthopedic Physical Therapy (COPT) Is Committed To Getting You Healthy
+                                    Comprehensive Orthopedic Physical Therapy (COPTNJ) Is Committed To Getting You
+                                    Healthy
                                 </p>
                                 <div class="hero-btn">
                                     <a href="{{ route('front.appointment') }}" class="btn-one">Request Appointment</a>
@@ -58,9 +59,11 @@
 
                             <div class="hero-content"
                                 style="background-color: rgba(255, 255, 255, .65); border-radius: .63rem; justify-content: center; padding: 2rem;">
-                                <h2>Individualized Hands-On Treatment, Including Acupuncture, To Help You Live Pain-Free</h2>
+                                <h2>Individualized Hands-On Treatment, Including Acupuncture, To Help You Live Pain-Free
+                                </h2>
                                 <p>
-                                    Comprehensive Orthopedic Physical Therapy (COPT) Is Committed To Getting You Healthy
+                                    Comprehensive Orthopedic Physical Therapy (COPTNJ) Is Committed To Getting You
+                                    Healthy
                                 <div class="hero-btn">
                                     <a href="{{ route('front.appointment') }}" class="btn-one">Request Appointment</a>
 
@@ -83,7 +86,8 @@
                                 <!-- <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">24/7 Service
                                     Available </span> -->
                                 <h2>Individualized Hands-On Treatment To Help You Live Pain-Free</h2>
-                                <p>Comprehensive Orthopedic Physical Therapy (COPT) Is Committed To Getting You Healthy
+                                <p>Comprehensive Orthopedic Physical Therapy (COPTNJ) Is Committed To Getting You
+                                    Healthy
                                 <div class="hero-btn">
                                     <a href="{{ route('front.appointment') }}" class="btn-one">Request
                                         Appointment</a>
@@ -116,7 +120,8 @@
                                     Available </span> -->
                                 <h2>Individualized Hands-On Treatment To Help You Live Pain-Free</h2>
                                 <p>
-                                    Comprehensive Orthopedic Physical Therapy (COPT) Is Committed To Getting You Healthy
+                                    Comprehensive Orthopedic Physical Therapy (COPTNJ) Is Committed To Getting You
+                                    Healthy
                                 </p>
                                 <div class="hero-btn">
                                     <a href="{{ route('front.appointment') }}" class="btn-one">Request
@@ -158,7 +163,7 @@
                                 medical history, and any health constraints you might have. Our physical therapist will
                                 then devise a personalized treatment plan to help you get back on your feet.</p>
 
-                           
+
                             <!-- <ul class="content-feature-list list-style">
                                 <li><i class="ri-check-line"></i>Refresing to get such a personal touch.</li>
                                 <li><i class="ri-check-line"></i>Duis aute irure dolor in reprehenderit in voluptate.
@@ -433,7 +438,8 @@
                         <div class="content-title-one">
                             <!-- <span>Our Services</span> -->
                             <h2>Faster Recovery & Lasting Results</h2>
-                            <p>It can be hard to take the first step towards recovery, and COPT understands that. If you
+                            <p>It can be hard to take the first step towards recovery, and COPTNJ understands that. If
+                                you
                                 do not know what is causing your pain, it is easy to discount physical therapy as an
                                 option that can help you feel better. We want you to know that physical therapy is a
                                 healthy, natural way to find pain relief for your condition.</p>

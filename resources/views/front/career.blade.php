@@ -166,46 +166,14 @@
                             </p>
                             <h5>The following are our current job openings:</h5>
                             <ul style="list-style: none; padding: .38rem;">
-                                <li>
-                                    <img src="{{ url('/') }}/assets/front/img/icons8-correct-25.png"
-                                        alt="">
-                                    Patient Care Coordinator
-                                </li>
-                                <li>
-                                    <img src="{{ url('/') }}/assets/front/img/icons8-correct-25.png"
-                                        alt="">
-                                    Massage Therapist
-                                </li>
-                                <li>
-                                    <img src="{{ url('/') }}/assets/front/img/icons8-correct-25.png"
-                                        alt="">
-                                    Rehab Aide
-                                </li>
-                                <li>
-                                    <img src="{{ url('/') }}/assets/front/img/icons8-correct-25.png"
-                                        alt="">
-                                    Front Desk Admin
-                                </li>
-                                <li>
-                                    <img src="{{ url('/') }}/assets/front/img/icons8-correct-25.png"
-                                        alt="">
-                                    Therapy Technicians
-                                </li>
-                                <li>
-                                    <img src="{{ url('/') }}/assets/front/img/icons8-correct-25.png"
-                                        alt="">
-                                    Physical Therapist Assistant
-                                </li>
-                                <li>
-                                    <img src="{{ url('/') }}/assets/front/img/icons8-correct-25.png"
-                                        alt="">
-                                    Physical Therapist
-                                </li>
-                                <li>
-                                    <img src="{{ url('/') }}/assets/front/img/icons8-correct-25.png"
-                                        alt="">
-                                    Occupational Therapist
-                                </li>
+                                @foreach ($jobs as $job)
+                                    <li>
+                                        <img src="{{ url('/') }}/assets/front/img/icons8-correct-25.png"
+                                            alt="">
+                                        {{ $job->name }}
+                                    </li>
+                                @endforeach
+
                                 <p>We’re always on the lookout for therapists and administrative personnel that thrive
                                     on
                                     new challenges and are dedicated to assisting others. Our Somerset, NJ physical

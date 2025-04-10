@@ -68,8 +68,6 @@
                                             <label for="locationdetail" class="form-label">Location Detail</label>
                                             <textarea name="locationdetail" id="locationdetail" class="form-control" cols="30" rows="2"
                                                 placeholder="Location Detail">{{ $ourlocation->location_details }}</textarea>
-
-
                                             <small id="locationdetail_error"></small>
                                         </div>
 
@@ -106,21 +104,11 @@
 
                                         <div class="form-group mb-3">
                                             <label for="expertise" class="form-label">Expertise</label>
-                                            <input type="text" class="form-control" name="expertise"
-                                                id="expertise" placeholder="Expertise"
-                                                value="{{ $ourlocation->expertise }}">
+                                            <div id="expertise-quill" class="quill-editor">
+                                                {!! $ourlocation->expertise !!}</div>
                                             {{-- <textarea name="expertise" id="expertise" class="form-control" cols="30" rows="2"></textarea> --}}
                                             <small id="expertise_error"></small>
                                         </div>
-                                        {{-- <div class="form-group mb-3">
-                                            <label for="extra_information" class="form-label">Extra
-                                                Information</label>
-                                            <div id="extra_information-quill" class="quill-editor">
-                                                {!! $ourlocation->extra_information !!}</div>
-                                            <small id="extra_information_error"></small>
-                                        </div> --}}
-
-
 
                                         <div class="form-group mb-3">
                                             <label class="form-label d-block">Business Hours</label>
@@ -186,6 +174,18 @@
                                             <input type="file" class="" name="other_images[]"
                                                 id="other_images" multiple>
                                             <small id="other_images_error"></small>
+                                            @php
+                                                $images = explode(',', $ourlocation->other_images);
+                                            @endphp
+
+                                            <div class="mt-2">
+                                                @foreach ($images as $image)
+                                                    @if ($image)
+                                                        <img src="{{ Storage::url($image) }}" alt=""
+                                                            style="width: 200px; height: 100px; margin: 5px;">
+                                                    @endif
+                                                @endforeach
+                                            </div>
                                         </div>
 
 

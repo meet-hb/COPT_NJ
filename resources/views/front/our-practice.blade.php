@@ -196,7 +196,7 @@
                 <p>
                     <a href="{{ route('front.appointment') }}" style="color: #00bfb3; text-decoration: none;">Request
                         an appointment</a> at
-                    COPT with
+                    COPTNJ with
                     one of our physical therapists today! We will be happy to meet
                     with you and create a plan for your journey toward health, healing, and pain relief.
                 </p>

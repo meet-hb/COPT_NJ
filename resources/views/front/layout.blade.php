@@ -42,7 +42,7 @@
                     <div class="logo-part d-flex container gap-3">
                         <img class="logo-light loog"
                             src="{{ url('/') }}/assets/front/img/comprehensive-orthopedic-physical-therapy-logo-somerset-nj-300x138.png"
-                            alt="logo" >
+                            alt="logo">
                         <img class="logo-light loog" src="{{ url('/') }}/assets/front/img/Reactive-trans.png"
                             alt="logo">
                     </div>
@@ -391,7 +391,7 @@
                 </li>
                 <li>
                     <i class="ri-mail-fill"></i>
-                    <a href="#">
+                    <a href="mailto:info@coptnj.com">
 
                         info@coptnj.com</a>
                 </li>

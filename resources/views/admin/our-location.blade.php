@@ -57,12 +57,10 @@
                                                 <th>#</th>
                                                 <th>Image</th>
                                                 <th>Location Name</th>
-                                                <th>Description</th>
-                                                <th>Address</th>
+                                                {{-- <th>Address</th> --}}
                                                 <th>Phone</th>
                                                 <th>Fax</th>
                                                 <th>Email</th>
-                                                <th>Expertise</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -176,14 +174,14 @@
                         data: "location_name",
                         name: "location_name",
                     },
-                    {
-                        data: "description",
-                        name: "description",
-                    },
-                    {
-                        data: "address",
-                        name: "address",
-                    },
+                    // {
+                    //     data: "description",
+                    //     name: "description",
+                    // },
+                    // {
+                    //     data: "address",
+                    //     name: "address",
+                    // },
                     {
                         data: "phone",
                         name: "phone",
@@ -196,10 +194,10 @@
                         data: "email",
                         name: "email",
                     },
-                    {
-                        data: "expertise",
-                        name: "expertise",
-                    },
+                    // {
+                    //     data: "expertise",
+                    //     name: "expertise",
+                    // },
                     {
                         data: "action",
                         name: "action",

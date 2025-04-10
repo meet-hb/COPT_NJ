@@ -268,7 +268,7 @@ $(document).ready(function () {
                             $.alert({
                                 type: "success",
                                 title: "Success",
-                                content: "Team added successfully!",
+                                content: "Location Details added successfully!",
                             });
                             form.reset();
                             $("small.text-danger").hide();
@@ -295,6 +295,10 @@ $(document).ready(function () {
 
             const descriptionEditor = new Quill(
                 "#description-quill",
+                editorOptions
+            );
+            const expertiseEditor = new Quill(
+                "#expertise-quill",
                 editorOptions
             );
             const extra_information = new Quill(
@@ -409,6 +413,10 @@ $(document).ready(function () {
                         descriptionEditor.root.innerHTML
                     );
                     formData.append(
+                        "expertise",
+                        expertiseEditor.root.innerHTML
+                    );
+                    formData.append(
                         "extrainformation",
                         extra_information.root.innerHTML
                     );
@@ -455,7 +463,7 @@ $(document).ready(function () {
                             $.alert({
                                 type: "success",
                                 title: "Success",
-                                content: "Team Edited successfully!",
+                                content: "Location Details Edited successfully!",
                             });
                             form.reset();
                             $("small.text-danger").hide();

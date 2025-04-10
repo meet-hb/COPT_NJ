@@ -41,12 +41,11 @@ class OurLocationController extends Controller
             1 => DB::raw('ROW_NUMBER() OVER(ORDER BY id ASC) as no'),
             2 => 'images',
             3 => 'location_name',
-            5 => 'description',
-            6 => 'address',
-            7 => 'phone',
-            8 => 'fax',
-            9 => 'email',
-            10 => 'expertise',
+            // 4 => 'address',
+            5 => 'phone',
+            6 => 'fax',
+            7 => 'email',
+            8 => 'expertise',
         ];
         $columnName = $columns[$columnIndex] ?? 'id';
 
@@ -92,12 +91,10 @@ class OurLocationController extends Controller
                 "no" => $ourlocation->no,
                 "image" => '<img src="' . Storage::url($ourlocation->images) . '" style="width: 100px; height: 100px; border-radius: 50%; border: 1px solid #ccc">',
                 "location_name" => $ourlocation->location_name,
-                "description" => $ourlocation->description,
-                "address" => $ourlocation->address,
+                // "address" => $ourlocation->address,
                 "phone" => $ourlocation->phone,
                 "fax" => $ourlocation->fax,
                 "email" => $ourlocation->email,
-                "expertise" => $ourlocation->expertise,
                 "action" => '
                     <a href="' . route('admin.ourlocationedit', $ourlocation->id) . '" class="btn btn-primary btn-sm">
                         <i class="fas fa-edit"></i>
