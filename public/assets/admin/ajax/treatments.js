@@ -10,47 +10,136 @@ $(document).ready(function () {
     }
 
     let page = getPage();
+    // function handleShow() {
+    //     $(document).ready(function () {
+    //         const columns = [
+    //             { data: "id", name: "id", visible: false },
+    //             {
+    //                 data: "no",
+    //                 name: "no",
+    //             },
+    //             {
+    //                 data: "image",
+    //                 name: "image",
+    //             },
+    //             {
+    //                 data: "treatment_name",
+    //                 name: "treatment_name",
+    //             },
+    //             {
+    //                 data: "action",
+    //                 name: "action",
+    //                 orderable: false,
+    //                 searchable: false,
+    //             },
+    //         ];
+
+    //         $("#treatment_table").DataTable({
+    //             responsive: true,
+    //             scrollCollapse: true,
+    //             processing: true,
+    //             serverSide: true,
+    //             ajax: {
+    //                 url: treatmentTable,
+    //                 type: "POST",
+    //                 error: function (xhr, status, error) {
+    //                     console.error("DataTable AJAX error:", status, error);
+    //                 },
+    //             },
+    //             columns: columns,
+    //             drawCallback: function () {
+    //                 console.log("DataTable redrawn");
+    //             },
+    //         });
+    //     });
+    // }
     function handleShow() {
-        $(document).ready(function () {
-            const columns = [
-                {
-                    data: "no",
-                    name: "no",
+        const table = $("#treatment_table").DataTable({
+            responsive: true,
+            scrollCollapse: true,
+            processing: true,
+            serverSide: true,
+            order: [[4, "asc"]],
+            ajax: {
+                url: treatmentTable, // make sure this variable is globally available
+                type: "POST",
+                error: function (xhr, status, error) {
+                    console.error("DataTable AJAX error:", status, error);
                 },
-                {
-                    data: "image",
-                    name: "image",
-                },
-                {
-                    data: "treatment_name",
-                    name: "treatment_name",
-                },
+            },
+            columns: [
+                { data: "id", name: "id", visible: false },
+                { data: "no", name: "no" },
+                { data: "image", name: "image" },
+                { data: "treatment_name", name: "treatment_name" },
+                { data: "sequence", name: "sequence" },
                 {
                     data: "action",
                     name: "action",
                     orderable: false,
                     searchable: false,
                 },
-            ];
+            ],
+            rowReorder: {
+                dataSrc: "no",
+                update: false,
+            },
+            drawCallback: function () {
+                console.log("DataTable redrawn");
+            },
+        });
 
-            $("#treatment_table").DataTable({
-                responsive: true,
-                scrollCollapse: true,
-                processing: true,
-                serverSide: true,
-                ajax: {
-                    url: treatmentTable,
-                    type: "POST",
-                    error: function (xhr, status, error) {
-                        console.error("DataTable AJAX error:", status, error);
-                    },
+        // Handle row reorder events
+        table.on("row-reorder", function (e, diff, edit) {
+            let positions = [];
+
+            diff.forEach(function (change) {
+                const rowData = table.row(change.node).data();
+                positions.push({
+                    id: rowData.id,
+                    position: change.newPosition + 1,
+                });
+            });
+
+            if (positions.length) {
+                updatePositions(positions);
+            }
+        });
+
+        function updatePositions(positions) {
+            $.ajax({
+                url: updateTreatmentPositionUrl, // <-- define this URL globally
+                type: "POST",
+                data: {
+                    _token: $("meta[name='csrf-token']").attr("content"),
+                    positions: positions,
                 },
-                columns: columns,
-                drawCallback: function () {
-                    console.log("DataTable redrawn");
+                success: function (response) {
+                    if (response.success) {
+                        Swal.fire(
+                            "Updated!",
+                            "Treatment positions have been updated.",
+                            "success"
+                        );
+                        table.ajax.reload();
+                    } else {
+                        Swal.fire(
+                            "Error!",
+                            response.message || "Unable to update positions.",
+                            "error"
+                        );
+                    }
+                },
+                error: function (xhr, status, error) {
+                    Swal.fire(
+                        "Error!",
+                        "An error occurred while updating positions.",
+                        "error"
+                    );
+                    console.error("Update Error:", xhr.responseText);
                 },
             });
-        });
+        }
     }
 
     function handleAdd() {
@@ -230,13 +319,15 @@ $(document).ready(function () {
                         }
                     });
 
-                    $("textarea[name='causes_description[]']").each(function () {
-                        let value = $(this).val().trim();
-                        if (value && !causesDescriptionSet.has(value)) {
-                            causesDescriptionSet.add(value);
-                            formData.append("causes_description[]", value);
+                    $("textarea[name='causes_description[]']").each(
+                        function () {
+                            let value = $(this).val().trim();
+                            if (value && !causesDescriptionSet.has(value)) {
+                                causesDescriptionSet.add(value);
+                                formData.append("causes_description[]", value);
+                            }
                         }
-                    });
+                    );
 
                     // Batch editor updates
                     Object.entries(editors).forEach(([key, editor]) => {
@@ -571,6 +662,3 @@ $(document).ready(function () {
     if (page === "add-treatment") handleAdd();
     if (page === "edit-treatment") handleEdit();
 });
-
-
-

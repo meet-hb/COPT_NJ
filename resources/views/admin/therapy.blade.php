@@ -15,9 +15,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Therapy</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/datatables@1.10.18/media/css/jquery.dataTables.min.css"
-        integrity="sha256-YY1izqyhIj4W3iyJOaGWOpXDSwrHWFL4Nfk+W0LyCHE=" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/rowreorder/1.4.1/css/rowReorder.dataTables.min.css">
     @include('admin.assets.links')
 </head>
 
@@ -60,11 +59,13 @@
                                 </div>
                                 <!-- /.card-header -->
                                 <div class="card-body">
-                                    <table id="therapy_table" class="table table-bordered table-striped">
+                                    <table id="therapy_table" class="table table-bordered table-striped"  style="width:100%">
                                         <thead>
                                             <tr>
+                                                <th>id</th>
                                                 <th>#</th>
                                                 <th>Therapy Name</th>
+                                                <th>Therapy Sequence</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -85,13 +86,15 @@
     <!-- ./wrapper -->
 
     @include('admin.assets.scripts')
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/rowreorder/1.4.1/js/dataTables.rowReorder.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://cdn.jsdelivr.net/npm/datatables@1.10.18/media/js/jquery.dataTables.min.js"
-        integrity="sha256-3aHVku6TxTRUkkiibvwTz5k8wc7xuEr1QqTB+Oo5Q7I=" crossorigin="anonymous"></script>
+
     <script src="{{ url('/') }}/assets/admin/ajax/therapy.js"></script>
     <script>
         var therapyTable = '{{ route('admin.therapyList') }}';
         var therapyDelete = '{{ route('admin.therapyDelete') }}';
+        var updatePositionUrl = '{{ route('admin.therapyUpdatePosition') }}';
 
         function deletetherapy(id) {
             Swal.fire({

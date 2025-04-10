@@ -21,6 +21,8 @@ class TreatmentController extends Controller
 
     public function treatmentAddOp(Request $request)
     {
+        $sequenceno = Treatment::max('sequence');
+
         $adddata = new Treatment();
         $adddata->treatment_name = $request->treatment_name;
         $adddata->body_description = $request->description;
@@ -28,6 +30,8 @@ class TreatmentController extends Controller
         $adddata->causes_note = $request->causes_note;
         $adddata->symptoms = $request->symptoms;
         $adddata->extra_information = $request->extra_information;
+        $adddata->sequence = $sequenceno + 1;
+
 
         // Store image and banner in the storage folder
         if ($request->hasFile('image')) {
@@ -79,6 +83,7 @@ class TreatmentController extends Controller
 
     public function treatmentList(Request $request)
     {
+        // dd('hello');
         $draw = filter_var($request->get('draw'), FILTER_VALIDATE_INT);
         $start = filter_var($request->get('start'), FILTER_VALIDATE_INT);
         $rowperpage = filter_var($request->get('length'), FILTER_VALIDATE_INT);
@@ -98,21 +103,23 @@ class TreatmentController extends Controller
         $columnSortOrder = $order_arr[0]['dir'] ?? 'asc';
 
         $columns = [
-            0 => 'id',
-            1 => DB::raw('ROW_NUMBER() OVER(ORDER BY treatments.id ASC) as no'),
+            0 => 'treatmentsid',
+            1 => 'treatments.no',
             2 => 'treatments.treatment_name',
             3 => 'treatments.image',
+            4 => 'treatments.sequence',
         ];
 
-        $columnName = $columns[$columnIndex] ?? 'treatments.id';
+        $columnName = $columns[$columnIndex] ?? 'treatments.sequence';
 
         // Build the query
         $query = DB::table('treatments')
             ->select([
                 'treatments.id as id',
-                DB::raw('ROW_NUMBER() OVER(ORDER BY treatments.id ASC) as no'),
+                DB::raw('ROW_NUMBER() OVER(ORDER BY treatments.sequence ASC) as no'),
                 'treatments.treatment_name as treatment_name',
                 'treatments.image as image',
+                'treatments.sequence as sequence',
             ])
             ->where('treatments.is_deleted', 0);
 
@@ -136,7 +143,9 @@ class TreatmentController extends Controller
         $data_arr = [];
         foreach ($treatments as $treatment) {
             $data_arr[] = [
+                'id' => $treatment->id,
                 "no" => $treatment->no,
+                "sequence" => $treatment->sequence,
                 "image" => '<img src="' . Storage::url($treatment->image) . '" style="width: 100px; height: 100px; border-radius: 50%; border: 1px solid #ccc">',
                 "treatment_name" => $treatment->treatment_name,
                 "action" => '<div class="btn-group btn-group-sm">
@@ -271,5 +280,19 @@ class TreatmentController extends Controller
         $treatment = Treatment::find($request->id);
         $treatment->delete();
         return response()->json(['success' => '200', 'message' => 'data deleted successfully!']);
+    }
+
+    public function updatePosition(Request $request)
+    {
+        $request->validate([
+            'positions.*.id' => 'required',
+            'positions.*.position' => 'required|integer',
+        ]);
+
+        foreach ($request->positions as $position) {
+            Treatment::where('id', $position['id'])->update(['sequence' => $position['position']]);
+        }
+
+        return response()->json(['success' => true, 'message' => 'Positions updated successfully.']);
     }
 }

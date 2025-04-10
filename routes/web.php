@@ -102,6 +102,7 @@ Route::post($admin_url . '/treatment_add', [TreatmentController::class, 'treatme
 Route::post($admin_url . '/treatment_delete', [TreatmentController::class, 'treatmentDelete'])->name('admin.treatmentDelete');
 Route::get($admin_url . '/treatment_edit/{id}', [TreatmentController::class, 'treatmentEdit'])->name('admin.treatmentEdit');
 Route::post($admin_url . '/treatment_edit', [TreatmentController::class, 'treatmentEditOp'])->name('admin.treatmentEditOp');
+Route::post($admin_url . '/treatments/update-position', [TreatmentController::class, 'updatePosition'])->name('admin.treatmentUpdatePosition');
 
 Route::get($admin_url . '/therapys', [TherapyController::class, 'therapys'])->name('admin.therapys');
 Route::post($admin_url . '/therapy_list', [TherapyController::class, 'therapyList'])->name('admin.therapyList');
@@ -110,6 +111,8 @@ Route::post($admin_url . '/therapy_add', [TherapyController::class, 'therapyAddO
 Route::post($admin_url . '/therapy_delete', [TherapyController::class, 'therapyDelete'])->name('admin.therapyDelete');
 Route::get($admin_url . '/therapy_edit/{id}', [TherapyController::class, 'therapyEdit'])->name('admin.therapyEdit');
 Route::post($admin_url . '/therapy_edit', [TherapyController::class, 'therapyEditOp'])->name('admin.therapyEditOp');
+Route::post($admin_url . '/therapys/update-position', [TherapyController::class, 'updatePosition'])->name('admin.therapyUpdatePosition');
+
 
 Route::get($admin_url . '/therapy_details', [TherapyController::class, 'therapyDetails'])->name('admin.therapyDetails');
 Route::post($admin_url . '/therapy_detail_list', [TherapyController::class, 'therapyDetailList'])->name('admin.therapyDetailList');

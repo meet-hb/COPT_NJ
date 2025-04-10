@@ -100,6 +100,11 @@ class JobController extends Controller
 
     public function jobAddOp(Request $request)
     {
+        $alreadyexist = JobsTitle::where('name', $request->name)->exists();
+        if ($alreadyexist) {
+            return response()->json(['error' => 'Job title already exists'], 409);
+        }
+
         $sequenceno = JobsTitle::max('sequence');
         $addjob = new JobsTitle();
         $addjob->name = $request->name;
@@ -123,21 +128,6 @@ class JobController extends Controller
 
     public function updatePosition(Request $request)
     {
-//         dd($request->all());
-//         "positions" => array:3 [
-//     0 => array:2 [
-//       "id" => "3"
-//       "position" => "1"
-//     ]
-//     1 => array:2 [
-//       "id" => "1"
-//       "position" => "2"
-//     ]
-//     2 => array:2 [
-//       "id" => "2"
-//       "position" => "3"
-//     ]
-//   ]
         $request->validate([
             'positions.*.id' => 'required',
             'positions.*.position' => 'required|integer',

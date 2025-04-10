@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('therapies', function (Blueprint $table) {
             $table->id();
+            $table->integer('sequence');
             $table->string('therapy_name', 255);
             $table->boolean('is_active')->default(1)->comment('1=Active, 0=Inactive');
             $table->boolean('is_deleted')->default(0)->comment('1=Deleted, 0=Not Deleted');

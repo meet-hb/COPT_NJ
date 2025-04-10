@@ -37,18 +37,20 @@ class TherapyController extends Controller
 
         $columns = [
             0 => 'therapies.id',
-            1 => DB::raw('ROW_NUMBER() OVER(ORDER BY therapies.id ASC) as no'),
+            1 => 'therapies.no',
             2 => 'therapies.therapy_name',
+            4 => 'therapies.sequence',
         ];
 
-        $columnName = $columns[$columnIndex] ?? 'therapies.id';
+        $columnName = $columns[$columnIndex] ?? 'therapies.sequence';
 
         // Build the query
         $query = DB::table('therapies')
             ->select([
                 'therapies.id as id',
-                DB::raw('ROW_NUMBER() OVER(ORDER BY therapies.id ASC) as no'),
+                DB::raw('ROW_NUMBER() OVER(ORDER BY therapies.sequence ASC) as no'),
                 'therapies.therapy_name as therapy_name',
+                'therapies.sequence as sequence',
             ])
             ->where('therapies.is_deleted', 0);
 
@@ -72,8 +74,10 @@ class TherapyController extends Controller
         $data_arr = [];
         foreach ($therapies as $therapy) {
             $data_arr[] = [
+                'id' => $therapy->id,
                 "no" => $therapy->no,
                 "therapy_name" => $therapy->therapy_name,
+                'sequence' => $therapy->sequence,
                 "action" => '<div class="btn-group btn-group-sm">
                 <a href="javascript:void(0)" onclick="window.location.href=\'' . route('admin.therapyEdit', ['id' => $therapy->id]) . '\'" class="btn btn-primary btn-sm">
                     <i class="fas fa-pen"></i>
@@ -101,8 +105,11 @@ class TherapyController extends Controller
     }
     public function therapyAddOp(Request $request)
     {
+        $sequenceno = Therapy::max('sequence');
+
         $addtherapy = new Therapy();
         $addtherapy->therapy_name = $request->Therapy_name;
+        $addtherapy->sequence = $sequenceno + 1;
         $addtherapy->save();
 
         return response()->json(['success' => '200', 'message' => 'Therapy added successfully!']);
@@ -228,9 +235,13 @@ class TherapyController extends Controller
     public function therapyDetailAddOp(Request $request)
     {
 
+        $sequenceno = TherapyDetail::max('sequence');
+
         $addtherapy = new TherapyDetail();
         $addtherapy->therapy_id = $request->therapy_name;
         $addtherapy->description = $request->description;
+        $addtherapy->sequence = $sequenceno + 1;
+
         $addtherapy->extra_information = $request->extra_information;
         if ($request->hasFile('image')) {
             $imagePath = $request->file('image')->store('public/therapy');
@@ -281,5 +292,20 @@ class TherapyController extends Controller
         $therapy->save();
 
         return response()->json(['success' => '200', 'message' => 'Therapy updated successfully!']);
+    }
+
+    public function updatePosition(Request $request)
+    {
+        // dd($request->all());
+        $request->validate([
+            'positions.*.id' => 'required',
+            'positions.*.position' => 'required|integer',
+        ]);
+
+        foreach ($request->positions as $position) {
+            Therapy::where('id', $position['id'])->update(['sequence' => $position['position']]);
+        }
+
+        return response()->json(['success' => true, 'message' => 'Positions updated successfully.']);
     }
 }

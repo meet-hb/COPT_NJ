@@ -45,21 +45,26 @@ $(document).ready(function () {
                     },
                 },
                 errorElement: "small",
-                errorClass: "text-danger",
                 errorPlacement: function (error, element) {
-                    const errorElementId = element.attr("id") + "_error";
-                    $("#" + errorElementId)
-                        .html(error)
-                        .show();
+                    var element_name = $(element).attr("name");
+                    error.appendTo($("#" + element_name + "_error"));
                 },
-                highlight: function (element) {
-                    $(element).addClass("is-invalid");
-                },
-                unhighlight: function (element) {
-                    $(element).removeClass("is-invalid");
-                    const errorElementId = element.id + "_error";
-                    $("#" + errorElementId).hide();
-                },
+                // errorElement: "small",
+                // errorClass: "text-danger",
+                // errorPlacement: function (error, element) {
+                //     const errorElementId = element.attr("id") + "_error";
+                //     $("#" + errorElementId)
+                //         .html(error)
+                //         .show();
+                // },
+                // highlight: function (element) {
+                //     $(element).addClass("is-invalid");
+                // },
+                // unhighlight: function (element) {
+                //     $(element).removeClass("is-invalid");
+                //     const errorElementId = element.id + "_error";
+                //     $("#" + errorElementId).hide();
+                // },
                 submitHandler: function (form, event) {
                     event.preventDefault();
 
@@ -91,21 +96,41 @@ $(document).ready(function () {
                             $("#submitjob")
                                 .prop("disabled", false)
                                 .html("Submit");
+
                             $.alert({
                                 type: "success",
                                 title: "Success",
-                                content: "Team added successfully!",
+                                content: "Job added successfully!",
                             });
                             form.reset();
                             $("small.text-danger").hide();
                             window.location.href = jobhome;
                         },
                         error: function (xhr, status, error) {
-                            $.alert({
-                                type: "error",
-                                title: "Oops!",
-                                content: "Invalid Information!",
-                            });
+                            // $.alert({
+                            //     type: "error",
+                            //     title: "Oops!",
+                            //     content: "Invalid Information!",
+                            // });
+                            $("#submitjob")
+                                .prop("disabled", false)
+                                .html("Submit");
+
+                            const response = xhr.responseJSON;
+
+                            if (response?.error) {
+                                $.alert({
+                                    type: "error",
+                                    title: "Oops!",
+                                    content: response.error,
+                                });
+                            } else {
+                                $.alert({
+                                    type: "error",
+                                    title: "Oops!",
+                                    content: "Invalid Information!",
+                                });
+                            }
                         },
                     });
                 },

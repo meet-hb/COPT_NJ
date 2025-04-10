@@ -11,44 +11,191 @@ $(document).ready(function () {
 
     let page = getPage();
 
+    // function handleShow() {
+    //     $(document).ready(function () {
+    //         const columns = [
+    //             {
+    //                 data: "no",
+    //                 name: "no",
+    //             },
+    //             {
+    //                 data: "therapy_name",
+    //                 name: "therapy_name",
+    //             },
+    //             {
+    //                 data: "action",
+    //                 name: "action",
+    //                 orderable: false,
+    //                 searchable: false,
+    //             },
+    //         ];
+
+    //         $("#therapy_table").DataTable({
+    //             responsive: true,
+    //             scrollCollapse: true,
+    //             processing: true,
+    //             serverSide: true,
+    //             ajax: {
+    //                 url: therapyTable,
+    //                 type: "POST",
+
+    //                 error: function (xhr, status, error) {
+    //                     console.error("DataTable AJAX error:", status, error);
+    //                 },
+    //             },
+    //             rowReorder: {
+    //                 dataSrc: "no", // Correct source
+    //                 update: false, // Don't auto-update, we handle it
+    //             },
+    //             drawCallback: function () {
+    //                 console.log("DataTable redrawn");
+    //             },
+    //         });
+
+    //         jobsTable.on("row-reorder", function (e, diff, edit) {
+    //             let positions = [];
+
+    //             diff.forEach(function (change) {
+    //                 let rowData = jobsTable.row(change.node).data();
+    //                 positions.push({
+    //                     id: rowData.id,
+    //                     position: change.newPosition + 1,
+    //                 });
+    //             });
+
+    //             if (positions.length) {
+    //                 updatePositions(positions);
+    //             }
+    //         });
+
+    //         function updatePositions(positions) {
+    //             $.ajax({
+    //                 url: updatePositionUrl, // URL to the route handling position updates
+    //                 method: "POST",
+    //                 data: {
+    //                     _token: "{{ csrf_token() }}",
+    //                     positions: positions,
+    //                 },
+    //                 success: function (response) {
+    //                     if (response.success) {
+    //                         Swal.fire(
+    //                             "Updated!",
+    //                             "Job positions have been updated.",
+    //                             "success"
+    //                         );
+    //                         $("#therapy_table").DataTable().ajax.reload(); // Reload DataTable
+    //                     } else {
+    //                         Swal.fire(
+    //                             "Error!",
+    //                             response.message ||
+    //                                 "Unable to update positions.",
+    //                             "error"
+    //                         );
+    //                     }
+    //                 },
+    //                 error: function (xhr, status, error) {
+    //                     Swal.fire(
+    //                         "Error!",
+    //                         "An error occurred while updating positions.",
+    //                         "error"
+    //                     );
+    //                     console.error("Update Error:", xhr.responseText);
+    //                 },
+    //             });
+    //         }
+    //     });
+    // }
+
     function handleShow() {
-        $(document).ready(function () {
-            const columns = [
-                {
-                    data: "no",
-                    name: "no",
+        const table = $("#therapy_table").DataTable({
+            responsive: true,
+            scrollCollapse: true,
+            processing: true,
+            serverSide: true,
+            order: [
+                [3, 'asc']
+            ],
+            ajax: {
+                url: therapyTable,
+                type: "POST",
+                error: function (xhr, status, error) {
+                    console.error("DataTable AJAX error:", status, error);
                 },
-                {
-                    data: "therapy_name",
-                    name: "therapy_name",
-                },
+            },
+            columns: [
+                { data: "id", name: "id", visible: false },
+                { data: "no", name: "no" },
+                { data: "therapy_name", name: "therapy_name" },
+                { data: "sequence", name: "sequence" },
                 {
                     data: "action",
                     name: "action",
                     orderable: false,
                     searchable: false,
                 },
-            ];
+            ],
+            rowReorder: {
+                dataSrc: "no", // Column that acts as drag handle
+                update: false, // We will handle reordering manually
+            },
+            drawCallback: function () {
+                console.log("DataTable redrawn");
+            },
+        });
 
-            $("#therapy_table").DataTable({
-                responsive: true,
-                scrollCollapse: true,
-                processing: true,
-                serverSide: true,
-                ajax: {
-                    url: therapyTable,
-                    type: "POST",
+        // Row reorder handler
+        table.on("row-reorder", function (e, diff, edit) {
+            let positions = [];
 
-                    error: function (xhr, status, error) {
-                        console.error("DataTable AJAX error:", status, error);
-                    },
+            diff.forEach(function (change) {
+                const rowData = table.row(change.node).data();
+                positions.push({
+                    id: rowData.id,
+                    position: change.newPosition + 1,
+                });
+            });
+
+            if (positions.length) {
+                updatePositions(positions);
+            }
+        });
+
+        function updatePositions(positions) {
+            // alert('hello');
+            $.ajax({
+                url: updatePositionUrl, // Make sure this variable is defined globally
+                type: "POST",
+                data: {
+                    _token: $("meta[name='csrf-token']").attr("content"),
+
+                    positions: positions,
                 },
-                columns: columns,
-                drawCallback: function () {
-                    console.log("DataTable redrawn");
+                success: function (response) {
+                    if (response.success) {
+                        Swal.fire(
+                            "Updated!",
+                            "Therapy positions have been updated.",
+                            "success"
+                        );
+                        table.ajax.reload();
+                    } else {
+                        Swal.fire(
+                            "Error!",
+                            response.message || "Unable to update positions.",
+                            "error"
+                        );
+                    }
+                },
+                error: function (xhr, status, error) {
+                    Swal.fire(
+                        "Error!",
+                        "An error occurred while updating positions.",
+                        "error"
+                    );
+                    console.error("Update Error:", xhr.responseText);
                 },
             });
-        });
+        }
     }
 
     function handleAdd() {

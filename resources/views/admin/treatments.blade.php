@@ -9,9 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Treatment</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/datatables@1.10.18/media/css/jquery.dataTables.min.css"
-        integrity="sha256-YY1izqyhIj4W3iyJOaGWOpXDSwrHWFL4Nfk+W0LyCHE=" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/rowreorder/1.4.1/css/rowReorder.dataTables.min.css">
+    {{-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> --}}
 
     @include('admin.assets.links')
 </head>
@@ -73,9 +73,11 @@
                                     <table id="treatment_table" class="table table-bordered table-striped">
                                         <thead>
                                             <tr>
+                                                <th>id</th>
                                                 <th>#</th>
                                                 <th>Image</th>
                                                 <th>Treatment Name</th>
+                                                <th>Sequence</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -101,12 +103,15 @@
 
     @include('admin.assets.scripts')
 
-    <script src="https://cdn.jsdelivr.net/npm/datatables@1.10.18/media/js/jquery.dataTables.min.js"
-        integrity="sha256-3aHVku6TxTRUkkiibvwTz5k8wc7xuEr1QqTB+Oo5Q7I=" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/rowreorder/1.4.1/js/dataTables.rowReorder.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script src="{{ url('/') }}/assets/admin/ajax/treatments.js"></script>
     <script>
         var treatmentTable = '{{ route('admin.treatmentList') }}';
         var treatmentDelete = '{{ route('admin.treatmentDelete') }}';
+        var updateTreatmentPositionUrl = '{{ route('admin.treatmentUpdatePosition') }}';
 
         function deletetreatment(id) {
             Swal.fire({
