@@ -2,6 +2,12 @@
     .xs-center {
         text-align: center;
     }
+    .navbar-area .navbar .navbar-toggler{
+        margin-left: 124px !important;
+    }
+    .nav-first{
+        display: flex !important;
+      }
 
     .appointment-steps-wrapper svg {
         width: 4.94rem !important;
