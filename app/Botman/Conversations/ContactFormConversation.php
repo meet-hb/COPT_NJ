@@ -26,16 +26,31 @@ class ContactFormConversation extends Conversation
     public function askPhone()
     {
         $this->ask("Your phone number?", function (Answer $answer) {
-            $this->phone = $answer->getText();
-            $this->askEmail();
+            $phone = $answer->getText();
+
+            if (!preg_match('/^\d{10}$/', $phone)) {
+                $this->say("❌ Please enter a valid 10-digit phone number (numbers only).");
+                return $this->askPhone(); // Ask again if not valid
+            }
+
+            $this->phone = $phone;
+            $this->askEmail(); // Move to next step if valid
         });
     }
 
     public function askEmail()
     {
         $this->ask("Your email address?", function (Answer $answer) {
-            $this->email = $answer->getText();
-            $this->askMessage();
+            $email = $answer->getText();
+
+            // Validate email using PHP's filter
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                $this->say("❌ Please enter a valid email address.");
+                return $this->askEmail(); // Ask again if invalid
+            }
+
+            $this->email = $email;
+            $this->askMessage(); // Proceed to next step
         });
     }
 
@@ -52,7 +67,7 @@ class ContactFormConversation extends Conversation
                 'created_at' => now(),
             ]);
 
-            $this->say("Thanks! We'll get back to you soon.");
+            $this->say("Thanks! your Request has been Submitted, We'll get back to you soon.😊");
         });
     }
 }
