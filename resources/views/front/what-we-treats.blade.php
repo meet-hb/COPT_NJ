@@ -58,7 +58,10 @@
                         <a href="javascript:void(0)">
                             <div class="team-card-one">
                                 <div class="team-img">
-                                    <img src="{{ Storage::url($whatWeTreat->image) }}" alt="Image">
+                                    <img src="{{ Storage::url($whatWeTreat->image) }}" alt="Image" style="width: 345px; height: 345px;">
+                                    {{-- <div class="team-social">
+                                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#quickview-modal"><i
+                                                class="ri-add-line"></i></a>
                                     {{-- <a href="#" class="btn-one add-to-cart">Read
                                         More</a> --}}
                                 </div>

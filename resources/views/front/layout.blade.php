@@ -154,7 +154,7 @@
                         <a href="{{ route('front.howWeTreatMain') }}" class="dropdown-toggle nav-link">
                             How We Treat
                         </a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu how">
                             @foreach ($howWeTreats as $howWeTreat)
                                 <li class="nav-item">
                                     <a href="{{ route('front.howWeTreat', $howWeTreat->therapy_name) }}"

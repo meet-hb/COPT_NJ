@@ -2178,6 +2178,10 @@
     .navbar-area .navbar .navbar-nav .nav-item  .we {
         width: 400px !important;
     }
+    .navbar-area .navbar .navbar-nav .nav-item .how {
+        width: 250px !important;
+    }
+
     /* .navbar-area .navbar .navbar-nav .nav-item .dropdown-menu {
       width: 170px !important;
   } */
@@ -2187,6 +2191,10 @@
     .testimonial-wrap-two .testimonial-btn,
     .testimonial-wrap-three .testimonial-btn {
         width: 1240px;
+    }
+
+    .navbar-area .navbar .navbar-nav .nav-item .how {
+        width: 250px !important;
     }
 
     .navbar-area .navbar .navbar-nav .nav-item .dropdown-menu  .we li  {
@@ -2203,6 +2211,13 @@
     .hero-wrap.hero-two .hero-content {
         padding-top: 70px;
     }
+    .navbar-area .navbar .navbar-nav .nav-item .how {
+        width: 250px !important;
+    }
+    .navbar-area .navbar .navbar-nav .nav-item .we {
+        width: 600px !important;
+    }
+
 
     .hero-wrap.hero-two .hero-content .hero-doc-card {
         margin-bottom: 30px;
@@ -2229,6 +2244,13 @@
     .container {
         max-width: 1340px;
     }
+    .navbar-area .navbar .navbar-nav .nav-item .we {
+        width: 600px !important;
+    }
+    .navbar-area .navbar .navbar-nav .nav-item .how {
+        width: 250px !important;
+    }
+
 
     .sidebar .sidebar-widget {
         padding: 25px;
@@ -2337,6 +2359,12 @@
 @media only screen and (min-width: 1600px) {
     .ps-xxl-6 {
         padding-left: 5rem !important;
+    }
+    .navbar-area .navbar .navbar-nav .nav-item .we {
+        width: 600px !important;
+    }
+    .navbar-area .navbar .navbar-nav .nav-item .how {
+        width: 250px !important;
     }
 
     .point-image {

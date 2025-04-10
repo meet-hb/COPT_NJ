@@ -62,7 +62,7 @@
                         <a href="javascript:void(0)">
                             <div class="team-card-one">
                                 <div class="team-img">
-                                    <img src="{{ Storage::url($therapy_details->image) }}" alt="Image">
+                                    <img src="{{ Storage::url($therapy_details->image) }}" alt="Image" style="width: 345px; height: 345px;">
                                     {{-- <a href="#" class="btn-one add-to-cart">Read
                                         More</a> --}}
                                 </div>

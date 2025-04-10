@@ -209,7 +209,7 @@
 .navbar-area .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .nav-link {
   display: block;
   font-size: 15px;
-  /* padding: 5px 25px; */
+  padding: 5px 25px;
   color: #fff;
 }
 
