@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zxx">
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -7,6 +8,7 @@
     @include('front.assets.css')
     <title>Patient Info / Forms | Physical Therapy Somerset, NJ - Comprehensive Orthopedic PT</title>
 </head>
+
 <body>
     @include('front.layout')
     <!-- Breadcrumb Section Start -->
@@ -156,11 +158,6 @@
     <!-- Footer -->
     @include('front.footer')
     <!-- End Footer -->
-
-    <!-- Back to Top -->
-    <button type="button" id="backtotop" class="position-fixed text-center border-0 p-0">
-        <i class="ri-arrow-up-line"></i>
-    </button>
 
     @include('front.assets.js')
 </body>

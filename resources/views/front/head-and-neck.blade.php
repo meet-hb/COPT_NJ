@@ -74,14 +74,13 @@
                                 type="button">Headaches and Migraines</a></li>
                         <li><a href="javascript:void(0);" data-bs-target="#exampleModalToggle9" data-bs-toggle="modal"
                                 type="button">Whiplash</a></li>
-                        <li><a href="javascript:void(0);" data-bs-target="#exampleModalToggle10"
-                                data-bs-toggle="modal" type="button">Neck Pain</a></li>
-                        <li><a href="javascript:void(0);" data-bs-target="#exampleModalToggle11"
-                                data-bs-toggle="modal" type="button">Post-surgery Rehab</a></li>
+                        <li><a href="javascript:void(0);" data-bs-target="#exampleModalToggle10" data-bs-toggle="modal"
+                                type="button">Neck Pain</a></li>
+                        <li><a href="javascript:void(0);" data-bs-target="#exampleModalToggle11" data-bs-toggle="modal"
+                                type="button">Post-surgery Rehab</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-4 img-pint " data-aos="fade-up" data-aos-duration="1000"
-                    data-aos-delay="200">
+                <div class="col-lg-4 img-pint " data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                     <div class="about-img">
                         <img src="{{ url('/') }}/assets/front/img/human-body.png" alt="Image">
                         <a href="{{ route('front.knee-balance-and-walking') }}" title="Knee, Balance and Walking"
@@ -100,7 +99,7 @@
                             class="condition-body-link head-and-neck"></a>
                     </div>
                 </div>
-                
+
             </div>
 
 
@@ -112,11 +111,6 @@
     <!-- Footer Section Start -->
     @include('front.footer')
     <!-- Footer Section End -->
-
-    <!-- Back to Top -->
-    <button type="button" id="backtotop" class="position-fixed text-center border-0 p-0">
-        <i class="ri-arrow-up-line"></i>
-    </button>
 
     @include('front.assets.js')
 </body>

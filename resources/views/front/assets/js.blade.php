@@ -6,6 +6,18 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://kit.fontawesome.com/2e81685459.js" crossorigin="anonymous"></script>
 <script>
+    var botmanWidget = {
+        aboutText: 'COPTNJ',
+        introMessage: 'Hi! Welcome to COPTNJ 😊',
+        chatBackgroundColor: 'transparent',
+        // mainColor: '#ffffff', // Chat bubble button color
+        // bubbleBackground: '#ffffff',
+        // headerTextColor: '#000000',
+        // headerBackgroundColor: '#ffffff',
+    };
+</script>
+<script src='https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/widget.js'></script>
+<script>
     $('#blogRequestForm').on('submit', function(e) {
         e.preventDefault();
 

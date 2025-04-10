@@ -23,7 +23,7 @@
             <div class="breadcrumb-content">
                 <h2 style="color: #fff;">Direct Access</h2>
                 <ul class="breadcrumb-menu list-style">
-                    <li style="color: #fff;"><a href="{{route('front.index')}}">Home</a></li>
+                    <li style="color: #fff;"><a href="{{ route('front.index') }}">Home</a></li>
                     <li style="color: #fff;">Direct Access</li>
                 </ul>
                 <div class="option-item">
@@ -132,11 +132,6 @@
     <!-- Footer Section Start -->
     @include('front.footer')
     <!-- Footer Section End -->
-
-    <!-- Back to Top -->
-    <button type="button" id="backtotop" class="position-fixed text-center border-0 p-0">
-        <i class="ri-arrow-up-line"></i>
-    </button>
 
     <!-- Modal HTML -->
     <!-- <div class="modal fade" id="quickview-modal" data-bs-keyboard="false" tabindex="-1"

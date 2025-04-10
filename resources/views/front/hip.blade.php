@@ -77,8 +77,7 @@
                     </ul>
                 </div>
 
-                <div class="col-lg-4 img-pint " data-aos="fade-up" data-aos-duration="1000"
-                    data-aos-delay="200">
+                <div class="col-lg-4 img-pint " data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                     <div class="about-img">
                         <img src="{{ url('/') }}/assets/front/img/human-body.png" alt="Image">
                         <a href="{{ route('front.knee-balance-and-walking') }}" title="Knee, Balance and Walking"
@@ -107,11 +106,6 @@
     <!-- Footer Section Start -->
     @include('front.footer')
     <!-- Footer Section End -->
-
-    <!-- Back to Top -->
-    <button type="button" id="backtotop" class="position-fixed text-center border-0 p-0">
-        <i class="ri-arrow-up-line"></i>
-    </button>
 
     @include('front.assets.js')
 </body>

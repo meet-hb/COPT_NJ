@@ -52,7 +52,7 @@
         <div class="container">
             <div class="row">
 
-                
+
                 <div class="col-lg-6">
                     <h4 style="color: black;">Foot and Ankle</h4>
                     <h6>Click on the body parts or the list below to find out more about your pain and how physical
@@ -101,11 +101,6 @@
     <!-- Footer Section Start -->
     @include('front.footer')
     <!-- Footer Section End -->
-
-    <!-- Back to Top -->
-    <button type="button" id="backtotop" class="position-fixed text-center border-0 p-0">
-        <i class="ri-arrow-up-line"></i>
-    </button>
 
     @include('front.assets.js')
 </body>

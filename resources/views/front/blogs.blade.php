@@ -47,7 +47,8 @@
                             <div class="col-xl-6 col-lg-6 col-md-6">
                                 <div class="blog-card-one">
                                     <div class="blog-card-img">
-                                        <img src="{{ Storage::url($healthBlog->image) }}" alt="Image" style="width: 329px; height: 185px;">
+                                        <img src="{{ Storage::url($healthBlog->image) }}" alt="Image"
+                                            style="width: 329px; height: 185px;">
                                     </div>
                                     <div class="blog-card-info">
                                         <div class="blog-title">
@@ -166,12 +167,6 @@
     <!-- Blog Details Section End -->
 
     @include('front.footer')
-
-
-    <!-- Back to Top -->
-    <button type="button" id="backtotop" class="position-fixed text-center border-0 p-0">
-        <i class="ri-arrow-up-line"></i>
-    </button>
 
     @include('front.assets.js')
 </body>

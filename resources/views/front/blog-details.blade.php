@@ -170,11 +170,6 @@
     @include('front.footer')
     <!-- Footer Section End -->
 
-    <!-- Back to Top -->
-    <button type="button" id="backtotop" class="position-fixed text-center border-0 p-0">
-        <i class="ri-arrow-up-line"></i>
-    </button>
-
     @include('front.assets.js')
     <script>
         $('#commentForm').on('submit', function(e) {

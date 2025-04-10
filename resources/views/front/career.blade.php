@@ -540,11 +540,6 @@
 
     @include('front.footer')
 
-    <!-- Back to Top -->
-    <button type="button" id="backtotop" class="position-fixed text-center border-0 p-0">
-        <i class="ri-arrow-up-line"></i>
-    </button>
-
     <!-- Link of JS files -->
     @include('front.assets.js')
     <script>

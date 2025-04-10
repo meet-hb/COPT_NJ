@@ -96,7 +96,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a href="{{ route('front.our-practice') }}" class="dropdown-toggle nav-link">
-                            About Us
+                            ABOUT US
                         </a>
                         <ul class="dropdown-menu">
                             <li class="nav-item">
@@ -123,7 +123,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="{{ route('front.whatWeTreatMain') }}" class="dropdown-toggle nav-link">
-                            What We Treat
+                            WHAT WE TREAT
                         </a>
                         <ul class="dropdown-menu we">
                             <div class="row">
@@ -152,7 +152,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="{{ route('front.howWeTreatMain') }}" class="dropdown-toggle nav-link">
-                            How We Treat
+                            HOW WE TREAT
                         </a>
                         <ul class="dropdown-menu how">
                             @foreach ($howWeTreats as $howWeTreat)
@@ -168,7 +168,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="{{ route('front.patientInfo') }}" class="dropdown-toggle nav-link">
-                            Patient Info
+                            PATIENT INFO
                         </a>
                         <ul class="dropdown-menu">
                             <li class="nav-item">
@@ -206,23 +206,17 @@
                     </li>
                     <li class="nav-item">
                         <a href="{{ route('front.health-blog') }}" class="nav-link">
-                            Health Blog
+                            HEALTH BLOG
                         </a>
 
                     </li>
                     <li class="nav-item">
                         <a href="{{ route('front.contact') }}" class="nav-link">
-                            Contact
+                            CONTACT
                         </a>
                     </li>
                 </ul>
-                <!-- <div class="option-item">
-                    <a class="sidebar-toggler">
-                        <img src="{{ url('/') }}/assets/front/img/icons8-call-40.png" alt="Image">
-                    </a>
-                </div>   -->
                 <div class="others-option d-none d-flex align-items-center">
-
                     <div class="option-item">
                         <a class="sidebar-toggler" data-bs-toggle="offcanvas" href="#navbarOffcanvas" role="button"
                             aria-controls="navbarOffcanvas">
@@ -255,7 +249,7 @@
             <div class="accordion-item">
                 <button class="accordion-button collapsed active" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                    About Us
+                    ABOUT US
                 </button>
                 <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#navbarAccordion">
                     <div class="accordion-body">
@@ -287,7 +281,7 @@
             <div class="accordion-item">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapZigour" aria-expanded="false" aria-controls="collapZigour">
-                    What We Treat
+                    WHAT WE TREAT
                 </button>
                 <div id="collapZigour" class="accordion-collapse collapse" data-bs-parent="#navbarAccordion">
                     <div class="accordion-body">
@@ -308,7 +302,7 @@
             <div class="accordion-item">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapHowTreat" aria-expanded="false" aria-controls="collapHowTreat">
-                    How We Treat
+                    HOW WE TREAT
                 </button>
                 <div id="collapHowTreat" class="accordion-collapse collapse" data-bs-parent="#navbarAccordion">
                     <div class="accordion-body">
@@ -330,7 +324,7 @@
             <div class="accordion-item">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapPatientInfo" aria-expanded="false" aria-controls="collapPatientInfo">
-                    Patient Info
+                    PATIENT INFO
                 </button>
                 <div id="collapPatientInfo" class="accordion-collapse collapse" data-bs-parent="#navbarAccordion">
                     <div class="accordion-body">
@@ -371,13 +365,13 @@
             </div>
             <div class="accordion-item">
                 <a class="accordion-button without-icon" href="{{ route('front.health-blog') }}">
-                    Health Blog
+                    HEALTH BLOG
                 </a>
             </div>
 
             <div class="accordion-item">
                 <a class="accordion-button without-icon" href="{{ route('front.contact') }}">
-                    Contact
+                    CONTACT
                 </a>
             </div>
         </div>
