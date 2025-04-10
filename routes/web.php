@@ -55,10 +55,10 @@ Route::post('/leavecomment', [FrontController::class, 'leaveComment'])->name('le
 Route::get('/faq', [FrontController::class, 'faq'])->name('front.faq');
 
 Route::get('/how-we-treat/{therapy_name}', [FrontController::class, 'viewTherapyTreatment'])->name('front.howWeTreat');
-Route::get('/how-we-treat-main', [FrontController::class, 'howWeTreatMain'])->name('front.howWeTreatMain');
+Route::get('/how-we-treats', [FrontController::class, 'howWeTreats'])->name('front.howWeTreatMain');
 
 Route::get('/what-we-treat/{treatment_name}', [FrontController::class, 'viewTreatmentNames'])->name('front.whatWeTreat');
-Route::get('/what-we-treat-main', [FrontController::class, 'whatWeTreatMain'])->name('front.whatWeTreatMain');
+Route::get('/what-we-treats', [FrontController::class, 'whatWeTreats'])->name('front.whatWeTreatMain');
 
 Route::get('/patient-info', [FrontController::class, 'patientInfo'])->name('front.patientInfo');
 Route::view('/direct-access', 'front.direct-access')->name('front.directAccess');

@@ -1,3 +1,6 @@
+@php
+    $howWeTreats = howWeTreat();
+@endphp
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -8,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     @include('front.assets.css')
-    <title>What We Treat | Somerset, NJ - Comprehensive Orthopedic PT</title>
+    <title>How We Treat | Somerset, NJ - Comprehensive Orthopedic PT</title>
 </head>
 
 <style>
@@ -32,10 +35,10 @@
             class="br-shape-two animationFramesTwo">
         <div class="container">
             <div class="breadcrumb-content">
-                <h2 style="color: #fff;">What We Treat</h2>
+                <h2 style="color: #fff;">How We Treat</h2>
                 <ul class="breadcrumb-menu list-style">
                     <li style="color: #fff;"><a href="index">Home</a></li>
-                    <li style="color: #fff;"><a href="#">What We Treat</a></li>
+                    <li style="color: #fff;"><a href="#">How We Treat</a></li>
                 </ul>
                 <div class="option-item">
                     <a href="{{ route('front.appointment') }}" class="btn-two">Request Appointment</a>
@@ -49,46 +52,29 @@
     <div class="project-details-wrap ptb-100">
         <div class="container">
             <div class="row justify-content-center">
-                <h2 class="text-center">Physical Therapists</h2>
-
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <a href="javascript:void(0)">
-                        <div class="team-card-one">
-                            <div class="team-img">
-                                <img src="{{ url('/') }}/assets/front/img/w1.png" alt="Image">
-                                {{-- <a href="#" class="btn-one add-to-cart">Read
+                @foreach ($howWeTreats as $howWeTreat)
+                    @php
+                        $therapy_details = \Illuminate\Support\Facades\DB::table('therapy_details')
+                            ->where('therapy_id', $howWeTreat->id)
+                            ->first();
+                    @endphp
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <a href="javascript:void(0)">
+                            <div class="team-card-one">
+                                <div class="team-img">
+                                    <img src="{{ Storage::url($therapy_details->image) }}" alt="Image">
+                                    {{-- <a href="#" class="btn-one add-to-cart">Read
                                         More</a> --}}
+                                </div>
+                                <h3>{{ $howWeTreat->therapy_name }}</h3>
+                                <p>{{ \Illuminate\Support\Str::limit(strip_tags($therapy_details->description), 80, '...') }}
+                                </p>
+                                <a href="{{ route('front.howWeTreat', $howWeTreat->therapy_name) }}"
+                                    class="btn-one add-to-cart">Read More</a>
                             </div>
-                            <h3>Back Pain Relief</h3>
-                            <p>Your search for back pain relief can end here! Are you currently…</p>
-                            <a href="{{ route('front.back') }}" class="btn-link">Read More</a>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <a href="javascript:void(0)">
-                        <div class="team-card-one">
-                            <div class="team-img">
-                                <img src="{{ url('/') }}/assets/front/img/w1.png" alt="Image">
-                                {{-- <a href="#" class="btn-one add-to-cart">Read
-                                        More</a> --}}
-                            </div>
-
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <a href="javascript:void(0)">
-                        <div class="team-card-one">
-                            <div class="team-img">
-                                <img src="{{ url('/') }}/assets/front/img/w1.png" alt="Image">
-                                {{-- <a href="#" class="btn-one add-to-cart">Read
-                                        More</a> --}}
-                            </div>
-
-                        </div>
-                    </a>
-                </div>
+                        </a>
+                    </div>
+                @endforeach
             </div>
 
         </div>

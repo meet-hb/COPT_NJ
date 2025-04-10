@@ -307,12 +307,12 @@ class FrontController extends Controller
     }
 
 
-    public function whatWeTreatMain(Request $request)
+    public function whatWeTreats(Request $request)
     {
-        return view('front.what-we-treat');
+        return view('front.what-we-treats');
     }
-    public function howWeTreatMain(Request $request)
+    public function howWeTreats(Request $request)
     {
-        return view('front.how-we-treat');
+        return view('front.how-we-treats');
     }
 }
