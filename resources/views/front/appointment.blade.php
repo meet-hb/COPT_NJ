@@ -80,9 +80,9 @@
                             <div class="form-group">
                                 <select name="service_time" id="service_time" required>
                                     <option value="" selected disabled>Preferred Time</option>
-                                    <option value="1">Morning</option>
-                                    <option value="2">Afternoon</option>
-                                    <option value="3">Evening</option>
+                                    <option value="Morning">Morning</option>
+                                    <option value="Afternoon">Afternoon</option>
+                                    <option value="Evening">Evening</option>
                                 </select>
                             </div>
                         </div>

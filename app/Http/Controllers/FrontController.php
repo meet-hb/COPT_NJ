@@ -176,11 +176,13 @@ class FrontController extends Controller
 
     public function patientInfo()
     {
-        return view("front.patient-info");
+        $patientInfo = Setting::where('name', 'patientinfo')->first();
+        return view("front.patient-info", compact('patientInfo'));
     }
 
     public function refererAFriend()
     {
+        $patientInfo = Setting::where('name', 'patientinfo')->first();
         return view("front.refer-a-friend");
     }
 

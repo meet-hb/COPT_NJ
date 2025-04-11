@@ -1,3 +1,6 @@
+@php
+    $insuranceInfo = insuranceInfo();
+@endphp
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -47,15 +50,7 @@
             <div class="row gx-5 align-items-center">
 
                 <div class="project-desc">
-                    <p>Comprehensive Orthopedic Physical Therapy accepts a variety of health insurance plans, and we are
-                        here to assist you in navigating the world of claims and benefits. Before you arrive, please
-                        give us a call to verify your health benefits to see whether treatment services will require a
-                        copay, deductible, or coinsurance. Please call our office at (732) 846-9400.</p>
-                    <p>
-                        Comprehensive Orthopedic Physical Therapy also offers a private pay plan if you do not have
-                        health insurance or have exhausted your benefits. For additional information about our service
-                        rates and payment options, please contact us as soon as possible!
-                    </p>
+                    {!! $insuranceInfo->value !!}
                 </div>
 
             </div>

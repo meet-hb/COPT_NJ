@@ -52,7 +52,9 @@
                 <ul class="header-links container iconn-con">
                     <li class="call"><a href="tel:7328469400" class="call-tracking btn enable-act">(732) 846-9400</a>
                     </li>
-                    <li class="review"><a href="javascript::void(0)" target="_blank" class="btn">Review Us</a></li>
+                    <li class="review"><a
+                            href="https://search.google.com/local/writereview?placeid=ChIJuYhmxSbHw4kRuHGDjf8yRl4"
+                            target="_blank" class="btn">Review Us</a></li>
                     <div class="option-item">
                         <a href="{{ route('front.appointment') }}" class="btn-two">Request Appointment</a>
                     </div>

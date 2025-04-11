@@ -1,3 +1,6 @@
+@php
+    $directAccess = directAccess();
+@endphp
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -41,91 +44,9 @@
             <div class="row align-items-center">
 
                 <div class="col-xl-12 col-lg-12">
-
+                    {!! $directAccess->value !!}
                 </div>
             </div>
-            <div class="row gx-5 align-items-center">
-                <h2>Newsflash: You Don’t Need A Referral To See A Physical
-                    Therapist!</h2>
-                <div class="project-desc">
-                    <p>Imagine waking up with pain in your back that becomes
-                        worse as the day progresses. When you phone
-                        your doctor’s office, you’re told that the next
-                        available appointment is three days away! That
-                        means you’re in for another three days of pain. If
-                        only there was a way to get in touch with
-                        someone who could help you sooner!</p>
-                    <p>
-                        You’re in luck because there is! Every state has
-                        approved legislation allowing physical therapists to
-                        assess and treat patients without the need for a
-                        doctor’s referral.
-                    </p>
-                    <p>
-                        With Direct Access, health care becomes more efficient and effective, allowing you to prioritize
-                        your recovery with physical therapy! If you see our physical therapist as soon as possible, you
-                        will feel much better!
-                    </p>
-                    <p>
-                        Direct Access also saves you money and allows you to go back to your normal routine more
-                        quickly. Direct Access is all about being able to make your own judgments without being
-                        constrained by regulations. It gives you control over your medical treatment.
-                    </p>
-                    <p>
-                        Continue reading to learn more about the benefits of Direct Access, and be sure to contact
-                        Comprehensive Orthopedic Physical Therapy in Somerset, NJ today if you have any questions or
-                        would like to set up an appointment to be seen by a physical therapist!
-                    </p>
-                </div>
-
-                <h2>Direct Access Myths</h2>
-                <div class="project-desc">
-                    <p>Many people believe that Direct Access refers to outpatient physical therapy; however, it also
-                        relates to treatment in pediatric facilities, private home care, school districts, hospitals,
-                        and sports fields. Direct Access is much more common than the general public realizes.</p>
-                    <p>
-                        Another popular misconception is that Direct Access is not available in all states. In some
-                        form, Direct Access is available in all 50 states and the District of Columbia. While the
-                        program continues to have some limitations, the foundation was laid, and regulations will be
-                        revised in the future to ensure that you receive the care you need when you want it.
-                    </p>
-
-                </div>
-
-                <h2>What to know about health insurance and direct access</h2>
-                <div class="project-desc">
-                    <p>Although the health insurance sector is continually changing, Direct Access covers a wide range
-                        of private health insurance carriers.</p>
-                    <p>
-                        Medicare will cover the cost of service if the physical therapist sets a treatment plan for the
-                        patient. Keep in mind that before beginning treatment, the physical therapist must have the plan
-                        of care reviewed and signed off on by a licensed doctor.
-                    </p>
-                    <p>
-                        Direct Access to physical therapy has many benefits. Including but not limited to:
-                    </p>
-                    <ul>
-                        <li>Patients reported a higher level of satisfaction when they received physical therapy through
-                            Direct Access versus physician referral.</li>
-                        <li>
-                            Patients receiving physical therapy through direct access versus referral had better
-                            outcomes at discharge.
-                        </li>
-                    </ul>
-
-                </div>
-                <h2>Better health is just a phone call away</h2>
-                <div class="project-desc">
-                    <p>ADirect Access is changing access to healthcare. If you or someone you love would like to learn
-                        more about Direct Access to physical therapy or how physical therapy can combat chronic pain of
-                        any sort, schedule an appointment with a Somerset, NJ physical therapist.</p>
-                </div>
-
-
-
-            </div>
-
-
         </div>
     </div>
 
