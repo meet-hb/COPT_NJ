@@ -220,6 +220,14 @@
                         </p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.mailsettings') }}" class="nav-link @yield('mailsettings')">
+                        <i class="nav-icon fa fa-envelope" aria-hidden="true"></i>
+                        <p>
+                            Mail Settings
+                        </p>
+                    </a>
+                </li>
             </ul>
 
         </nav>

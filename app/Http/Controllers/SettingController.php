@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Setting;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
 
 class SettingController extends Controller
 {
@@ -145,5 +146,55 @@ class SettingController extends Controller
         }
 
         return response()->json(['success' => 'Direct Access updated successfully']);
+    }
+
+
+    public function mailsettings()
+    {
+        return view('admin.mailsettings');
+    }
+
+    public function updateMailSettings(Request $request)
+    {
+        try {
+            $this->setEnvValue([
+                'MAIL_FROM_ADDRESS' => $request->mail_from_address,
+                'MAIL_TO' => $request->mail_to,
+                'MAIL_FROM_NAME' => $request->mail_from_name,
+            ]);
+
+            Artisan::call('php artisan queue:restart');
+
+            return response()->json(['message' => 'Mail settings updated successfully'], 200);
+        } catch (\Throwable $e) {
+            return response()->json([
+                'message' => 'Error: ' . $e->getMessage()
+            ], 500);
+        }
+    }
+
+
+    protected function setEnvValue(array $values)
+    {
+        $envFile = base_path('.env');
+        $envLines = file($envFile);
+
+        foreach ($values as $key => $newValue) {
+            $keyFound = false;
+
+            foreach ($envLines as &$line) {
+                if (str_starts_with($line, $key . '=')) {
+                    $line = $key . '="' . $newValue . '"' . PHP_EOL;
+                    $keyFound = true;
+                    break;
+                }
+            }
+
+            if (!$keyFound) {
+                $envLines[] = $key . '="' . $newValue . '"' . PHP_EOL;
+            }
+        }
+
+        file_put_contents($envFile, implode('', $envLines));
     }
 }
