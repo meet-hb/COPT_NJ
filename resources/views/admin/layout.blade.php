@@ -198,7 +198,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('admin.patientinfo') }}" class="nav-link @yield('patientinfo')">
-                        <i class="nav-icon fas fa-user"></i>
+                        <i class="nav-icon fas fa-file-medical"></i>
                         <p>
                             Patient Info
                         </p>
