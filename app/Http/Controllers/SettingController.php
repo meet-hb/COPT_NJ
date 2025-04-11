@@ -79,4 +79,71 @@ class SettingController extends Controller
 
         return response()->json(['success' => 'Our Practice updated successfully']);
     }
+
+    public function insuranceinfo()
+    {
+        $data = Setting::where('name', 'insuranceinfo')->first();
+        return view('admin.insuranceinfo', compact('data'));
+    }
+
+    public function insuranceinfoOP(Request $request)
+    {
+        if ($request->id == null) {
+
+            $newdata = new Setting();
+            $newdata->name = 'insuranceinfo';
+            $newdata->value = $request->description;
+            $newdata->save();
+        } else {
+            $data = Setting::find($request->id);
+            $data->value = $request->description;
+            $data->save();
+        }
+
+        return response()->json(['success' => 'Insurance Info updated successfully']);
+    }
+    public function patientinfo()
+    {
+        $data = Setting::where('name', 'patientinfo')->first();
+        return view('admin.patientinfo', compact('data'));
+    }
+
+    public function patientinfoOP(Request $request)
+    {
+        if ($request->id == null) {
+
+            $newdata = new Setting();
+            $newdata->name = 'patientinfo';
+            $newdata->value = $request->description;
+            $newdata->save();
+        } else {
+            $data = Setting::find($request->id);
+            $data->value = $request->description;
+            $data->save();
+        }
+
+        return response()->json(['success' => 'Patient Info updated successfully']);
+    }
+    public function directaccess()
+    {
+        $data = Setting::where('name', 'directaccess')->first();
+        return view('admin.directaccess', compact('data'));
+    }
+
+    public function directaccessOP(Request $request)
+    {
+        if ($request->id == null) {
+
+            $newdata = new Setting();
+            $newdata->name = 'directaccess';
+            $newdata->value = $request->description;
+            $newdata->save();
+        } else {
+            $data = Setting::find($request->id);
+            $data->value = $request->description;
+            $data->save();
+        }
+
+        return response()->json(['success' => 'Direct Access updated successfully']);
+    }
 }

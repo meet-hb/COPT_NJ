@@ -196,6 +196,30 @@
                         </p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.patientinfo') }}" class="nav-link @yield('patientinfo')">
+                        <i class="nav-icon fas fa-user"></i>
+                        <p>
+                            Patient Info
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.directaccess') }}" class="nav-link @yield('directaccess')">
+                        <i class="nav-icon fas fa-folder-open"></i>
+                        <p>
+                            Direct Access
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.insuranceinfo') }}" class="nav-link @yield('insuranceinfo')">
+                        <i class="nav-icon fas fa-shield-alt"></i>
+                        <p>
+                            Insurance Info
+                        </p>
+                    </a>
+                </li>
             </ul>
 
         </nav>
@@ -243,6 +267,7 @@
                     <li class="nav-item @yield('society')">
                         <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-building"></i>
+
                             <p>
                                 Society
                                 <i class="right fas fa-angle-left"></i>
