@@ -62,10 +62,18 @@ class SettingController extends Controller
             $newdata = new Setting();
             $newdata->name = 'ourpractice';
             $newdata->value = $request->description;
+            if ($request->hasFile('image')) {
+                $imagePath = $request->file('image')->store('public/ourpractice');
+                $newdata->image = 'public/ourpractice/' . basename($imagePath);
+            }
             $newdata->save();
         } else {
             $data = Setting::find($request->id);
             $data->value = $request->description;
+            if ($request->hasFile('image')) {
+                $imagePath = $request->file('image')->store('public/ourpractice');
+                $data->image = 'public/ourpractice/' . basename($imagePath);
+            }
             $data->save();
         }
 

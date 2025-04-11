@@ -70,6 +70,13 @@
                                             <small id="description_error"></small>
                                         </div>
 
+                                        <div class="form-group mb-3">
+                                            <label for="image" class="form-label">Image</label>
+                                            <input type="file" name="image" id="image" accept="image/*"
+                                                class="" required>
+                                            <small id="image_error"></small>
+                                        </div>
+
                                         <div class="d-flex justify-content-end">
                                             <button type="submit" id="submitTherapy"
                                                 class="btn btn-success mr-2">Submit</button>

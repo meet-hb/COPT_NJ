@@ -56,7 +56,8 @@ class FrontController extends Controller
 
     public function ourpractice()
     {
-        return view("front.our-practice");
+        $ourPractice = Setting::where('name', 'ourpractice')->first();
+        return view("front.our-practice", compact('ourPractice'));
     }
     public function ourlocations()
     {
