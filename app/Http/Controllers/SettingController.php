@@ -163,7 +163,7 @@ class SettingController extends Controller
                 'MAIL_FROM_NAME' => $request->mail_from_name,
             ]);
 
-            Artisan::call('php artisan queue:restart');
+            Artisan::call('queue:restart');
 
             return response()->json(['message' => 'Mail settings updated successfully'], 200);
         } catch (\Throwable $e) {
