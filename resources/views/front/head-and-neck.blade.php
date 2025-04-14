@@ -1,6 +1,5 @@
 @php
-    $howWeTreats = howWeTreat();
-    $whatWeTreat = whatWeTreat();
+    $headAndNeckDetails = headAndNeck('Head and Neck');
 @endphp
 <!DOCTYPE html>
 <html lang="zxx">
@@ -56,28 +55,10 @@
                     <h6>Click on the body parts or the list below to find out more about your pain and how physical
                         therapy can help.</h6>
                     <ul type="square">
-                        <li><a href="javascript:void(0);" data-bs-target="#exampleModalToggle1" data-bs-toggle="modal"
-                                type="button">Herniated or Bulging Disc</a></li>
-                        <li><a href="javascript:void(0);" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
-                                type="button">Vertigo and Dizziness</a></li>
-                        <li><a href="javascript:void(0);" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal"
-                                type="button">Temporomandibular Joint Dysfunction (TMD or TMJ)</a></li>
-                        <li><a href="javascript:void(0);" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal"
-                                type="button">Degenerative Disc Disease</a></li>
-                        <li><a href="javascript:void(0);" data-bs-target="#exampleModalToggle5" data-bs-toggle="modal"
-                                type="button">Arthritis and Stenosis</a></li>
-                        <li><a href="javascript:void(0);" data-bs-target="#exampleModalToggle6" data-bs-toggle="modal"
-                                type="button">Poor Posture and Forward Head Syndrome</a></li>
-                        <li><a href="javascript:void(0);" data-bs-target="#exampleModalToggle7" data-bs-toggle="modal"
-                                type="button">Radiating pain</a></li>
-                        <li><a href="javascript:void(0);" data-bs-target="#exampleModalToggle8" data-bs-toggle="modal"
-                                type="button">Headaches and Migraines</a></li>
-                        <li><a href="javascript:void(0);" data-bs-target="#exampleModalToggle9" data-bs-toggle="modal"
-                                type="button">Whiplash</a></li>
-                        <li><a href="javascript:void(0);" data-bs-target="#exampleModalToggle10" data-bs-toggle="modal"
-                                type="button">Neck Pain</a></li>
-                        <li><a href="javascript:void(0);" data-bs-target="#exampleModalToggle11" data-bs-toggle="modal"
-                                type="button">Post-surgery Rehab</a></li>
+                        @foreach ($headAndNeckDetails as $headAndNeckDetail)
+                            <li><a href="javascript:void(0);" data-bs-target="#{{ $headAndNeckDetail->treatment_id }}"
+                                    data-bs-toggle="modal" type="button">{{ $headAndNeckDetail->type }}</a></li>
+                        @endforeach
                     </ul>
                 </div>
                 <div class="col-lg-4 img-pint " data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
