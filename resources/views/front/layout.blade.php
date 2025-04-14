@@ -11,23 +11,7 @@
 
 
 </style>
-<!--  Preloader Start -->
-{{-- <div class="loader-wrapper">
-    <div class="loader"></div>
-    <div class="loader-section section-left"></div>
-    <div class="loader-section section-right"></div>
-</div> --}}
-<!--  Preloader End -->
-
 <div class="navbar-area header-one bg-white" id="navbar">
-    <!-- <div class="topbar" style="background-color: #00BFB3;">
-        <div class="container">
-            <div class="top ">
-                <p  style="color: #fff;">We now accept Medicare!</p>
-            </div>
-        </div>
-
-     </div> -->
     <div data-name="wenowacceptmedicare" id="address-bar" class="address-bar" style="">
         <div class="address-text">
             <p>We now accept Medicare!</p>
@@ -37,7 +21,6 @@
     <div class="container-fluid nav-first">
         <div class="container p-2">
             <div class="top d-flex justify-content-between align-items-center">
-
                 <a class="navbar-brand d-flex" href="{{ url('/') }}">
                     <div class="logo-part d-flex container gap-3">
                         <img class="logo-light loog"
@@ -46,8 +29,6 @@
                         <img class="logo-light loog" src="{{ url('/') }}/assets/front/img/Reactive-trans.png"
                             alt="logo">
                     </div>
-
-                    <!-- <img class="logo-dark" src="{{ url('/') }}/assets/front/img/logo-white.webp" alt="logo"> -->
                 </a>
                 <ul class="header-links container iconn-con">
                     <li class="call"><a href="tel:7328469400" class="call-tracking btn enable-act">(732) 846-9400</a>
@@ -59,14 +40,8 @@
                         <a href="{{ route('front.appointment') }}" class="btn-two">Request Appointment</a>
                     </div>
                 </ul>
-
-
             </div>
-
         </div>
-
-
-
         <nav class="navbar navbar-expand-lg container-fluid">
 
             {{-- <a class="navbar-brand d-flex" href="{{ url('/') }}">
