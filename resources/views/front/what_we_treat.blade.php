@@ -59,20 +59,20 @@
                             data-aos-delay="200">
                             <div class="about-img">
                                 <img src="{{ url('/') }}/assets/front/img/human-body.png" alt="Image">
-                                <a href="{{ route('front.whatWeTreat', ['Knee Pain Relief']) }}"
+                                <a href="{{ route('front.knee-balance-and-walking') }}"
                                     title="Knee, Balance and Walking" id="knee-balance-and-walking"
                                     class="condition-body-link knee-balance-and-walking"></a>
-                                <a href="{{ route('front.whatWeTreat', ['Back Pain Relief']) }}" title="Back"
-                                    id="back" class="condition-body-link back"></a>
-                                <a href="{{ route('front.whatWeTreat', ['Hip Pain Relief']) }}" title="Hip"
-                                    id="hip" class="condition-body-link hip"></a>
-                                <!--<a href="#" title="Elbow, Wrist and Hand" id="elbow-wrist-and-hand"-->
-                                <!--    class="condition-body-link elbow-wrist-and-hand"></a>-->
-                                <a href="{{ route('front.whatWeTreat', ['Foot Pain Relief']) }}" title="Foot and Ankle"
+                                <a href="{{ route('front.back') }}" title="Back" id="back"
+                                    class="condition-body-link back"></a>
+                                <a href="{{ route('front.hip') }}" title="Hip" id="hip"
+                                    class="condition-body-link hip"></a>
+                                <a href="{{ route('front.elbow-wrist-hand') }}" title="Elbow, Wrist and Hand"
+                                    id="elbow-wrist-and-hand" class="condition-body-link elbow-wrist-and-hand"></a>
+                                <a href="{{ route('front.foot-and-ankle') }}" title="Foot and Ankle"
                                     id="foot-and-ankle" class="condition-body-link foot-and-ankle"></a>
-                                <a href="#" title="Shoulder" id="shoulder"
+                                <a href="{{ route('front.shoulder') }}" title="Shoulder" id="shoulder"
                                     class="condition-body-link shoulder"></a>
-                                <a href="#" title="Head and Neck" id="head-and-neck"
+                                <a href="{{ route('front.head-and-neck') }}" title="Head and Neck" id="head-and-neck"
                                     class="condition-body-link head-and-neck"></a>
                             </div>
                         </div>

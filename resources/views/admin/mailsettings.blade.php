@@ -90,34 +90,26 @@
                                         </div>
 
                                         <div class="row">
-                                            <div class="form-group col-md-4">
-                                                <label for="mail_from_address" class="form-label">Mail From
-                                                    Address</label>
-                                                <input type="text" class="form-control" name="mail_from_address"
-                                                    id="mail_from_address" placeholder="Mail From Address"
-                                                    value="{{ env('MAIL_FROM_ADDRESS') }}">
-                                                <small id="mail_from_address_error"></small>
-                                            </div>
-                                            <div class="form-group col-md-4">
+                                            <input type="hidden" name="mail_from_address" id="mail_from_address"
+                                                value="help@coptnj.com">
+                                            <div class="form-group col-md-6">
                                                 <label for="mail_from_name" class="form-label">Mail From Name</label>
                                                 <input type="text" class="form-control" name="mail_from_name"
                                                     id="mail_from_name" placeholder="Mail From Name"
                                                     value="{{ env('MAIL_FROM_NAME') }}">
                                                 <small id="mail_from_name_error"></small>
                                             </div>
-                                            <div class="form-group col-md-4">
+                                            <div class="form-group col-md-6">
                                                 <label for="email" class="form-label">Mail To</label>
-                                                <input type="email" class="form-control" name="mail_to"
-                                                    id="mail_to" placeholder="Mail to Address"
-                                                    value="{{ env('MAIL_TO') }}">
+                                                <input type="email" class="form-control" name="mail_to" id="mail_to"
+                                                    placeholder="Mail to Address" value="{{ env('MAIL_TO') }}">
                                                 <small id="mail_to_error"></small>
                                             </div>
                                         </div>
 
                                         <div class="d-flex justify-content-end">
-                                            <button type="submit" id="updateSettings"
-                                                class="btn btn-primary mr-2"><i class="fa fa-refresh"
-                                                    aria-hidden="true"></i> Update</button>
+                                            <button type="submit" id="updateSettings" class="btn btn-primary mr-2"><i
+                                                    class="fa fa-refresh" aria-hidden="true"></i> Update</button>
                                             <a href="{{ route('admin.therapys') }}"><button type="button"
                                                     class="btn btn-danger">Close</button></a>
                                         </div>
