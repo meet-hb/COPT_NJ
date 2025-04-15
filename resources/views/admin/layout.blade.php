@@ -106,6 +106,32 @@
                         </p>
                     </a>
                 </li>
+
+                <li
+                    class="nav-item @yield('vmctreatments') @if (isset($vmctreatments)) menu-is-opening menu-open @endif">
+                    <a href="{{ route('admin.vmctreatments') }}" class="nav-link @yield('addvmctreatments')">
+                        <i class="nav-icon fas fa-info-circle"></i>
+                        <p>
+                            View More Conditions
+                            <i class="right fas fa-angle-right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview" @if (isset($vmctreatments)) style="display: block" @endif>
+                        <li class="nav-item">
+                            <a href="{{ route('admin.vmctreatments') }}" class="nav-link @yield('add_vmctreatments')">
+                                <i class="fa-solid fa-arrow-right nav-icon ml-1"></i>
+                                <p>Add Treatments</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('admin.treatmentsDetails') }}" class="nav-link @yield('treatmentsDetails')">
+                                <i class="fa-solid fa-arrow-right nav-icon ml-1"></i>
+                                <p>Treatment Details</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
                 <li
                     class="nav-item @yield('therapys') @if (isset($Therapy)) menu-is-opening menu-open @endif">
                     <a href="{{ route('admin.therapys') }}" class="nav-link @yield('addtherapys')">
@@ -130,6 +156,7 @@
                         </li>
                     </ul>
                 </li>
+
 
                 <li class="nav-item">
                     <a href="{{ route('admin.BlogDetails') }}" class="nav-link @yield('blog')">
@@ -225,6 +252,14 @@
                         <i class="nav-icon fa fa-envelope" aria-hidden="true"></i>
                         <p>
                             Mail Settings
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.configuration') }}" class="nav-link @yield('configuration')">
+                        <i class="nav-icon fa fa-cog" aria-hidden="true"></i>
+                        <p>
+                            Configuration
                         </p>
                     </a>
                 </li>

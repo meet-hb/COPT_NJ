@@ -15,6 +15,7 @@ use App\Http\Controllers\FaqController;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\OurLocationController;
 use App\Http\Controllers\SettingController;
+use App\Http\Controllers\ViewMoreConditionsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -177,8 +178,26 @@ Route::post($admin_url . '/directaccess', [SettingController::class, 'directacce
 Route::get($admin_url . '/insuranceinfo', [SettingController::class, 'insuranceinfo'])->name('admin.insuranceinfo');
 Route::post($admin_url . '/insuranceinfo', [SettingController::class, 'insuranceinfoOP'])->name('admin.insuranceinfoDetailOp');
 
+Route::get($admin_url . '/configuration', [SettingController::class, 'configuration'])->name('admin.configuration');
+Route::post($admin_url . '/configuration', [SettingController::class, 'configurationOP'])->name('admin.configurationOp');
+
 Route::get($admin_url . '/mailsettings', [SettingController::class, 'mailsettings'])->name('admin.mailsettings');
 Route::post($admin_url . '/updateMailSettings', [SettingController::class, 'updateMailSettings'])->name('admin.updateMailSettings');
 
+Route::get($admin_url . '/treatment', [ViewMoreConditionsController::class, 'treatments'])->name('admin.vmctreatments');
+Route::post($admin_url . '/treatments_list', [ViewMoreConditionsController::class, 'treatmentsList'])->name('admin.treatmentsList');
+Route::get($admin_url . '/treatments_add', [ViewMoreConditionsController::class, 'treatmentsAdd'])->name('admin.treatmentsAdd');
+Route::post($admin_url . '/treatments_add', [ViewMoreConditionsController::class, 'treatmentsAddOp'])->name('admin.treatmentsAddOp');
+Route::post($admin_url . '/treatments_delete', [ViewMoreConditionsController::class, 'treatmentsDelete'])->name('admin.treatmentsDelete');
+Route::get($admin_url . '/treatments_edit/{id}', [ViewMoreConditionsController::class, 'treatmentsEdit'])->name('admin.treatmentsEdit');
+Route::post($admin_url . '/treatments_edit', [ViewMoreConditionsController::class, 'treatmentsEditOp'])->name('admin.treatmentsEditOp');
+
+Route::get($admin_url . '/treatments_details', [ViewMoreConditionsController::class, 'treatmentsDetails'])->name('admin.treatmentsDetails');
+Route::post($admin_url . '/treatments_detail_list', [ViewMoreConditionsController::class, 'treatmentsDetailList'])->name('admin.treatmentsDetailList');
+Route::get($admin_url . '/treatments_detail_add', [ViewMoreConditionsController::class, 'treatmentsDetailAdd'])->name('admin.treatmentsDetailAdd');
+Route::post($admin_url . '/treatments_detail_add', [ViewMoreConditionsController::class, 'treatmentsDetailAddOp'])->name('admin.treatmentsDetailAddOp');
+Route::post($admin_url . '/treatments_detail_delete', [ViewMoreConditionsController::class, 'treatmentsDetailDelete'])->name('admin.treatmentsDetailDelete');
+Route::get($admin_url . '/treatments_detail_edit/{id}', [ViewMoreConditionsController::class, 'treatmentsDetailEdit'])->name('admin.treatmentsDetailEdit');
+Route::post($admin_url . '/treatments_detail_edit', [ViewMoreConditionsController::class, 'treatmentsDetailEditOp'])->name('admin.treatmentsDetailEditOp');
 
 Route::match(['get', 'post'], '/botman', [ChatController::class, 'handle']);

@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Configuration;
 use App\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Storage;
 
 class SettingController extends Controller
 {
@@ -196,5 +198,42 @@ class SettingController extends Controller
         }
 
         file_put_contents($envFile, implode('', $envLines));
+    }
+
+    public function configuration()
+    {
+        $data = Configuration::get();
+        return view('admin.configuration', compact('data'));
+    }
+
+    public function configurationOP(Request $request)
+    {
+        $types = ['websitelogo1', 'websitelogo2', 'adminlogo'];
+
+        foreach ($types as $type) {
+            if ($request->hasFile($type)) {
+                $file = $request->file($type);
+                $imagePath = $file->store('public/configuration');
+                $imagePath = 'public/configuration/' . basename($imagePath);
+
+                $config = Configuration::where('type', $type)->first();
+
+                if ($config) {
+                    if ($config->image && Storage::exists($config->image)) {
+                        Storage::delete($config->image);
+                    }
+
+                    $config->image = $imagePath;
+                    $config->save();
+                } else {
+                    $config = new Configuration();             
+                    $config->type = $type;
+                    $config->image = $imagePath;
+                    $config->save();
+                }
+            }
+        }
+
+        return response()->json(['success' => 'Configuration updated successfully']);
     }
 }
