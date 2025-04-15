@@ -69,7 +69,7 @@
                                             <label for="websitelogo1" class="form-label">WebSite Logo 1</label>
                                             <input type="file" name="websitelogo1" id="websitelogo1" class="">
                                             <div id="image_preview_1">
-                                                @if (!empty($config['websitelogo1']))
+                                                @if (!empty($config['websitelogo1']) && $config['websitelogo1'] != '')
                                                     <img class="mt-2"
                                                         src="{{ Storage::url($config['websitelogo1']->image) }}"
                                                         style="width: 200px; height: 100px;">
@@ -82,7 +82,7 @@
                                             <label for="websitelogo2" class="form-label">WebSite Logo 2</label>
                                             <input type="file" name="websitelogo2" id="websitelogo2" class="">
                                             <div id="image_preview_2">
-                                                @if (!empty($config['websitelogo2']))
+                                                @if (!empty($config['websitelogo2']) && $config['websitelogo2'] != '')
                                                     <img class="mt-2"
                                                         src="{{ Storage::url($config['websitelogo2']->image) }}"
                                                         style="width: 200px; height: 100px;">
@@ -94,10 +94,10 @@
                                             <label for="adminlogo" class="form-label">Admin Logo</label>
                                             <input type="file" name="adminlogo" id="adminlogo" class="">
                                             <div id="image_preview_3">
-                                                @if (!empty($config['adminlogo']))
+                                                @if (!empty($config['adminlogo']) && $config['adminlogo'] != '')
                                                     <img class="mt-2"
                                                         src="{{ Storage::url($config['adminlogo']->image) }}"
-                                                        style="width: 200px; height: 100px;">
+                                                        style="width: 100px; height: 100px;">
                                                 @endif
                                             </div>
                                             <small id="image_error"></small>

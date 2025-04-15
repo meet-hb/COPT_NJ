@@ -4,6 +4,7 @@
     $half = ceil($whatWeTreat->count() / 2);
     $firstHalf = $whatWeTreat->slice(0, $half);
     $secondHalf = $whatWeTreat->slice($half);
+    $config = getConfig();
 @endphp
 
 
@@ -12,7 +13,7 @@
 
 </style>
 <div class="navbar-area header-one bg-white" id="navbar">
-    <div data-name="wenowacceptmedicare" id="address-bar" class="address-bar" style="">
+    <div data-name="wenowacceptmedicare" id="address-bar" class="address-bar">
         <div class="address-text">
             <p>We now accept Medicare!</p>
         </div>
@@ -23,10 +24,9 @@
             <div class="top d-flex justify-content-between align-items-center">
                 <a class="navbar-brand d-flex" href="{{ url('/') }}">
                     <div class="logo-part d-flex container gap-3">
-                        <img class="logo-light loog"
-                            src="{{ url('/') }}/assets/front/img/comprehensive-orthopedic-physical-therapy-logo-somerset-nj-300x138.png"
+                        <img class="logo-light loog" src="{{ Storage::url($config['websiteLogo1']->image) }}"
                             alt="logo">
-                        <img class="logo-light loog" src="{{ url('/') }}/assets/front/img/Reactive-trans.png"
+                        <img class="logo-light loog" src="{{ Storage::url($config['websiteLogo2']->image) }}"
                             alt="logo">
                     </div>
                 </a>
@@ -43,6 +43,18 @@
             </div>
         </div>
         <nav class="navbar navbar-expand-lg container-fluid">
+
+            {{-- <a class="navbar-brand d-flex" href="{{ url('/') }}">
+                <div class="logo-part d-flex container gap-3">
+                    <img class="logo-light"
+                        src="{{ url('/') }}/assets/front/img/comprehensive-orthopedic-physical-therapy-logo-somerset-nj-300x138.png"
+                        alt="logo">
+                    <img class="logo-light" src="{{ url('/') }}/assets/front/img/Reactive-trans.png"
+                        alt="logo">
+                </div>
+
+                 <img class="logo-dark" src="{{ url('/') }}/assets/front/img/logo-white.webp" alt="logo">
+            </a> --}}
             <div class="d-none call-icon ms-5">
                 <a class="sidebar-toggler">
                     <a href="tel:7328469400">
@@ -57,6 +69,10 @@
                     <span class="bottom-bar"></span>
                 </span>
             </a>
+
+
+
+
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
@@ -151,6 +167,11 @@
                                     INSURANCE INFO
                                 </a>
                             </li>
+                            {{-- <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    Reviews
+                                </a>
+                            </li> --}}
                             <li class="nav-item">
                                 <a href="{{ route('front.referAFriend') }}" class="nav-link">
                                     REFER A FRIEND
@@ -254,6 +275,7 @@
                                     </a>
                                 </div>
                             @endforeach
+
                         </div>
                     </div>
                 </div>

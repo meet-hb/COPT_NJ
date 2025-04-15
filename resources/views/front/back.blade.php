@@ -1,6 +1,5 @@
 @php
-    $howWeTreats = howWeTreat();
-    $whatWeTreat = whatWeTreat();
+    $backDetails = viewMoreConditions('Back');
 @endphp
 <!DOCTYPE html>
 <html lang="zxx">
@@ -57,28 +56,10 @@
                     <h6>Click on the body parts or the list below to find out more about your pain and how physical
                         therapy can help.</h6>
                     <ul type="square">
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle1"
-                                type="button">Post-surgery Rehab</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle2"
-                                type="button">Compression Fractures</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle3"
-                                type="button">Degenerative Diseases</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle4"
-                                type="button">Spondylolisthesis</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle5"
-                                type="button">Osteoporosis</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle6"
-                                type="button">Herniated or Bulging Disc</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle7"
-                                type="button">Spinal Arthritis and Spinal Stenosisq</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle8"
-                                type="button">Sciatica and Radiating Pain</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle9"
-                                type="button">Mid Back Pain</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle10"
-                                type="button">Low Back Pain</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle11"
-                                type="button">Sprain / Strain</a></li>
+                        @foreach ($backDetails as $backDetail)
+                            <li><a href="javascript:void(0);" data-bs-target="#{{ $backDetail->treatment_id }}"
+                                    data-bs-toggle="modal" type="button">{{ $backDetail->type }}</a></li>
+                        @endforeach
 
                     </ul>
                 </div>
@@ -107,7 +88,21 @@
     </div>
 
 
-    @include('front.modal.back_details')
+    @foreach ($backDetails as $backDetail)
+        <div class="modal fade" id="{{ $backDetail->treatment_id }}" aria-hidden="true"
+            aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        {!! $backDetail->description !!}
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endforeach
     <!-- Footer Section Start -->
     @include('front.footer')
     <!-- Footer Section End -->

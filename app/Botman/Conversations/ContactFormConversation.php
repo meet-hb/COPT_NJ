@@ -2,6 +2,7 @@
 
 namespace App\BotMan\Conversations;
 
+use App\Jobs\SendEmailJob;
 use BotMan\BotMan\Messages\Conversations\Conversation;
 use BotMan\BotMan\Messages\Incoming\Answer;
 use Illuminate\Support\Facades\DB;
@@ -66,6 +67,16 @@ class ContactFormConversation extends Conversation
                 'message' => $this->message,
                 'created_at' => now(),
             ]);
+
+            $details = [
+                "name" => $this->name,
+                "phone" => $this->phone,
+                "email" => $this->email,
+                "message" => $this->message,
+                'template' => 'emails.inquiry_via_chatbot',
+            ];
+
+            dispatch(new SendEmailJob($details));
 
             $this->say("Thanks! your Request has been Submitted, We'll get back to you soon.😊");
         });

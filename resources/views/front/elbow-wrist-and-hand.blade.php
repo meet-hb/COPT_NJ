@@ -1,6 +1,5 @@
 @php
-    $howWeTreats = howWeTreat();
-    $whatWeTreat = whatWeTreat();
+    $elbowWristAndHandDetails = viewMoreConditions('Elbow,Wrist and Hand');
 @endphp
 <!DOCTYPE html>
 <html lang="zxx">
@@ -56,20 +55,12 @@
                     <h6>Click on the body parts or the list below to find out more about your pain and how physical
                         therapy can help.</h6>
                     <ul type="square">
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle1"
-                                type="button">Sprain / Strain</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle2"
-                                type="button">Tendon Repair & Post-surgery Rehab</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle3"
-                                type="button">Carpal Tunnel Syndrome</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle4"
-                                type="button">Nerve Injuries</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle5"
-                                type="button">Tennis and Golfer’s Elbow</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                type="button">Elbow Pain, Wrist Pain, Hand Pain</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                type="button">Fractures</a></li>
+                        @foreach ($elbowWristAndHandDetails as $elbowWristAndHandDetail)
+                            <li><a href="javascript:void(0);"
+                                    data-bs-target="#{{ $elbowWristAndHandDetail->treatment_id }}"
+                                    data-bs-toggle="modal" type="button">{{ $elbowWristAndHandDetail->type }}</a></li>
+                        @endforeach
+
                     </ul>
                 </div>
 
@@ -98,7 +89,21 @@
     </div>
 
 
-    @include('front.modal.elbow_wrist_and_hand_details')
+    @foreach ($elbowWristAndHandDetails as $elbowWristAndHandDetail)
+        <div class="modal fade" id="{{ $elbowWristAndHandDetail->treatment_id }}" aria-hidden="true"
+            aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        {!! $elbowWristAndHandDetail->description !!}
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endforeach
     <!-- Footer Section Start -->
     @include('front.footer')
     <!-- Footer Section End -->

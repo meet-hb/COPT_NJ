@@ -1,6 +1,5 @@
 @php
-    $howWeTreats = howWeTreat();
-    $whatWeTreat = whatWeTreat();
+    $hipDetails = viewMoreConditions('Hip');
 @endphp
 <!DOCTYPE html>
 <html lang="zxx">
@@ -56,24 +55,11 @@
                     <h6>Click on the body parts or the list below to find out more about your pain and how physical
                         therapy can help.</h6>
                     <ul type="square">
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                type="button">Hip Sprain / Strain</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                type="button">Trochanteric Bursitis</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                type="button">Osteoarthritis of The Hip</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                type="button">Sciatica</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                type="button">Hip Pain and Thigh Pain</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                type="button">Piriformis Syndrome</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                type="button">Total Hip Replacement / Partial Hip Replacement</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                type="button">Difficulty Walking</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                type="button">Post-surgery Rehab</a></li>
+                        @foreach ($hipDetails as $hipDetail)
+                            <li><a href="javascript:void(0);" data-bs-target="#{{ $hipDetail->treatment_id }}"
+                                    data-bs-toggle="modal" type="button">{{ $hipDetail->type }}</a></li>
+                        @endforeach
+
                     </ul>
                 </div>
 
@@ -102,7 +88,21 @@
     </div>
 
 
-    @include('front.modal.hip_details')
+    @foreach ($hipDetails as $hipDetail)
+        <div class="modal fade" id="{{ $hipDetail->treatment_id }}" aria-hidden="true"
+            aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        {!! $hipDetail->description !!}
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endforeach
     <!-- Footer Section Start -->
     @include('front.footer')
     <!-- Footer Section End -->

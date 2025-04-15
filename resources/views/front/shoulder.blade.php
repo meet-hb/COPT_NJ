@@ -1,6 +1,5 @@
 @php
-    $howWeTreats = howWeTreat();
-    $whatWeTreat = whatWeTreat();
+    $shoulderDetails = viewMoreConditions('Shoulder');
 @endphp
 <!DOCTYPE html>
 <html lang="zxx">
@@ -62,26 +61,10 @@
                     <h6>Click on the body parts or the list below to find out more about your pain and how physical
                         therapy can help.</h6>
                     <ul type="square">
-                        <li><a href="javascript:void(0);" data-bs-target="#exampleModalToggle1"
-                                data-bs-toggle="modal">Sprain / Strain</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle2"
-                                type="button">Shoulder Pain</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle3"
-                                type="button">Dislocation, Instability</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle4"
-                                type="button">Labrum Tear</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle5"
-                                type="button">Frozen Shoulder / Adhesive Capsulitis</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle6"
-                                type="button">Rotator Cuff Injuries</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle7"
-                                type="button">Sports Injuries</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle8"
-                                type="button">Bursitis / Tendonitis</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle9"
-                                type="button">Post-surgery Rehab</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle10"
-                                type="button">Fractures</a></li>
+                        @foreach ($shoulderDetails as $shoulderDetail)
+                            <li><a href="javascript:void(0);" data-bs-target="#{{ $shoulderDetail->treatment_id }}"
+                                    data-bs-toggle="modal" type="button">{{ $shoulderDetail->type }}</a></li>
+                        @endforeach
                     </ul>
                 </div>
                 <div class="col-lg-4 img-pint " data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
@@ -107,7 +90,21 @@
         </div>
     </div>
 
-    @include('front.modal.shoulder_details')
+    @foreach ($shoulderDetails as $shoulderDetail)
+        <div class="modal fade" id="{{ $shoulderDetail->treatment_id }}" aria-hidden="true"
+            aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        {!! $shoulderDetail->description !!}
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endforeach
 
     <!-- Footer Section Start -->
     @include('front.footer')

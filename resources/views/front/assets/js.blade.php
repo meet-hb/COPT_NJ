@@ -20,7 +20,7 @@
         e.preventDefault();
 
         // Disable the submit button and change text
-        $('#submit-btn').prop('disabled', true).text('Submitting...');
+        $('#btn-subscribe').prop('disabled', true).text('Submitting...');
 
         // Submit the form via AJAX
         $.ajax({
@@ -28,13 +28,13 @@
             type: "POST",
             data: $(this).serialize(),
             success: function() {
-                $('#submit-btn').prop('disabled', false).text('Send Message');
+                $('#btn-subscribe').prop('disabled', false).text('Subscribe');
                 $('#blogRequestForm')[0].reset(); // Reset form fields
                 alert('Request has been sent Successfully!');
             },
             error: function() {
                 alert('There was an error. Please try again.');
-                $('#submit-btn').prop('disabled', false).text('Send Message');
+                $('#btn-subscribe').prop('disabled', false).text('Subscribe');
             }
         });
     });

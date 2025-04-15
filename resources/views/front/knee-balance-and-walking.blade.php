@@ -1,6 +1,5 @@
 @php
-    $howWeTreats = howWeTreat();
-    $whatWeTreat = whatWeTreat();
+    $kneeBalanceAndWalkingDetails = viewMoreConditions('Knee Balance and Walking');
 @endphp
 <!DOCTYPE html>
 <html lang="zxx">
@@ -56,32 +55,13 @@
                     <h6>Click on the body parts or the list below to find out more about your pain and how physical
                         therapy can help.</h6>
                     <ul type="square">
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle1"
-                                type="button">Difficulty
-                                Walking</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle2"
-                                type="button">Post-surgery Rehab
-                                Walking</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle3"
-                                type="button">Knee Pain</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle4"
-                                type="button">Poor Balance / Risk of Falling</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle5"
-                                type="button">Total Knee Replacement</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle6"
-                                type="button">Lateral Collateral Ligament (LCL) Tears</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle7"
-                                type="button">Medial Collateral Ligament (MCL) Tears</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle8"
-                                type="button">Posterior Cruciate Ligament (PCL) Tears</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle9"
-                                type="button">Anterior Cruciate Ligament (ACL) Tears</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle10"
-                                type="button">Tendonitis</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle11"
-                                type="button">Meniscus Injury</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle12"
-                                type="button">Sprain / Strain</a></li>
+                        @foreach ($kneeBalanceAndWalkingDetails as $kneeBalanceAndWalkingDetail)
+                            <li><a href="javascript:void(0);"
+                                    data-bs-target="#{{ $kneeBalanceAndWalkingDetail->treatment_id }}"
+                                    data-bs-toggle="modal" type="button">{{ $kneeBalanceAndWalkingDetail->type }}</a>
+                            </li>
+                        @endforeach
+
                     </ul>
                 </div>
                 <div class="col-lg-4 img-pint " data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
@@ -108,7 +88,21 @@
     </div>
 
 
-    @include('front.modal.knee_balance_and_walking_details')
+    @foreach ($kneeBalanceAndWalkingDetails as $kneeBalanceAndWalkingDetail)
+        <div class="modal fade" id="{{ $kneeBalanceAndWalkingDetail->treatment_id }}" aria-hidden="true"
+            aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        {!! $kneeBalanceAndWalkingDetail->description !!}
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endforeach
     <!-- Footer Section Start -->
     @include('front.footer')
     <!-- Footer Section End -->

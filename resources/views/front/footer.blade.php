@@ -15,7 +15,7 @@
                                         style="color: #000000 !important; border: 1px solid #04BFB3FF !important; border: 1px solid #04BFB3FF !important;border-radius: 40px !important;padding: 10px 25px 10px 25px;box-shadow: 0px 0px 5px 1px #CBCBCB82;font-family: 'Poppins';font-size: 14px;font-weight: 400;background-clip: inherit !important;"
                                         required>
                                 </div>
-                                <button type="submit" id="btn-submit" class="mt-2"
+                                <button type="submit" id="btn-subscribe" class="mt-2"
                                     style="background-color:#1F2B44FF;color:#fff; border:0px solid #04BFB300;border-radius:40px;padding:10px 25px 10px 25px;white-space:normal;width:100%;box-shadow:0px 0px 0px 0px #FFFFFF;">Subscribe</button>
                             </form>
                         </div>

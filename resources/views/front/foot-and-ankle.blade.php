@@ -1,6 +1,5 @@
 @php
-    $howWeTreats = howWeTreat();
-    $whatWeTreat = whatWeTreat();
+    $footAndAnkleDetails = viewMoreConditions('Foot and Ankle');
 @endphp
 <!DOCTYPE html>
 <html lang="zxx">
@@ -58,18 +57,12 @@
                     <h6>Click on the body parts or the list below to find out more about your pain and how physical
                         therapy can help.</h6>
                     <ul type="square">
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle1"
-                                type="button">Achilles Tendonitis</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle2"
-                                type="button">Plantar Fasciitis</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle3"
-                                type="button">Instability</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle4"
-                                type="button">Post-surgery Rehab</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle5"
-                                type="button">Sprain / Strain</a></li>
-                        <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModalToggle6"
-                                type="button">Fractures</a></li>
+                        @foreach ($footAndAnkleDetails as $footAndAnkleDetail)
+                            <li><a href="javascript:void(0);" data-bs-target="#{{ $footAndAnkleDetail->treatment_id }}"
+                                    data-bs-toggle="modal" type="button">{{ $footAndAnkleDetail->type }}</a>
+                            </li>
+                        @endforeach
+
                     </ul>
                 </div>
                 <div class="col-lg-4 img-pint " data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
@@ -97,7 +90,21 @@
 
 
 
-    @include('front.modal.foot_and_ankle_details')
+    @foreach ($footAndAnkleDetails as $footAndAnkleDetail)
+        <div class="modal fade" id="{{ $footAndAnkleDetail->treatment_id }}" aria-hidden="true"
+            aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        {!! $footAndAnkleDetail->description !!}
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endforeach
     <!-- Footer Section Start -->
     @include('front.footer')
     <!-- Footer Section End -->

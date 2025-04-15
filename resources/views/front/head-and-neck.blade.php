@@ -1,5 +1,5 @@
 @php
-    $headAndNeckDetails = headAndNeck('Head and Neck');
+    $headAndNeckDetails = viewMoreConditions('Head and Neck');
 @endphp
 <!DOCTYPE html>
 <html lang="zxx">
@@ -88,7 +88,21 @@
     </div><br><br>
 
 
-    @include('front.modal.head_and_neck_details')
+    @foreach ($headAndNeckDetails as $headAndNeckDetail)
+        <div class="modal fade" id="{{ $headAndNeckDetail->treatment_id }}" aria-hidden="true"
+            aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        {!! $headAndNeckDetail->description !!}
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endforeach
     <!-- Footer Section Start -->
     @include('front.footer')
     <!-- Footer Section End -->

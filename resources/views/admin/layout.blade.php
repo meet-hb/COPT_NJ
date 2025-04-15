@@ -1,3 +1,6 @@
+@php
+    $config = getConfig();
+@endphp
 <!-- Preloader -->
 <div class="preloader flex-column justify-content-center align-items-center">
     <img class="animation__shake"
@@ -47,7 +50,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background: #0d1218;">
     <!-- Brand Logo -->
     <a href="{{ route('admin.dashboard') }}" class="brand-link">
-        <img src="{{ url('/') }}/assets/admin/logo/favicon.png" alt="SarjanGate Logo"
+        <img src="{{ Storage::url($config['adminPannelLogo']->image) }}" alt="Logo"
             class="brand-image img-circle elevation-3" style="opacity: .8">
         <span class="brand-text font-weight-light">COPTNJ</span>
     </a>
