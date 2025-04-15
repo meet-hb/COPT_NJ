@@ -178,6 +178,9 @@ Route::post($admin_url . '/directaccess', [SettingController::class, 'directacce
 Route::get($admin_url . '/insuranceinfo', [SettingController::class, 'insuranceinfo'])->name('admin.insuranceinfo');
 Route::post($admin_url . '/insuranceinfo', [SettingController::class, 'insuranceinfoOP'])->name('admin.insuranceinfoDetailOp');
 
+Route::get($admin_url . '/configuration', [SettingController::class, 'configuration'])->name('admin.configuration');
+Route::post($admin_url . '/configuration', [SettingController::class, 'configurationOP'])->name('admin.configurationOp');
+
 Route::get($admin_url . '/mailsettings', [SettingController::class, 'mailsettings'])->name('admin.mailsettings');
 Route::post($admin_url . '/updateMailSettings', [SettingController::class, 'updateMailSettings'])->name('admin.updateMailSettings');
 

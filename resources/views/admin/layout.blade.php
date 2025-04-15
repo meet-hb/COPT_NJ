@@ -255,6 +255,14 @@
                         </p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.configuration') }}" class="nav-link @yield('configuration')">
+                        <i class="nav-icon fa fa-cog" aria-hidden="true"></i>
+                        <p>
+                            Configuration
+                        </p>
+                    </a>
+                </li>
             </ul>
 
         </nav>
