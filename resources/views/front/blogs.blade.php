@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="zxx">
-
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -8,7 +7,6 @@
     @include('front.assets.css')
     <title>Blogs | Somerset, NJ - Comprehensive Orthopedic PT</title>
 </head>
-
 <body>
     @include('front.layout')
     <!-- Breadcrumb Section Start -->
@@ -51,7 +49,8 @@
                                                 {{ \Carbon\Carbon::parse($healthBlog->date)->format('M') }}
                                             </a>
                                             <h3>
-                                                <a href="{{ route('front.blog_details', $healthBlog->id) }}">{{ $healthBlog->name }}</a>
+                                                <a
+                                                    href="{{ route('front.blog_details', $healthBlog->id) }}">{{ $healthBlog->name }}</a>
                                             </h3>
                                         </div>
                                     </div>
