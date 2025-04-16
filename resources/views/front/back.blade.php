@@ -50,7 +50,6 @@
     <div class="project-details-wrap ptb-100">
         <div class="container">
             <div class="row">
-
                 <div class="col-lg-6">
                     <h4 style="color: black;">Back</h4>
                     <h6>Click on the body parts or the list below to find out more about your pain and how physical
@@ -60,10 +59,8 @@
                             <li><a href="javascript:void(0);" data-bs-target="#{{ $backDetail->treatment_id }}"
                                     data-bs-toggle="modal" type="button">{{ $backDetail->type }}</a></li>
                         @endforeach
-
                     </ul>
                 </div>
-
                 <div class="col-lg-4 img-pint " data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                     <div class="about-img">
                         <img src="{{ url('/') }}/assets/front/img/human-body.png" alt="Image">
@@ -86,8 +83,6 @@
             </div>
         </div>
     </div>
-
-
     @foreach ($backDetails as $backDetail)
         <div class="modal fade" id="{{ $backDetail->treatment_id }}" aria-hidden="true"
             aria-labelledby="exampleModalToggleLabel" tabindex="-1">

@@ -17,12 +17,12 @@
     <div class="hero-wrap hero-one">
         <img src="{{ url('/') }}/assets/front/img/hero/hero-shape-1.webp" alt="Image"
             class="hero-shape-one md-none" />
-            <div class="container-fluid">
-                <div class="swiper swiper-move hero-slider-one">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide ">
-                            <div class="hero-slide-item bg-f hero-slide-one">
-                                <!-- <div class="hero-video" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+        <div class="container-fluid">
+            <div class="swiper swiper-move hero-slider-one">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide ">
+                        <div class="hero-slide-item bg-f hero-slide-one">
+                            <!-- <div class="hero-video" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
                                     <img src="{{ url('/') }}/assets/front/img/hero/hero-video-bg.webp" alt="Image">
                                     <a class="play-now" data-fslightbox href="https://www.youtube.com/watch?v=qZV1j8lHOgA">
                                         <i class="ri-play-fill"></i>
@@ -30,18 +30,18 @@
                                     </a>
                                     <p>Stay Healthy With Physical Therapy</p>
                                 </div> -->
-                                <div class="hero-content"
-                                    style="background-color: rgba(255, 255, 255, .65); border-radius: .63rem; justify-content: center; padding: 2rem;">
-                                    <!-- <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Physical Therapy
+                            <div class="hero-content"
+                                style="background-color: rgba(255, 255, 255, .65); border-radius: .63rem; justify-content: center; padding: 2rem;">
+                                <!-- <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Physical Therapy
                                         Somerset, NJ - Comprehensive Orthopedic PT</span> -->
-                                    <h2>Individualized Hands-On Treatment To Help You Live Pain-Free</h2>
-                                    <p>
-                                        Comprehensive Orthopedic Physical Therapy (COPTNJ) Is Committed To Getting You
-                                        Healthy
-                                    </p>
-                                    <div class="hero-btn">
-                                        <a href="{{ route('front.appointment') }}" class="btn-one">Request Appointment</a>
-                                        <!-- <div class="client-likes">
+                                <h2>Individualized Hands-On Treatment To Help You Live Pain-Free</h2>
+                                <p>
+                                    Comprehensive Orthopedic Physical Therapy (COPTNJ) Is Committed To Getting You
+                                    Healthy
+                                </p>
+                                <div class="hero-btn">
+                                    <a href="{{ route('front.appointment') }}" class="btn-one">Request Appointment</a>
+                                    <!-- <div class="client-likes">
                                             <ul class="list-style">
                                                 <li><img src="{{ url('/') }}/assets/front/img/clients/client-3.webp" alt="Image"></li>
                                                 <li><img src="{{ url('/') }}/assets/front/img/clients/client-4.webp" alt="Image"></li>
@@ -50,30 +50,30 @@
                                             </ul>
                                             <h6>10k+ Members</h6>
                                         </div> -->
-                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="hero-slide-item bg-f hero-slide-two">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="hero-slide-item bg-f hero-slide-two">
 
-                                <div class="hero-content"
-                                    style="background-color: rgba(255, 255, 255, .65); border-radius: .63rem; justify-content: center; padding: 2rem;">
-                                    <h2>Individualized Hands-On Treatment, Including Acupuncture, To Help You Live Pain-Free
-                                    </h2>
-                                    <p>
-                                        Comprehensive Orthopedic Physical Therapy (COPTNJ) Is Committed To Getting You
-                                        Healthy
-                                    <div class="hero-btn">
-                                        <a href="{{ route('front.appointment') }}" class="btn-one">Request Appointment</a>
+                            <div class="hero-content"
+                                style="background-color: rgba(255, 255, 255, .65); border-radius: .63rem; justify-content: center; padding: 2rem;">
+                                <h2>Individualized Hands-On Treatment, Including Acupuncture, To Help You Live Pain-Free
+                                </h2>
+                                <p>
+                                    Comprehensive Orthopedic Physical Therapy (COPTNJ) Is Committed To Getting You
+                                    Healthy
+                                <div class="hero-btn">
+                                    <a href="{{ route('front.appointment') }}" class="btn-one">Request Appointment</a>
 
-                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="hero-slide-item bg-f hero-slide-three">
-                                <!-- <div class="hero-video" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="hero-slide-item bg-f hero-slide-three">
+                            <!-- <div class="hero-video" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
                                     <img src="{{ url('/') }}/assets/front/img/hero/hero-video-bg.webp" alt="Image">
                                     <a class="play-now" data-fslightbox href="https://www.youtube.com/watch?v=qZV1j8lHOgA">
                                     <i class="ri-play-fill"></i>
@@ -81,17 +81,17 @@
                                     </a>
                                     <p>Stay Healthy With Physical Therapy</p>
                                 </div> -->
-                                <div class="hero-content"
-                                    style="background-color: rgba(255, 255, 255, .65); border-radius: .63rem; justify-content: center; padding: 2rem;">
-                                    <!-- <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">24/7 Service
+                            <div class="hero-content"
+                                style="background-color: rgba(255, 255, 255, .65); border-radius: .63rem; justify-content: center; padding: 2rem;">
+                                <!-- <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">24/7 Service
                                         Available </span> -->
-                                    <h2>Individualized Hands-On Treatment To Help You Live Pain-Free</h2>
-                                    <p>Comprehensive Orthopedic Physical Therapy (COPTNJ) Is Committed To Getting You
-                                        Healthy
-                                    <div class="hero-btn">
-                                        <a href="{{ route('front.appointment') }}" class="btn-one">Request
-                                            Appointment</a>
-                                        <!-- <div class="client-likes">
+                                <h2>Individualized Hands-On Treatment To Help You Live Pain-Free</h2>
+                                <p>Comprehensive Orthopedic Physical Therapy (COPTNJ) Is Committed To Getting You
+                                    Healthy
+                                <div class="hero-btn">
+                                    <a href="{{ route('front.appointment') }}" class="btn-one">Request
+                                        Appointment</a>
+                                    <!-- <div class="client-likes">
                                             <ul class="list-style">
                                                 <li><img src="{{ url('/') }}/assets/front/img/clients/client-3.webp" alt="Image"></li>
                                                 <li><img src="{{ url('/') }}/assets/front/img/clients/client-4.webp" alt="Image"></li>
@@ -100,13 +100,13 @@
                                             </ul>
                                             <h6>10k+ Members</h6>
                                         </div> -->
-                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="hero-slide-item bg-f hero-slide-four">
-                                <!-- <div class="hero-video" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="hero-slide-item bg-f hero-slide-four">
+                            <!-- <div class="hero-video" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
                                     <img src="{{ url('/') }}/assets/front/img/hero/hero-video-bg.webp" alt="Image">
                                     <a class="play-now" data-fslightbox href="https://www.youtube.com/watch?v=qZV1j8lHOgA">
                                         <i class="ri-play-fill"></i>
@@ -114,19 +114,19 @@
                                     </a>
                                     <p>Stay Healthy With Physical Therapy</p>
                                 </div> -->
-                                <div class="hero-content"
-                                    style="background-color: rgba(255, 255, 255, .65); border-radius: .63rem; justify-content: center; padding: 2rem;">
-                                    <!-- <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">24/7 Service
+                            <div class="hero-content"
+                                style="background-color: rgba(255, 255, 255, .65); border-radius: .63rem; justify-content: center; padding: 2rem;">
+                                <!-- <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">24/7 Service
                                         Available </span> -->
-                                    <h2>Individualized Hands-On Treatment To Help You Live Pain-Free</h2>
-                                    <p>
-                                        Comprehensive Orthopedic Physical Therapy (COPTNJ) Is Committed To Getting You
-                                        Healthy
-                                    </p>
-                                    <div class="hero-btn">
-                                        <a href="{{ route('front.appointment') }}" class="btn-one">Request
-                                            Appointment</a>
-                                        <!-- <div class="client-likes">
+                                <h2>Individualized Hands-On Treatment To Help You Live Pain-Free</h2>
+                                <p>
+                                    Comprehensive Orthopedic Physical Therapy (COPTNJ) Is Committed To Getting You
+                                    Healthy
+                                </p>
+                                <div class="hero-btn">
+                                    <a href="{{ route('front.appointment') }}" class="btn-one">Request
+                                        Appointment</a>
+                                    <!-- <div class="client-likes">
                                             <ul class="list-style">
                                                 <li><img src="{{ url('/') }}/assets/front/img/clients/client-3.webp" alt="Image"></li>
                                                 <li><img src="{{ url('/') }}/assets/front/img/clients/client-4.webp" alt="Image"></li>
@@ -135,24 +135,20 @@
                                             </ul>
                                             <h6>10k+ Members</h6>
                                         </div> -->
-                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="hero-pagination"></div>
                 </div>
+                <div class="hero-pagination"></div>
             </div>
+        </div>
     </div>
     <!-- Hero Section End -->
     <!-- About Section Start -->
     <div class="about-wrap-one">
-        <!-- <img src="{{ url('/') }}/assets/front/img/about/about-shape-1.webp" alt="Image" class="about-shape-one moveHorizontal md-none">
-        <img src="{{ url('/') }}/assets/front/img/about/about-shape-2.webp" alt="Image" class="about-shape-two md-none">
-        <img src="{{ url('/') }}/assets/front/img/about/about-thumb-1.webp" alt="Image" class="about-thumb-img bounce md-none"> -->
         <div class="container gx-5 pt-100">
             <div class="row align-items-center gx-5">
-
                 <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                     <div class="about-content">
                         <div class="content-title-one">
@@ -162,15 +158,6 @@
                                 whole patient rather than just the injury. We'll evaluate your symptoms, talk about your
                                 medical history, and any health constraints you might have. Our physical therapist will
                                 then devise a personalized treatment plan to help you get back on your feet.</p>
-
-
-                            <!-- <ul class="content-feature-list list-style">
-                                <li><i class="ri-check-line"></i>Refresing to get such a personal touch.</li>
-                                <li><i class="ri-check-line"></i>Duis aute irure dolor in reprehenderit in voluptate.
-                                </li>
-                                <li><i class="ri-check-line"></i>Velit esse cillum dolore eu fugiat nulla pariatur.</li>
-                            </ul>
-                            <a href="about.html" class="btn-one">Discover More</a> -->
                         </div>
                     </div>
                 </div>
@@ -193,7 +180,6 @@
                             class="condition-body-link head-and-neck"></a>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
