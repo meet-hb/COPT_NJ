@@ -51,8 +51,7 @@
                                                 {{ \Carbon\Carbon::parse($healthBlog->date)->format('M') }}
                                             </a>
                                             <h3>
-                                                <a
-                                                    href="{{ route('front.blog_details', $healthBlog->id) }}">{{ $healthBlog->name }}</a>
+                                                <a href="{{ route('front.blog_details', $healthBlog->id) }}">{{ $healthBlog->name }}</a>
                                             </h3>
                                         </div>
                                     </div>
