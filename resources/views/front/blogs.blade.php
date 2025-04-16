@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="zxx">
 
-<!-- Mirrored from templates.hibootstrap.com/zigo/default/blog-right-sidebar.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Feb 2025 06:03:38 GMT -->
-
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     @include('front.assets.css')
     <title>Blogs | Somerset, NJ - Comprehensive Orthopedic PT</title>
 </head>
 
 <body>
     @include('front.layout')
-
     <!-- Breadcrumb Section Start -->
     <div class="breadcrumb-wrapr">
         <!-- <img src="assets/img/br-shape-1.webp" alt="Image" class="br-shape-one moveHorizontal"> -->
@@ -25,7 +21,6 @@
                 <h2 style="color: #fff;">Health Blog</h2>
                 <ul class="breadcrumb-menu list-style">
                     <li style="color: #fff;"><a href="{{ route('front.index') }}">Home</a></li>
-
                     <li style="color: #fff;">Health Blog</li>
                 </ul>
                 <div class="option-item">
@@ -35,8 +30,6 @@
         </div>
     </div>
     <!-- Breadcrumb Section End -->
-
-
     <!-- Blog Details Section Start -->
     <div class="blog-wrap-two ptb-100">
         <div class="container gx-5">
@@ -105,12 +98,6 @@
                 </div>
                 <div class="col-xl-4">
                     <div class="sidebar">
-                        {{-- <div class="sidebar-widget search-box">
-                            <input type="search" placeholder="Search">
-                            <button type="submit">
-                                <i class="ri-search-line"></i>
-                            </button>
-                        </div> --}}
                         <div class="sidebar-widget">
                             <h3 class="sidebar-widget-title">Popular Posts</h3>
                             <div class="popular-post-widget">
@@ -135,29 +122,6 @@
                                 @endforeach
                             </div>
                         </div>
-                        {{-- <div class="sidebar-widget">
-                            <h3 class="sidebar-widget-title">Categories</h3>
-                            <ul class="category-list-one list-style">
-                                <li><a href="blog-left-sidebar.html"><ion-icon
-                                            name="arrow-forward-circle-outline"></ion-icon>Ankle Pain Relief</a></li>
-                                <li><a href="blog-left-sidebar.html"><ion-icon
-                                            name="arrow-forward-circle-outline"></ion-icon>Arthritis Relief</a></li>
-                                <li><a href="blog-left-sidebar.html"><ion-icon
-                                            name="arrow-forward-circle-outline"></ion-icon>Back Pain Relief</a></li>
-                                <li><a href="blog-left-sidebar.html"><ion-icon
-                                            name="arrow-forward-circle-outline"></ion-icon>Balance Disorders</a></li>
-                                <li><a href="blog-left-sidebar.html"><ion-icon
-                                            name="arrow-forward-circle-outline"></ion-icon>Case Study</a></li>
-                                <li><a href="blog-left-sidebar.html"><ion-icon
-                                            name="arrow-forward-circle-outline"></ion-icon>Chronic Pain</a></li>
-                                <li><a href="blog-left-sidebar.html"><ion-icon
-                                            name="arrow-forward-circle-outline"></ion-icon>Foot Pain Relief</a></li>
-                                <li><a href="blog-left-sidebar.html"><ion-icon
-                                            name="arrow-forward-circle-outline"></ion-icon>Headache Relief</a></li>
-                            </ul>
-                        </div> --}}
-
-
                     </div>
                 </div>
             </div>
