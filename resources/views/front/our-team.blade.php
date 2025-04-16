@@ -44,8 +44,7 @@
                         <div class="team-card-one">
                             <div class="team-img">
                                 <img src="{{ Storage::url($team->image) }}" alt="Image"
-                                    style="width: 244px;
-    height: 225px;">
+                                    style="width: 244px; height: 225px;">
                                 <a href="{{ route('front.team-detail', $team->id) }}" class="btn-one add-to-cart">Read
                                     More</a>
                             </div>
@@ -62,8 +61,7 @@
                         <div class="team-card-one">
                             <div class="team-img">
                                 <img src="{{ Storage::url($team->image) }}" alt="Image"
-                                    style="width: 244px;
-    height: 225px;">
+                                    style="width: 244px; height: 225px;">
                                 <a href="{{ route('front.team-detail', $team->id) }}" class="btn-one add-to-cart">Read
                                     More</a>
                             </div>
@@ -80,8 +78,7 @@
                         <div class="team-card-one">
                             <div class="team-img">
                                 <img src="{{ Storage::url($team->image) }}" alt="Image"
-                                    style="width: 244px;
-    height: 225px;">
+                                    style="width: 244px; height: 225px;">
                                 <a href="{{ route('front.team-detail', $team->id) }}" class="btn-one add-to-cart">Read
                                     More</a>
                             </div>

@@ -54,8 +54,6 @@
     <div class="project-details-wrap ptb-100">
         <div class="container gx-5">
             <div class="row">
-
-
                 <div class="col-lg-6">
                     <h4 style="color: black;">Shoulder</h4>
                     <h6>Click on the body parts or the list below to find out more about your pain and how physical
@@ -89,7 +87,6 @@
             </div>
         </div>
     </div>
-
     @foreach ($shoulderDetails as $shoulderDetail)
         <div class="modal fade" id="{{ $shoulderDetail->treatment_id }}" aria-hidden="true"
             aria-labelledby="exampleModalToggleLabel" tabindex="-1">
