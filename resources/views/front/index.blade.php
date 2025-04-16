@@ -76,7 +76,7 @@
                             <!-- <div class="hero-video" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
                                 <img src="{{ url('/') }}/assets/front/img/hero/hero-video-bg.webp" alt="Image">
                                 <a class="play-now" data-fslightbox href="https://www.youtube.com/watch?v=qZV1j8lHOgA">
-                                    <i class="ri-play-fill"></i>
+                                   <i class="ri-play-fill"></i>
                                     <span class="ripple"></span>
                                 </a>
                                 <p>Stay Healthy With Physical Therapy</p>

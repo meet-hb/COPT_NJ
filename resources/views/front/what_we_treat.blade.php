@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="zxx">
 
-
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -11,12 +10,10 @@
 </head>
 
 <body>
-
     @include('front.layout')
     <!-- Breadcrumb Section Start -->
     <div class="breadcrumb-wrap mt-5"
-        style="background-image: url('{{ Storage::url($treatments->banner) }}');background-repeat: no-repeat;
-  background-size: cover;">
+        style="background-image: url('{{ Storage::url($treatments->banner) }}');background-repeat: no-repeat; background-size: cover;">
         <img src="{{ url('/') }}/assets/front/img/br-shape-2.webp" alt="Image"
             class="br-shape-two animationFramesTwo">
         <div class="container gx-5">
@@ -30,7 +27,6 @@
         </div>
     </div>
     <!-- Breadcrumb Section End -->
-
     <!-- Project Details Section Start -->
     <div class="project-details-wrap ptb-100">
         <div class="container gx-5">
@@ -77,15 +73,12 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             @endif
-
             <div class="row gx-5 align-items-center mt-5">
                 @if ($treatments->causes_summary != null)
                     {!! $treatments->causes_summary !!}
                 @endif
-
                 @if (isset($treatment_causes) && count($treatment_causes) > 0)
                     <div class="accordion" id="accordionExample">
                         @foreach ($treatment_causes as $index => $treatment_cause)
@@ -117,7 +110,6 @@
                     {!! $treatments->causes_note !!}
                 </div>
             @endif
-
             @if (!empty(strip_tags($treatments->symptoms)))
                 <div class="row mt-3 mb-3 align-items-center">
                     <div class="col-xl-12">
@@ -127,7 +119,6 @@
                     </div>
                 </div>
             @endif
-
             @if ($treatments->extra_information != null)
                 <div class="row mt-3 align-items-center">
                     <div class="col-xl-12">
@@ -135,8 +126,6 @@
                     </div>
                 </div>
             @endif
-
-
         </div>
     </div>
     <section class="appointment-steps-section">
