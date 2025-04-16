@@ -66,7 +66,6 @@
                                 </div>
                             </div>
                         @endforeach
-
                     </div>
                     <ul class="page-nav list-style">
                         <!-- Previous Page Link -->

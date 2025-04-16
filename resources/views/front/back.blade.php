@@ -22,7 +22,6 @@
 </head>
 
 <body>
-
     @include('front.layout')
     <!-- Breadcrumb Section Start -->
     <div class="breadcrumb-wrapr">
