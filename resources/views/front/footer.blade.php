@@ -226,8 +226,8 @@
         </div>
     </div>
     <p class="copyright-text"><i class="ri-copyright-line"></i>Comprehensive Orthopedic Physical Therapy 2025 | <a
-            href="#">Sitemap</a> | <a href="{{ route('front.privacy_policy') }}">Privacy Policy</a> | <a
-            href="{{ route('front.terms_and_conditions') }}">Terms & Conditions</a>
+            href="{{ route('front.sitemap') }}">Sitemap</a> | <a href="{{ route('front.privacy_policy') }}">Privacy
+            Policy</a> | <a href="{{ route('front.terms_and_conditions') }}">Terms & Conditions</a>
     </p>
 </footer>
 <!-- Footer Section End -->
