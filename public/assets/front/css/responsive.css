@@ -2212,6 +2212,20 @@
     .testimonial-btn .testimonial-button-next {
         margin-right: 27px;
     }
+    .navbar-area .navbar .navbar-nav .nav-item .we {
+        width: 600px !important;
+        overflow: auto;
+        height: 350px !important;
+        overflow-x: hidden;
+    }
+
+    .navbar-area .navbar .navbar-nav .nav-item .how {
+        width: 250px !important;
+        overflow: auto;
+        height: 350px !important;
+        overflow-x: hidden;
+    }
+
 }
 
 @media only screen and (min-width: 1400px) {

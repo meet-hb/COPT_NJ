@@ -15,9 +15,6 @@
 
 <body>
 
-
-
-
     @include('front.layout')
 
     <!-- Breadcrumb Section Start -->
