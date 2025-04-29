@@ -2010,7 +2010,7 @@
     }
 
     .navbar-area .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .nav-link {
-        font-size: 16px !important;
+        font-size: 12px !important;
     }
 
     .navbar-area .navbar .navbar-nav .nav-item .we {
@@ -2141,6 +2141,7 @@
         overflow: auto;
         height: 350px !important;
         overflow-x: hidden;
+        margin-left: -110px !important;
     }
 
     .navbar-area .navbar .navbar-nav .nav-item .how {
