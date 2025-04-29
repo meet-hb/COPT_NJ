@@ -112,15 +112,39 @@
                         <a href="{{ route('front.howWeTreatMain') }}" class="dropdown-toggle nav-link">
                             HOW WE TREAT
                         </a>
-                        <ul class="dropdown-menu how">
-                            @foreach ($howWeTreats as $howWeTreat)
+                        <ul class="dropdown-menu we">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    @foreach ($howWeTreats as $howWeTreat)
+                                        <li class="nav-item">
+                                            <a href="{{ route('front.howWeTreat', $howWeTreat->therapy_name) }}"
+                                                class="nav-link">
+                                                {{ strtoupper($howWeTreat->therapy_name) }}
+                                            </a>
+                                        </li>
+                                    @endforeach
+
+                                </div>
+                                <div class="col-lg-6">
+                                    @foreach ($howWeTreats as $howWeTreat)
+                                        <li class="nav-item">
+                                            <a href="{{ route('front.howWeTreat', $howWeTreat->therapy_name) }}"
+                                                class="nav-link">
+                                                {{ strtoupper($howWeTreat->therapy_name) }}
+                                            </a>
+                                        </li>
+                                    @endforeach
+
+                                </div>
+                            </div>
+                            {{-- @foreach ($howWeTreats as $howWeTreat)
                                 <li class="nav-item">
                                     <a href="{{ route('front.howWeTreat', $howWeTreat->therapy_name) }}"
                                         class="nav-link">
                                         {{ strtoupper($howWeTreat->therapy_name) }}
                                     </a>
                                 </li>
-                            @endforeach
+                            @endforeach --}}
 
                         </ul>
                     </li>
