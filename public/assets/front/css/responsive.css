@@ -79,6 +79,51 @@
         max-width: 18px;
         margin: 0 auto;
     }
+
+    .condition-body-link.knee-balance-and-walking {
+        left: 56% !important;
+        bottom: 27% !important;
+    }
+
+    .condition-body-link.hip {
+        top: 37% !important;
+        left: 47% !important;
+    }
+
+    .condition-body-link.foot-and-ankle {
+        left: 56% !important;
+        bottom: 2% !important;
+    }
+
+    /* .condition-body-link.hip {
+        top: 37% !important;
+        left: 47% !important;
+    } */
+
+    .condition-body-link.back {
+        top: 23% !important;
+        left: 46.5% !important;
+    }
+
+    .condition-body-link.elbow-wrist-and-hand {
+        top: 28% !important;
+        left: 65% !important;
+
+    }
+
+    .condition-body-link.head-and-neck {
+        top: 1% !important;
+        left: 47% !important;
+    }
+
+    .condition-body-link.shoulder {
+        top: 15% !important;
+        right: 32% !important;
+    }
+    .condition-body-link {
+    width: 24px !important;
+    height: 24px !important;
+    }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
@@ -248,9 +293,9 @@
         padding: 174px 0 97px;
     }
 
-    .img-pint {
+    /* .img-pint {
         display: none;
-    }
+    } */
 
     .iconn-con {
         display: none;
@@ -1542,9 +1587,9 @@
         display: none !important;
     }
 
-    .point-image {
+    /* .point-image {
         max-height: 280px !important;
-    }
+    } */
 
     .sidebar {
         margin-top: 50px;
@@ -2213,6 +2258,7 @@
     .testimonial-btn .testimonial-button-next {
         margin-right: 27px;
     }
+
     .navbar-area .navbar .navbar-nav .nav-item .we {
         width: 600px !important;
         overflow: auto;

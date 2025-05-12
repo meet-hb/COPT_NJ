@@ -29,7 +29,7 @@
         <!-- <img src="assets/img/br-shape-1.webp" alt="Image" class="br-shape-one moveHorizontal"> -->
         <img src="{{ url('/') }}/assets/front/img/br-shape-2.webp" alt="Image"
             class="br-shape-two animationFramesTwo">
-        <div class="container">
+        <div class="container gx-5">
             <div class="breadcrumb-content">
                 <h2 style="color: #fff;">Knee Balance and Walking</h2>
                 <ul class="breadcrumb-menu list-style">
@@ -48,7 +48,7 @@
 
     <!-- Project Details Section Start -->
     <div class="project-details-wrap ptb-100">
-        <div class="container">
+        <div class="container gx-5">
             <div class="row">
                 <div class="col-lg-6">
                     <h4 style="color: black;">Knee, Balance and Walking</h4>

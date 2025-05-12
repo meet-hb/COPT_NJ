@@ -29,7 +29,7 @@
         <!-- <img src="assets/img/br-shape-1.webp" alt="Image" class="br-shape-one moveHorizontal"> -->
         <img src="{{ url('/') }}/assets/front/img/br-shape-2.webp" alt="Image"
             class="br-shape-two animationFramesTwo">
-        <div class="container">
+        <div class="container gx-5">
             <div class="breadcrumb-content">
                 <h2 style="color: #fff;">Head and Neck</h2>
                 <ul class="breadcrumb-menu list-style">
@@ -40,7 +40,6 @@
                     <a href="{{ route('front.appointment') }}" class="btn-two">Request
                         Appointment</a>
                 </div>
-
             </div>
         </div>
     </div>
@@ -48,9 +47,9 @@
 
     <!-- Project Details Section Start -->
     <div class="project-details-wrap ptb-100">
-        <div class="container">
+        <div class="container gx-5">
             <div class="row">
-                <div class="col-lg-6" style="max-height: 320px;">
+                <div class="col-lg-6">
                     <h4 style="color: black;">Head and Neck</h4>
                     <h6>Click on the body parts or the list below to find out more about your pain and how physical
                         therapy can help.</h6>
@@ -61,9 +60,9 @@
                         @endforeach
                     </ul>
                 </div>
-                <div class="col-lg-4 img-pint " data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <div class="col-lg-4 img-pint" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                     <div class="about-img">
-                        <img src="{{ url('/') }}/assets/front/img/human-body.png" alt="Image">
+                        <img src="{{ url('/') }}/assets/front/img/human-body.png" alt="Image" class="img-fluid">
                         <a href="{{ route('front.knee-balance-and-walking') }}" title="Knee, Balance and Walking"
                             id="knee-balance-and-walking" class="condition-body-link knee-balance-and-walking"></a>
                         <a href="{{ route('front.back') }}" title="Back" id="back"
