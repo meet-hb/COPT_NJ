@@ -41,6 +41,7 @@
         grabCursor: true,
         loop: true,
         autoHeight: true,
+        autoplay: true,
         speed:1200,
         pagination: {
             el: ".hero-pagination",
